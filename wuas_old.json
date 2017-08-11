@@ -1,0 +1,630 @@
+
+{
+    "spaces": {
+        "neutral": {
+            "name": "Neutral Space",
+            "coords": "0,0,33,33",
+            "visual": "empty gray space",
+            "desc": "This space can be freely traversed and have no additional effects."
+        },
+        "shop": {
+            "name": "Shop",
+            "coords": "33,0,66,33",
+            "visual": "blue space with white 'S'",
+            "desc": "A player who lands on this space receives a random item, if there is room in the player's inventory."
+        },
+        "altar": {
+            "name": "Altar",
+            "coords": "66,0,99,33",
+            "visual": "red space with black 'A'",
+            "desc": "A player on this space is allowed to make one wish. At the end of the turn, all players who made wishes have their wishes granted and then are returned to Start. Multiple players on this space do not engage in combat."
+        },
+        "agony": {
+            "name": "Agony Space",
+            "coords": "99,0,132,33",
+            "visual": "pink space with black screaming face",
+            "desc": "Whenever a player passes this space, it cries out in agony and deals 1 damage to that player and any player on an adjacent or diagonally adjacent space. Afterward, it becomes a Happy Face of Pleasure."
+        },
+        "start": {
+            "name": "Start Square",
+            "coords": "132,0,165,33",
+            "visual": "yellow space with black 'St'",
+            "desc": "All new players start on this square. Players sharing this space do not fight, and any player on this space does not lose HP for any reason. A player who ends his turn on Start is cured of any status ailments."
+        },
+        "elemental": {
+            "name": "Elemental Space",
+            "coords": "165,0,197,33",
+            "visual": "light gray space with multicolored diamond",
+            "desc": "A player who lands on this space randomly receives one of the following four effects: Fire Bender, Water Bender, Air Bender, or Earth Bender. The given effect lasts only one turn."
+        },
+        "happyface": {
+            "name": "Happy Face of Pleasure",
+            "coords": "197,0,230,33",
+            "visual": "green space with black excited smiley",
+            "desc": "This space just loves being stepped on, but not too much. Any player who passes this space gains 3 HP as a result of shared happiness, but if two or more different players pass it in the same turn, it becomes a Grumpy Face of Rudeness."
+        },
+        "warshipneutral": {
+            "name": "Warship's Hull",
+            "coords": "0,33,33,66",
+            "visual": "light gray space with no distinctive features",
+            "desc": "This space also counts as a neutral space. It is considered an warship part."
+        },
+        "warbomblobber": {
+            "name": "Bomb Lobber",
+            "coords": "33,33,66,66",
+            "visual": "light gray space with slingshot and bomb",
+            "desc": "This space can be activated by a player who ends his turn on it. That player selects any location on the map. That location is marked with a crosshair, and the Bomb Lobber becomes an Inactive Bomb Lobber. At the end of the next turn, the crosshair space is bombed. Any player on the bombed space takes 2 damage, and any player on an adjacent space takes 1 damage. Additionally, a fire appears on the bombed space which lasts two turns and deals 1 damage to any player who passes it. This is a warship part."
+        },
+        "electrossbow": {
+            "name": "Electrossbow",
+            "coords": "66,33,99,66",
+            "visual": "light gray space with blue glowing crossbow",
+            "desc": "This space can be activated by a player who ends his turn on it. That player selects any player within a 5x5 square around the Electrossbow (that is, any player whose Chebyshev distance from the firing player is less-than-or-equal-to 2). The target player or token takes 1 damage, and so does the firing player. The Electrossbow then becomes an Inactive Electrossbow. This is a warship part."
+        },
+        "sliceum": {
+            "name": "Sliceum Sabre Creator",
+            "coords": "99,33,132,66",
+            "visual": "light gray space with pink framed sabre",
+            "desc": "Any player who passes this space automatically receives one Sliceum Sabre. This space is a warship part."
+        },
+        "warshipwheel": {
+            "name": "Warship's Wheel",
+            "coords": "132,33,165,66",
+            "visual": "light gray space with brown pirate ship's wheel",
+            "desc": "A player who started the turn on this space can use its effect. That player cannot move in the same turn if he uses this effect. This space moves one to three spaces in a direction of the player's choice. If there is a Jacqueshammer adjacent to the Warship's Wheel, the Wheel can only be moved in the direction of the Jacqueshammer. Any warship parts that are connected to this space, either directly or indirectly through other warship parts, are moved the same distance in the same direction whenever the Wheel moves. Alternatively, in lieu of moving or moving the Wheel, a player on this space can rotate the warship, either 90 degrees right or left. All directly or indirectly connected warship parts rotate around the Wheel. Any movements or rotations of the Wheel happen after all player movements but before wish granting. This is a warship part."
+        },
+        "jacqueshammer": {
+            "name": "Jacqueshammer",
+            "coords": "165,33,197,66",
+            "visual": "light gray space with drill/hammer in the middle",
+            "desc": "A player who is controlling a connected Warship's Wheel can use this space's effect once per turn, but not during the Warship's movement. That player can select any space adjacent to Jacqueshammer that is not a Warship's Wheel and that has no players on it. That space is destroyed and replaced with a gap. This is a warship part."
+        },
+        "grumpyface": {
+            "name": "Grumpy Face of Rudeness",
+            "coords": "197,33,230,66",
+            "visual": "red space with upside down smile",
+            "desc": "This space hates being stepped on. As soon as a player moves onto this space, it will teleport to a random position on the board, taking that player with it. The position will be a gap if possible but will replace another space if necessary. If there are multiple gaps available, the Grumpy Face will move to a position adjacent to a non-gap space. The player who passed this space will continue his movements normally from the new position."
+        },
+        "saxophone": {
+            "name": "Saxophone Space",
+            "coords": "230,0,296,66",
+            "visual": "2x2 green space with dark yellow saxophone",
+            "desc": "When a player lands on this space, it emits a loud noise, and all players are afflicted with Jazz for one turn."
+        },
+        "cannon": {
+            "name": "Cannon Space",
+            "coords": "296,0,329,33",
+            "visual": "light yellow space with black cannon",
+            "desc": "A player who lands on this must choose to fire either himself or a cannonball at a space of his or her choice that is horizontally or vertically aligned with the cannon space. A cannonball will deal 3 damage to any player on the target space and, if it explodes (10% chance), 1 damage to adjacent players. The firing player will be knocked back to an adjacent space due to recoil. If the player launches himself, he will be dealt 1 damage upon landing, and any players on the target square will also be dealt 1 damage."
+        },
+        "saltwater": {
+            "name": "Salt Water Space",
+            "coords": "296,33,329,66",
+            "visual": "dark blue space with watery texture",
+            "desc": "This space counts as a Water Space. That is, a player who moves onto this space must stop here. Non-player tokens who move randomly will avoid Salt Water Spaces if possible. Tokens with \"Boa Constructor\" in the name are not affected by either of the effects of this space."
+        },
+        "pearspace": {
+            "name": "Pear Space",
+            "coords": "0,66,33,99",
+            "visual": "light green space with dark green pear",
+            "desc": "A player who lands on this space gets a Tomato."
+        },
+        "genielamp": {
+            "name": "Genie's Lamp",
+            "coords": "33,66,66,99",
+            "visual": "dark orange space with yellow genie lamp",
+            "desc": "A player who lands on this space may select a player and choose to send him or her to either the Start square or the Altar. A player who uses this effect to target another player is subsequently sent back to Start."
+        },
+        "fakestart": {
+            "name": "Fake Start Square",
+            "coords": "66,66,99,99",
+            "visual": "yellow space with inverted black 'St'",
+            "desc": "A player who lands on this space and has exactly 1 HP can choose to fake his own death. He will trick the game into thinking that he died and respawned on the Fake Start Square. That player's HP is restored to 10, and he does not lose any of his items or gold coins."
+        },
+        "gap": {
+            "name": "Empty Gap",
+            "coords": "99,66,132,99",
+            "visual": "empty white area",
+            "desc": "These spaces are ordinarily impassible to players. If a player is forced onto a gap, he immediately returns to Start and loses 5 HP. A player who is adjacent to a gap can choose to leap into the gap."
+        },
+        "photobooth": {
+            "name": "Photo Booth",
+            "coords": "132,66,165,99",
+            "visual": "muted blue space with camera, mini-board, and bidirectional arrow between them",
+            "desc": "A player who lands on this space can use either of its effects but cannot use both in one turn. If he pays 1 gold coin, the player can choose to take a picture of the current game board, including any spaces but excluding players, items, and tokens. The picture manifests itself as an item in that player's inventory. This effect cannot be activated if the player's inventory is full. Alternatively, the player can expend a game board picture that is in his inventory. This latter effect does not require gold coins. This will trigger an Event next turn in which the game board is reverted to the state shown in the picture for one turn. The picture is \"anchored\" at the Start square, not the upper-left corner. Any players who are forced into gaps as a result of the Event will be sent back to Start at the start of the turn with no HP penalty."
+        },
+        "graveyard": {
+            "name": "Graveyard Soil",
+            "coords": "165,66,198,99",
+            "visual": "brown space with inverted red five-point star in corner",
+            "desc": "A Zombie who passes this space heals 2 HP. A non-Zombie player who passes this space takes 2 damage."
+        },
+        "unholy": {
+            "name": "Unholy Temple",
+            "coords": "198,66,231,99",
+            "visual": "dark red space with inverted red five-point star",
+            "desc": "A player who lands on this space can make a single wish, as though he were at the Altar. To do so, that player must sacrifice one item from his inventory. All melee damage taken on this space is doubled. A player who dies on this space is revived on this space with full HP as a Zombie. The new Zombie keeps any items but loses his gold coins."
+        },
+        "goldcoin": {
+            "name": "Neutral + Gold Coin",
+            "coords": "231,66,264,99",
+            "visual": "empty gray space with gold coin",
+            "desc": "This behaves like a neutral space but contains a gold coin. As such, it is protected from modification by wishes."
+        },
+        "clockspace": {
+            "name": "Clock Space",
+            "coords": "264,66,296,99",
+            "visual": "light blue space with yellow clock",
+            "desc": "A player who passes this space must target a single player. The target's age is accelerated by a year. With age comes wisdom but also fragility. The target gains 1 ATK but loses 1 MOV. This space cannot target a player with 1 or less MOV, nor can it target non-player tokens. If a player passes this space and no valid target exists, the Clock Space collapses into a singularity and becomes Graveyard Soil."
+        },
+        "dilation": {
+            "name": "Time Dilation Space",
+            "coords": "296,66,329,99",
+            "visual": "dark blue space with two yellow clocks",
+            "desc": "A player who lands on this space has his MOV doubled."
+        },
+        "grandfather": {
+            "name": "Grandfather Clock Space",
+            "coords": "0,99,33,132",
+            "visual": "purple space with yellow clock with mustache",
+            "desc": "This clock wants to become younger. When a player (or token) passes it, that player gets the Grandfather status effect and the Grandfather Clock Space becomes a Clock Space."
+        },
+        "paradox": {
+            "name": "Paradox Space",
+            "coords": "33,99,66,132",
+            "visual": "dark grey space with pink F/T and arrows between them",
+            "desc": "A player who lands on this space may choose to cause a paradox. To do so, that player must forfeit 50 HP, six items, and a gold coin. A paradox will then be scheduled for the end of the next turn. If the player who caused the paradox dies on the current or the next turn, the paradox is cancelled. If the player survives, a paradox engulfs the board, killing all tokens and players, moving the Altar next to Start, and destroying all other spaces. Any gold coin spaces are left intact."
+        },
+        "mmst": {
+            "name": "Make Merc Say This Space",
+            "coords": "66,99,99,132",
+            "visual": "grey space with black 'MMST'",
+            "desc": "A player who lands on this space can specify a sentence or two. The next update will contain the opposite of that sentence."
+        },
+        "redspring": {
+            "name": "Red Spring",
+            "coords": "99,99,132,132",
+            "visual": "red space with column of three black circles",
+            "desc": "A player who passes this space is sent five spaces in a random cardinal direction. If possible, this space's effect will never send a player into a gap."
+        },
+        "yellowspring": {
+            "name": "Yellow Spring",
+            "coords": "132,99,165,132",
+            "visual": "yellow space with column of three black circles",
+            "desc": "A player who passes this space can choose to leap in a chosen direction. That player is moved two spaces in that direction, bypassing the effect of the intermediate space."
+        },
+        "upstairs": {
+            "name": "Upstairs Space",
+            "coords": "165,99,198,132",
+            "visual": "gray space with black stairs and up arrow",
+            "desc": "A player who is on this space can spend one movement point to move vertically upward one space, on the game's Z axis."
+        },
+        "downstairs": {
+            "name": "Downstairs Space",
+            "coords": "198,99,231,132",
+            "visual": "gray space with black stairs and down arrow",
+            "desc": "A player who is on this space can spend one movement point to move vertically downward one space, on the game's Z axis."
+        },
+        "genieclock": {
+            "name": "Genie Clock Space",
+            "coords": "231,99,264,132",
+            "visual": "light blue space with genie lamp containing clock hands",
+            "desc": "A player who lands on this space can select a target player. That target player's MOV becomes whatever the landing player chooses for the next turn. The chosen MOV can be no less than 1 and must be a finite, natural number. At the end of the next turn, that player's MOV is reset to whatever it was immediately before this effect. A player cannot be targeted by a Genie Clock Space two turns in a row."
+        },
+        "linefactory": {
+            "name": "Line Paster Factory",
+            "coords": "264,99,297,132",
+            "visual": "green space with black arrow pointing to game board and question mark",
+            "desc": "A player who lands on this space receives a Line Paster, unless his inventory is full."
+        },
+        "dinput": {
+            "name": "Downward Input Space",
+            "coords": "296,99,329,132",
+            "visual": "dark blue space with white downward arrow",
+            "desc": "Whenever a player lands on this space, that player receives two random items. This space will copy the space effect below it into the adjacent left and right spaces. If there is no visible space below, it will use the space above it. This space will copy space effects whenever the left and right spaces do not match its intention. This space will only affect visible spaces."
+        },
+        "infinity": {
+            "name": "Infinity Space",
+            "coords": "0,132,33,165",
+            "visual": "middle green space with sharp blue infinity sign",
+            "desc": "This space has reached a point where time has no meaning. A player who lands on this space will feel an infinite length of time pass and will enter the realm of infinity. This space cannot be modified by other space effects."
+        }
+    },
+    "items": {
+        "slicesabre": {
+            "name": "Sliceum Sabre",
+            "desc": "+2 ATK. This item is destroyed if it is ever dropped or used in combat."
+        },
+        "rumbottle": {
+            "name": "Bottle of Rum",
+            "desc": "This item is actually sentient. If it is in a player's inventory, it will moan and complain about how it has to help Mercerenies update WUAS. It whines so much that any space the player passes is treated as though the player landed on it."
+        },
+        "airplane": {
+            "name": "Airplane",
+            "desc": "Single use. Select any non-gap space that is currently visible on the board. The airplane takes you to that space. You may not move and use Airplane in the same turn."
+        },
+        "boadest": {
+            "name": "Boa Destructor",
+            "desc": "As long as you hold this item, any Boa Constructor Body tokens on the space you occupy are removed from the field. This has no effect on Boa Constructor Head tokens."
+        },
+        "photograph": {
+            "name": "Photograph",
+            "desc": "Retains an image of the board at a specific moment. Can be expended at Photo Booth spaces. When a Photograph is expended in this way, it is removed from the inventory."
+        },
+        "gavel": {
+            "name": "Gavel of Justice",
+            "desc": "This item can be used once per turn. Select a non-player token on the same or an adjacent space. Over the next turn, all players will be allowed to vote on whether that token is guilty or innocent (a player can simply refuse to vote, which is different than an innocent vote). If the token gets more guilty votes than innocent ones, it is removed from the field at the end of that turn."
+        },
+        "normality": {
+            "name": "Normality Blaster",
+            "desc": "This item can be used once per turn. All squares that are two or less spaces away (using Manhattan distance) from the player become spaces with simpler effects. This item has no effect on neutral spaces, gaps, Start, or the Altar."
+        },
+        "linepaster": {
+            "name": "Line Paster",
+            "desc": "Single use. Select a cardinal direction and a space type. Every space directly in that cardinal direction from you (excluding the space you are on) is rewritten to be the space type you chose. This item will not rewrite gaps, nor will it convert spaces into gaps. This item cannot be used to create or rewrite Start or Altar spaces."
+        }
+    },
+    "effects": [
+        {
+            "name": "Fire Bender",
+            "desc": "+2 ATK, +1 DEF as long as you have this effect. At the end of your turn, you deal 1 damage to all adjacent players (mitigated by DEF)."
+        },
+        {
+            "name": "Water Bender",
+            "desc": "+2 MOV as long as you have this effect. Items on a square you pass or land on are moved to adjacent spaces before you have a chance to pick them up, possibly falling into a gap and being removed from the field. Combat involving a player with the Water Bender status results in all involved players being healed by the amount that would have been dealt in damage. Water Spaces have no effect on you."
+        },
+        {
+            "name": "Earth Bender",
+            "desc": "You may destroy a space whenever you move off it. This ability cannot destroy Elemental Spaces."
+        },
+        {
+            "name": "Air Bender",
+            "desc": "You may choose to ignore the effects of spaces that would trigger when you pass them."
+        },
+        {
+            "name": "Jazz",
+            "desc": "Jazz music is so smooth that everyone just has to walk along with the beat. A player afflicted with Jazz can only move in one cardinal direction during the turn."
+        },
+        {
+            "name": "Zombie",
+            "desc": "MOV is divided by 2 (rounded up). Any player you pass is afflicted with Zombie. If all players and tokens have Zombie at the same time, the zombie apocalypse occurs, instantly killing all players and tokens who have HP and removing from the field those that do not."
+        },
+        {
+            "name": "Grandfather",
+            "desc": "Your MOV is capped at 4. If MOV ever becomes higher than 4, it is reset to 4. You may not use the effects of Clock Spaces, nor can you be targeted by them. If you pass a Clock Space, you may choose to give up Grandfather, and the Clock Space becomes a Grandfather Clock Space. If you pass another player or token, you may choose to give them the Grandfather effect."
+        }
+    ],
+    "tokens": {
+        "o_drumpf": {
+            "name": "Donald Trump",
+            "stats": "5 MOV",
+            "thumbnail": [0, 0],
+            "desc": "Moves randomly each turn. Whenever he passes a neutral space that does not contain a Wall token, there is a 10% chance that he will create a Wall token there. Donald Trump is immune to the effect of Wall tokens. Any player who passes Donald Trump or who is passed by Donald Trump gives 1 gold coin to Donald Trump (if he has any) and returns to Start, where he finishes his turn. Donald Trump will never move onto Start or the Altar."
+        },
+        "o_happy": {
+            "name": "Happy Man",
+            "stats": "5 MOV",
+            "thumbnail": [16, 0],
+            "desc": "Moves randomly each turn. If he passes a Grumpy Face of Rudeness or an Agony Space, it becomes a Happy Face of Pleasure."
+        },
+        "o_boa": {
+            "name": "Boa Constructor Head",
+            "stats": "3 MOV",
+            "thumbnail": [32, 0],
+            "desc": "Moves randomly each turn, and can move freely over gaps. Will never move onto Start or the Altar. Any player who ends his turn on the same space as this token takes 2 damage. Whenever this token moves, it leaves behind a Boa Constructor Body tile. The effect of the underlying space becomes \"This space is treated as a neutral space.\" as long as this token occupies the space."
+        },
+        "o_boatail": {
+            "name": "Boa Constructor Body",
+            "stats": "3 HP",
+            "thumbnail": [48, 0],
+            "desc": "Loses 1 HP at the beginning of every turn. Any effects of the underlying space are negated as long as this token occupies the space. Can freely inhabit gaps. The effect of the underlying space becomes \"This space is treated as a neutral space.\" as long as this token occupies the space."
+        },
+        "o_wall": {
+            "name": "Wall",
+            "stats": "3 HP; 0 ATK; 0 MOV",
+            "thumbnail": [48, 16],
+            "desc": "Any player who moves onto a space containing a Wall cannot move any further on the current turn."
+        },
+        "o_geoffbrown": {
+            "name": "Geoff Brown",
+            "stats": "5 MOV",
+            "thumbnail": [0, 16],
+            "desc": "Moves randomly each turn, avoiding players when possible. If a player passes him, he will beg that player for an item which he can sell to fuel his gambling habit. If that player does not give him an item, he will sue them in a drunken rage, forcing the player to be sent to the nearest Courtroom Space. If no Courtroom Space exists on the board, one will be created randomly."
+        },
+        "o_mrinsult": {
+            "name": "Mr Insult",
+            "stats": "30 HP; 4 MOV",
+            "thumbnail": [16, 16],
+            "desc": "Moves randomly each turn. If Geoff Brown or Donald Trump is on the playing field, Mr Insult will favor moving toward them, with Brown taking priority. When Mr Insult stops moving, he throws an insult at any player who is adjacent or on the same space as he is. These insults are special and stick to the player. If a player has more than five insults stuck to him, he dies immediately. Insults behave like status effects and as such are removed whenever status effects would be cured (for example, when landing on the Start square)."
+        },
+        "o_supercoolguy": {
+            "name": "Super-Cool Guy",
+            "stats": "10 HP; 4 ATK; 4 MOV",
+            "thumbnail": [32, 16],
+            "desc": "Moves randomly each turn, toward Mr Insult if he exists. Super-Cool Guy is immune to Mr Insult's insult effect, and any insults that stick to him will immediately fall off."
+        },
+        "o_cameraman": {
+            "name": "Photographer",
+            "stats": "3 MOV",
+            "thumbnail": [0, 32],
+            "desc": "Will not move unless Mr Insult is near, in which case he will flee from Mr Insult. Every turn, the Photographer takes a picture of the playing field and retains it, as though he had just activated a Photo Booth space. A player who passes Photographer can pay 2 gold coins to buy a picture of the board during any turn that this Photographer was alive. Photographer always takes his pictures at the end of the turn, so his photographs reflect the spaces present in the update image."
+        },
+        "o_roytheshort": {
+            "name": "roythesort",
+            "stats": "Player",
+            "thumbnail": [16, 32],
+            "desc": "A player token."
+        },
+        "o_lukasmah": {
+            "name": "Lukasmah",
+            "stats": "Player",
+            "thumbnail": [32, 32],
+            "desc": "A player token."
+        },
+        "o_rougebare": {
+            "name": "rougebare",
+            "stats": "Player",
+            "thumbnail": [48, 32],
+            "desc": "A player token."
+        },
+        "o_snakeispink": {
+            "name": "Snake is Pink",
+            "stats": "Player",
+            "thumbnail": [0, 48],
+            "desc": "A player token."
+        },
+        "o_magnus": {
+            "name": "Mr Magnus",
+            "stats": "Player",
+            "thumbnail": [16, 48],
+            "desc": "A player token."
+        },
+        "o_kepons": {
+            "name": "Kepons",
+            "stats": "Player",
+            "thumbnail": [32, 48],
+            "desc": "A player token."
+        },
+        "o_roa": {
+            "name": "Roa",
+            "stats": "Player",
+            "thumbnail": [48, 48],
+            "desc": "A player token."
+        },
+        "o_fire": {
+            "name": "Bomb Lobber Fire",
+            "stats": "N/A",
+            "thumbnail": [0, 64],
+            "desc": "Remains in play for two turns as a result of a Bomb Lobber space. Deals 1 damage to any player who passes it."
+        },
+        "o_friendlyboa": {
+            "name": "Friendly Boa Constructor Head",
+            "stats": "3 MOV",
+            "thumbnail": [16, 64],
+            "desc": "Moves randomly each turn, and can move freely over gaps. Will never move onto Start or the Altar. Whenever this token moves, it leaves behind a Boa Constructor Body tile. The effect of the underlying space becomes \"This space is treated as a neutral space.\" as long as this token occupies the space."
+        },
+        "o_tony": {
+            "name": "Insane Tony the Talking Clock",
+            "stats": "20 HP; 1 ATK; 5 MOV",
+            "thumbnail": [32, 64],
+            "desc": "Chases nearby players each turn, battling anyone he passes and anyone who passes him. Whenever Tony passes a space with \"clock\" in the name, he sucks the clock power out of the space, converting it to a neutral space and gaining 1 ATK in the process. Spaces with \"clock\" in the name do not affect Tony."
+        },
+        "o_angrybaseball": {
+            "name": "Angry Baseball Batter",
+            "stats": "5 ATK; 5 MOV",
+            "thumbnail": [48, 64],
+            "desc": "Chases whichever player the GM chooses, attacking anyone he passes and anyone who passes him."
+        }
+    },
+    "rulings": [
+        {
+            "desc": "Any Altar wishes occur at the end of the turn, after all player movement is completed."
+        },
+        {
+            "desc": "Effects which target a stat that a token lacks have no effect on the token. For example, a space that deals damage will not affect a token who has no concept of HP."
+        },
+        {
+            "desc": "The specific nature of combat in the case of tokens which are deficient in some stats is this. All involved players or tokens who have an ATK stat will attack all involved players or tokens who have an HP stat. All such attacks happen simultaneously, and in general a token will never attack itself unless otherwise stated."
+        },
+        {
+            "desc": "In general, an action which attempts to move into a gap is considered to be a mistake or a typo, and the player will not be allowed to move into the gap. If the movement into the gap was intentional, this should be specified in the post. This ruling does not apply if the player in question has any equipment that would enable him or her to pass the gaps without the normal penalty."
+        }
+    ],
+    "current_turn": 15,
+    "turns": {
+        "11": {
+            "0": {
+                "spaces":
+                [["gap","gap","gap","gap","gap","gap","gap","gap","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","genielamp","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater"],
+                 ["gap","gap","gap","grumpyface","gap","gap","neutral","gap","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","pearspace","saltwater"],
+                 ["gap","gap","gap","grumpyface","grumpyface","photobooth","gap","saltwater","saltwater","fakestart","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","fakestart","saltwater","saltwater","saltwater","saltwater"],
+                 ["gap","gap","gap","gap","gap","gap","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","altar","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater"],
+                 ["gap","gap","gap","gap","gap","gap","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater"],
+                 ["gap","gap","gap","gap","gap","grumpyface","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","happyface","happyface","happyface","happyface","grumpyface","saltwater","saltwater","saltwater","saltwater","saltwater"],
+                 ["gap","gap","gap","gap","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","happyface","neutral","pearspace","neutral","grumpyface","saltwater","saltwater","saltwater","saltwater","saltwater"],
+                 ["gap","saltwater","saltwater","saltwater","saltwater","grumpyface","grumpyface","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","happyface","happyface","happyface","happyface","gap","saltwater","saltwater","saltwater","saltwater","saltwater"],
+                 ["saltwater","agony","saltwater","saltwater","saltwater","grumpyface","grumpyface","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","gap","elemental","saltwater","saltwater","grumpyface","neutral","gap","saltwater"],
+                 ["saltwater","saltwater","agony","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","neutral","neutral","cannon","neutral","neutral","neutral","gap","gap","grumpyface","gap","gap"],
+                 ["saltwater","saltwater","graveyard","agony","saltwater","shop","saltwater","gap","happyface","happyface","happyface","happyface","shop","happyface","gap","neutral","grumpyface","grumpyface","gap","gap","gap","gap","gap"],
+                 ["gap","graveyard","graveyard","graveyard","happyface","saltwater","gap","gap","happyface","happyface","grumpyface","happyface","neutral","neutral","neutral","gap","neutral","neutral","gap","gap","gap","gap","grumpyface"],
+                 ["graveyard","graveyard","unholy","graveyard","graveyard","gap","gap","gap","happyface","agony","happyface","happyface","happyface","happyface","grumpyface","start","gap","saxophone","saxophone","gap","gap","gap","agony"],
+                 ["gap","graveyard","graveyard","graveyard","gap","gap","gap","gap","agony","happyface","happyface","happyface","grumpyface","happyface","happyface","gap","agony","saxophone","saxophone","happyface","happyface","happyface","agony"],
+                 ["gap","gap","graveyard","gap","gap","gap","neutral","gap","agony","happyface","agony","agony","happyface","warshipneutral","warbomblobber","electrossbow","happyface","happyface","happyface","agony","agony","agony","agony","agony"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","agony","agony","agony","agony","agony","agony","sliceum","warshipwheel","jacqueshammer","happyface","agony","agony","agony","agony","agony"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","agony","happyface","happyface","happyface","happyface","warshipneutral","warbomblobber","electrossbow","agony","agony","agony","agony","agony","agony","agony"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony"]],
+                "tokens": [{"object":"o_boatail","position":[266,298]},{"object":"o_boatail","position":[297,302]},{"object":"o_boatail","position":[329,297]},{"object":"o_boatail","position":[432,171]},{"object":"o_boatail","position":[427,140]},{"object":"o_boatail","position":[582,73]},{"object":"o_boatail","position":[616,76]},{"object":"o_boatail","position":[648,76]},{"object":"o_boatail","position":[491,201]},{"object":"o_boatail","position":[458,201]},{"object":"o_boatail","position":[430,205]},{"object":"o_boatail","position":[425,106]},{"object":"o_roa","position":[496,426]},{"object":"o_fire","position":[456,423]},{"object":"o_boatail","position":[233,295]},{"object":"o_boatail","position":[238,265]},{"object":"o_boatail","position":[235,237]},{"object":"o_boatail","position":[710,104]},{"object":"o_boatail","position":[714,74]},{"object":"o_boatail","position":[683,77]},{"object":"o_boatail","position":[396,203]},{"object":"o_boatail","position":[391,175]},{"object":"o_boatail","position":[360,170]},{"object":"o_boatail","position":[419,73]},{"object":"o_boatail","position":[420,41]},{"object":"o_boatail","position":[390,40]},{"object":"o_boatail","position":[713,206]},{"object":"o_boatail","position":[713,170]},{"object":"o_boatail","position":[709,139]},{"object":"o_boatail","position":[396,103]},{"object":"o_boatail","position":[367,106]},{"object":"o_boatail","position":[364,138]},{"object":"o_boatail","position":[329,74]},{"object":"o_boatail","position":[334,42]},{"object":"o_boatail","position":[362,40]},{"object":"o_boatail","position":[232,169]},{"object":"o_boatail","position":[234,201]},{"object":"o_boatail","position":[200,170]},{"object":"o_cameraman","position":[202,297]},{"object":"o_supercoolguy","position":[423,423]},{"object":"o_mrinsult","position":[426,329]},{"object":"o_geoffbrown","position":[585,166]},{"object":"o_wall","position":[419,396]},{"object":"o_snakeispink","position":[657,333]},{"object":"o_boa","position":[417,195]},{"object":"o_boa","position":[522,201]},{"object":"o_boa","position":[550,73]},{"object":"o_boa","position":[359,298]},{"object":"o_drumpf","position":[479,416]},{"object":"o_drumpf","position":[262,232]},{"object":"o_drumpf","position":[460,459]},{"object":"o_drumpf","position":[479,435]},{"object":"o_drumpf","position":[715,394]},{"object":"o_kepons","position":[555,519]},{"object":"o_magnus","position":[426,551]},{"object":"o_rougebare","position":[456,168]},{"object":"o_lukasmah","position":[655,207]},{"object":"o_roytheshort","position":[135,426]}]
+            }
+        },
+        "12": {
+            "0": {
+                "spaces":
+                [["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","genielamp","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","grumpyface","dilation","dilation","goldcoin","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","pearspace","clockspace"],
+                 ["dilation","dilation","dilation","grumpyface","grumpyface","photobooth","dilation","clockspace","clockspace","fakestart","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","fakestart","paradox","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","altar","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","happyface","happyface","happyface","happyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","happyface","neutral","pearspace","neutral","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","clockspace","clockspace","clockspace","clockspace","grumpyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","happyface","happyface","happyface","happyface","dilation","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["clockspace","agony","clockspace","clockspace","clockspace","grumpyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","dilation","elemental","clockspace","clockspace","grumpyface","neutral","dilation","clockspace"],
+                 ["clockspace","clockspace","agony","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","neutral","neutral","cannon","neutral","neutral","neutral","dilation","dilation","grumpyface","dilation","dilation"],
+                 ["clockspace","clockspace","graveyard","agony","clockspace","shop","clockspace","dilation","happyface","happyface","happyface","happyface","shop","happyface","dilation","neutral","grumpyface","grumpyface","dilation","dilation","dilation","dilation","dilation"],
+                 ["dilation","graveyard","graveyard","graveyard","happyface","clockspace","dilation","dilation","happyface","happyface","grumpyface","happyface","neutral","neutral","neutral","redspring","neutral","neutral","dilation","dilation","dilation","dilation","grumpyface"],
+                 ["graveyard","genielamp","unholy","graveyard","graveyard","dilation","dilation","dilation","happyface","agony","happyface","grumpyface","grumpyface","grumpyface","grumpyface","start","dilation","saxophone","saxophone","dilation","dilation","dilation","happyface"],
+                 ["dilation","graveyard","graveyard","graveyard","dilation","dilation","dilation","dilation","agony","happyface","happyface","happyface","grumpyface","happyface","happyface","yellowspring","agony","saxophone","saxophone","happyface","happyface","happyface","happyface"],
+                 ["dilation","dilation","graveyard","dilation","dilation","dilation","goldcoin","dilation","agony","happyface","agony","agony","happyface","warshipneutral","warbomblobber","electrossbow","happyface","happyface","happyface","agony","mmst","agony","agony"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","agony","agony","agony","grandfather","agony","happyface","sliceum","warshipwheel","jacqueshammer","happyface","agony","agony","agony","agony","agony"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","agony","happyface","happyface","happyface","happyface","warshipneutral","warbomblobber","electrossbow","agony","agony","agony","agony","agony","agony","agony"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony"]],
+                "tokens": [{"object":"o_friendlyboa","position":[553,329]},{"object":"boadest","position":[462,174]},{"object":"o_roa","position":[355,394]},{"object":"o_snakeispink","position":[657,333]},{"object":"o_kepons","position":[460,520]},{"object":"o_magnus","position":[483,416]},{"object":"o_rougebare","position":[496,431]},{"object":"o_lukasmah","position":[648,234]},{"object":"o_roytheshort","position":[78,421]}]
+            }
+        },
+        "13": {
+            "0": {
+                "spaces":
+                [["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","genieclock","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","genielamp","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","grumpyface","dilation","dilation","goldcoin","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","pearspace","clockspace"],
+                 ["dilation","dilation","dilation","grumpyface","grumpyface","photobooth","dilation","clockspace","genieclock","fakestart","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","fakestart","paradox","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","altar","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","happyface","happyface","happyface","happyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","happyface","neutral","pearspace","neutral","grumpyface","clockspace","clockspace","mmst","genielamp","clockspace"],
+                 ["dilation","clockspace","clockspace","clockspace","clockspace","grumpyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","happyface","happyface","happyface","happyface","dilation","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["clockspace","agony","clockspace","clockspace","clockspace","grumpyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","dilation","elemental","clockspace","clockspace","grumpyface","neutral","dilation","clockspace"],
+                 ["clockspace","clockspace","agony","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","neutral","neutral","cannon","neutral","neutral","neutral","dilation","dilation","grumpyface","dilation","dilation"],
+                 ["clockspace","clockspace","graveyard","agony","clockspace","shop","clockspace","dilation","happyface","happyface","happyface","happyface","shop","happyface","dilation","neutral","grumpyface","grumpyface","dilation","dilation","dilation","dilation","dilation"],
+                 ["dilation","graveyard","graveyard","graveyard","happyface","clockspace","dilation","dilation","happyface","happyface","grumpyface","happyface","neutral","neutral","neutral","redspring","neutral","neutral","dilation","dilation","dilation","dilation","grumpyface"],
+                 ["graveyard","genielamp","unholy","graveyard","graveyard","dilation","dilation","dilation","happyface","agony","happyface","grumpyface","grumpyface","grumpyface","upstairs","start","dilation","saxophone","saxophone","dilation","dilation","dilation","happyface"],
+                 ["dilation","graveyard","graveyard","graveyard","dilation","dilation","dilation","dilation","agony","happyface","happyface","happyface","grumpyface","happyface","happyface","yellowspring","agony","saxophone","saxophone","happyface","happyface","happyface","happyface"],
+                 ["dilation","dilation","graveyard","dilation","dilation","dilation","goldcoin","dilation","agony","happyface","happyface","happyface","happyface","warshipneutral","warbomblobber","electrossbow","happyface","happyface","happyface","agony","mmst","agony","agony"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","agony","agony","agony","grandfather","happyface","happyface","sliceum","warshipwheel","jacqueshammer","happyface","agony","agony","agony","agony","agony"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","agony","happyface","happyface","happyface","happyface","warshipneutral","warbomblobber","electrossbow","agony","agony","agony","agony","agony","agony","agony"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony"]],
+                "tokens": [{"object":"o_angrybaseball","position":[426,41]},{"object":"o_angrybaseball","position":[267,553]},{"object":"o_angrybaseball","position":[40,552]},{"object":"o_tony","position":[362,553]},{"object":"o_boatail","position":[551,329]},{"object":"o_boatail","position":[551,293]},{"object":"o_boatail","position":[552,264]},{"object":"normality","position":[587,107]},{"object":"normality","position":[107,200]},{"object":"linepaster","position":[74,552]},{"object":"normality","position":[105,457]},{"object":"linepaster","position":[422,330]},{"object":"linepaster","position":[618,555]},{"object":"o_friendlyboa","position":[520,267]},{"object":"boadest","position":[462,174]},{"object":"o_roa","position":[458,324]},{"object":"o_snakeispink","position":[657,333]},{"object":"o_kepons","position":[325,485]},{"object":"o_magnus","position":[392,363]},{"object":"o_rougebare","position":[496,431]},{"object":"o_lukasmah","position":[648,234]},{"object":"o_roytheshort","position":[483,417]}]
+            },
+            "1": {
+                "spaces":
+                [["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","neutral","downstairs","neutral","neutral","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"]],
+                "tokens": [{"object":"linepaster","position":[490,424]},{"object":"normality","position":[456,360]}]
+            }
+        },
+        "14": {
+            "0": {
+                "spaces":
+                [["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","genieclock","clockspace","clockspace","clockspace","clockspace","linefactory","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","genielamp","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","grumpyface","dilation","dilation","goldcoin","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","pearspace","clockspace"],
+                 ["dilation","dilation","dilation","grumpyface","grumpyface","photobooth","dilation","clockspace","genieclock","fakestart","clockspace","clockspace","clockspace","linefactory","clockspace","clockspace","clockspace","clockspace","fakestart","paradox","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","altar","linefactory","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","happyface","happyface","happyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","neutral","pearspace","neutral","grumpyface","clockspace","clockspace","mmst","genielamp","clockspace"],
+                 ["dilation","clockspace","clockspace","clockspace","clockspace","grumpyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","happyface","happyface","happyface","dilation","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["clockspace","agony","clockspace","clockspace","clockspace","grumpyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","clockspace","dilation","elemental","clockspace","clockspace","grumpyface","neutral","dilation","clockspace"],
+                 ["clockspace","clockspace","agony","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","neutral","neutral","cannon","neutral","neutral","neutral","dilation","dilation","grumpyface","dilation","dilation"],
+                 ["clockspace","clockspace","graveyard","agony","clockspace","shop","clockspace","dilation","happyface","happyface","happyface","happyface","shop","happyface","dilation","neutral","grumpyface","grumpyface","dilation","dilation","dilation","dilation","dilation"],
+                 ["dilation","graveyard","graveyard","graveyard","happyface","clockspace","dilation","dilation","happyface","happyface","grumpyface","happyface","neutral","neutral","neutral","redspring","neutral","neutral","dilation","dilation","dilation","dilation","grumpyface"],
+                 ["graveyard","genielamp","unholy","graveyard","graveyard","dilation","dilation","dilation","happyface","agony","happyface","grumpyface","grumpyface","grumpyface","upstairs","start","dilation","saxophone","saxophone","dilation","dilation","dilation","happyface"],
+                 ["dilation","graveyard","graveyard","graveyard","dilation","dilation","dilation","dilation","agony","happyface","happyface","happyface","grumpyface","happyface","happyface","yellowspring","agony","saxophone","saxophone","happyface","happyface","happyface","happyface"],
+                 ["dilation","dilation","graveyard","dilation","dilation","dilation","neutral","dilation","happyface","happyface","happyface","happyface","happyface","warshipneutral","warbomblobber","electrossbow","happyface","happyface","happyface","agony","mmst","agony","agony"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","agony","agony","agony","neutral","happyface","happyface","sliceum","warshipwheel","jacqueshammer","happyface","agony","agony","agony","agony","agony"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","agony","happyface","happyface","happyface","happyface","warshipneutral","warbomblobber","electrossbow","agony","agony","agony","agony","agony","agony","agony"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony","agony"]],
+                "tokens": [{"object":"o_boatail","position":[552,233]},{"object":"o_boatail","position":[518,233]},{"object":"o_boatail","position":[518,261]},{"object":"o_angrybaseball","position":[426,134]},{"object":"o_angrybaseball","position":[363,556]},{"object":"o_angrybaseball","position":[105,519]},{"object":"o_tony","position":[357,387]},{"object":"o_boatail","position":[551,329]},{"object":"o_boatail","position":[551,293]},{"object":"o_boatail","position":[552,264]},{"object":"normality","position":[587,107]},{"object":"normality","position":[107,200]},{"object":"linepaster","position":[74,552]},{"object":"normality","position":[105,457]},{"object":"linepaster","position":[618,555]},{"object":"o_friendlyboa","position":[584,231]},{"object":"boadest","position":[462,174]},{"object":"o_roa","position":[451,163]},{"object":"o_snakeispink","position":[657,333]},{"object":"o_kepons","position":[168,485]},{"object":"o_magnus","position":[392,363]},{"object":"o_lukasmah","position":[648,234]},{"object":"o_roytheshort","position":[432,321]}]
+            },
+            "1": {
+                "spaces":
+                [["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","neutral","downstairs","neutral","neutral","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"]],
+                "tokens": [{"object":"o_rougebare","position":[455,390]},{"object":"linepaster","position":[490,424]}]
+            }
+        },
+        "15": {
+            "0": {
+                "spaces":
+                [["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","genieclock","clockspace","clockspace","clockspace","clockspace","linefactory","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","genielamp","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","grumpyface","dilation","dilation","goldcoin","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","pearspace","clockspace"],
+                 ["dilation","dilation","dilation","grumpyface","grumpyface","photobooth","dilation","clockspace","genieclock","fakestart","clockspace","clockspace","clockspace","linefactory","clockspace","clockspace","clockspace","clockspace","fakestart","paradox","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","altar","linefactory","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","dilation","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","happyface","happyface","happyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["dilation","dilation","dilation","dilation","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","neutral","pearspace","neutral","grumpyface","clockspace","clockspace","mmst","genielamp","clockspace"],
+                 ["dilation","clockspace","clockspace","clockspace","clockspace","grumpyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","happyface","happyface","happyface","dilation","clockspace","clockspace","clockspace","clockspace","clockspace"],
+                 ["clockspace","agony","clockspace","clockspace","clockspace","grumpyface","grumpyface","clockspace","clockspace","clockspace","clockspace","clockspace","clockspace","linefactory","clockspace","dilation","elemental","clockspace","clockspace","grumpyface","neutral","dilation","clockspace"],
+                 ["dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","infinity","dinput","infinity","dinput","neutral","dilation","grumpyface","dilation","dilation"],
+                 ["dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","infinity","dinput","neutral","dilation","dilation","dilation","dilation","dilation"],
+                 ["dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","neutral","neutral","dilation","dilation","dilation","dilation","grumpyface"],
+                 ["dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","start","dilation","gap","gap","dilation","dilation","dilation","happyface"],
+                 ["dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput"],
+                 ["dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput"],
+                 ["dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput"],
+                 ["dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput"],
+                 ["dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput","dinput"]],
+                "tokens": [{"object":"o_boatail","position":[618,200]},{"object":"o_boatail","position":[616,231]},{"object":"o_boatail","position":[582,232]},{"object":"o_boatail","position":[552,233]},{"object":"o_boatail","position":[518,233]},{"object":"o_boatail","position":[518,261]},{"object":"o_angrybaseball","position":[426,294]},{"object":"o_angrybaseball","position":[356,394]},{"object":"o_angrybaseball","position":[234,486]},{"object":"o_tony","position":[386,353]},{"object":"o_boatail","position":[551,329]},{"object":"o_boatail","position":[551,293]},{"object":"o_boatail","position":[552,264]},{"object":"normality","position":[587,107]},{"object":"normality","position":[107,200]},{"object":"normality","position":[105,457]},{"object":"linepaster","position":[618,555]},{"object":"o_friendlyboa","position":[618,171]},{"object":"boadest","position":[462,174]},{"object":"o_roa","position":[451,163]},{"object":"o_snakeispink","position":[657,333]},{"object":"o_kepons","position":[8,462]},{"object":"o_magnus","position":[399,365]},{"object":"o_lukasmah","position":[648,234]},{"object":"o_roytheshort","position":[487,421]}]
+            },
+            "1": {
+                "spaces":
+                [["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","neutral","downstairs","neutral","neutral","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","neutral","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"],
+                 ["gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap","gap"]],
+                "tokens": [{"object":"o_rougebare","position":[517,423]}]
+            }
+        }
+    }
+}

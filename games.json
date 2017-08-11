@@ -1,0 +1,269 @@
+
+{
+    "genres": ["Text-based", "Adventure", "Puzzle", "Platformer",
+               "FPS", "RPG", "Maze", "3D", "Point-and-click", "Economy",
+               "Casual", "Card Game", "Strategy", "Trivia"],
+    "occasions": ["GMC Jam", "Project", "Joke", "Challenge"],
+    "games": [
+        {
+            "name": "Demensitis",
+            "author": "Mercerenies",
+            "genre": "Text-based Adventure RPG",
+            "occasion": "Project",
+            "magnitude": "Large",
+            "summary": "A text-based adventure story of good and evil",
+            "finished": [2, 2013],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=542967"
+        },
+        {
+            "name": "Loop: An Adventure Through Time",
+            "author": "Mercerenies",
+            "genre": "Puzzle Platformer",
+            "occasion": "Project",
+            "magnitude": "Large",
+            "summary": "A platformer with time-travel based puzzles",
+            "finished": [12, 2014],
+            "page": "http://gamejolt.com/games/loop-an-adventure-through-time/43414"
+        },
+        {
+            "name": "Ice-Bot 5000",
+            "author": "Mercerenies",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Block-pushing puzzle game centered around an ice-traversing robot",
+            "finished": [4, 2015],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=661759&p=4792978"
+        },
+        {
+            "name": "Bridges: the Game",
+            "author": "Mercerenies",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Bridge-building puzzle game about escaping a virtual reality",
+            "finished": [7, 2014],
+            "page": "http://gamejolt.com/games/bridges-the-game/30791"
+        },
+        {
+            "name": "Barry: the Brainless Overlord",
+            "author": "Mercerenies",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Lead brainwashed minions out of the lab to take over the world",
+            "finished": [10, 2014],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=640956&p=4680901"
+        },
+        {
+            "name": "Circuitboard",
+            "author": "Mercerenies",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "A pipe-based puzzle game about a rogue AI",
+            "finished": [1, 2015],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=650771&p=4735634"
+        },
+        {
+            "name": "Luminescence",
+            "author": "Mercerenies",
+            "genre": "Platformer",
+            "occasion": "Challenge",
+            "magnitude": "Medium",
+            "summary": "A slightly psychadelic platformer about light and darkness",
+            "finished": [12, 2012],
+            "page": "http://gamejolt.com/games/luminescence/183027"
+        },
+        {
+            "name": "Pacifist: the Monster Hunter",
+            "author": "Mercerenies",
+            "genre": "Platformer",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Capture monsters and other creatures using clever traps",
+            "finished": [7, 2013],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=588681&p=4343938"
+        },
+        {
+            "name": "Rabbit Hole",
+            "author": "Mercerenies",
+            "genre": "Platformer 3D FPS RPG Maze Adventure Text-based",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Dive into the gaming rabbit hole as you explore various genres",
+            "finished": [7, 2015],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=670626&p=4842286"
+        },
+        {
+            "name": "Cyclone Apocalypse",
+            "author": "Mercerenies",
+            "genre": "3D Platformer",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Harness the power of tornadoes to explore the world",
+            "finished": [10, 2012],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=558410&p=4124366"
+        },
+        {
+            "name": "Stick and Stone",
+            "author": "Mercerenies / Hiznopellagio",
+            "genre": "Point-and-click Adventure",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Explore the prehistoric world and defeat the overlord",
+            "finished": [10, 2015],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=679964&p=4895776"
+        },
+        {
+            "name": "Baby's First Steam Engine",
+            "author": "Mercerenies",
+            "genre": "Economy Strategy",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Build your railroading empire across the map",
+            "finished": [10, 2013],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=598547&p=4418693"
+        },
+        {
+            "name": "A Boy and his Tub",
+            "author": "Mercerenies",
+            "genre": "Casual",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Physics-based game about sinking enemy ships",
+            "finished": [1, 2014],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=606848&p=4489748"
+        },
+        {
+            "name": "Potato Blaster",
+            "author": "Mercerenies",
+            "genre": "Casual",
+            "occasion": "Joke",
+            "magnitude": "Joke",
+            "summary": "Fire potatoes at everything that moves; more fun than it sounds",
+            "finished": [4, 2015],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=661759&p=4794924"
+        },
+        {
+            "name": "GMCynchronized",
+            "author": "Mercerenies",
+            "genre": "Strategy Card Game",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "A card game about staving off murderous clowns",
+            "finished": [1, 2015],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=650771&p=4737045"
+        },
+        {
+            "name": "Flag Hunter",
+            "author": "Mercerenies",
+            "genre": "Trivia",
+            "occasion": "Joke",
+            "magnitude": "Joke",
+            "summary": "National flag identifying game; race against the clock",
+            "finished": [7, 2015],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=670626&p=4844352"
+        },
+        {
+            "name": "Five Minutes",
+            "author": "Mercerenies",
+            "genre": "Casual Platformer",
+            "occasion": "Challenge",
+            "magnitude": "Joke",
+            "summary": "Just a simple platformer; written in five minutes",
+            "finished": [10, 2012],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=549609&p=4109711"
+        },
+        {
+            "name": "Endless Rail",
+            "author": "Mercerenies",
+            "genre": "Casual Strategy",
+            "occasion": "Project",
+            "magnitude": "Medium",
+            "summary": "Keep the train on the tracks by building a path for it",
+            "finished": [7, 2015],
+            "page": "http://gamejolt.com/games/endless-rail/79158"
+        },
+        {
+            "name": "Daron Moore: Private Eye",
+            "author": "Mercerenies",
+            "genre": "Point-and-click Puzzle Detective",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "A private investigator and a ghost solve crimes together",
+            "finished": [5, 2016],
+            "page": "http://gamejolt.com/games/daron-moore-private-eye/148514"
+        },
+        {
+            "name": "Maze of the Moon",
+            "author": "Mercerenies",
+            "genre": "Maze Adventure",
+            "occasion": "Joke",
+            "magnitude": "Joke",
+            "summary": "Unlock all the treasure chests in a randomly-generated maze",
+            "finished": [1, 2016],
+            "page": "http://gmc.yoyogames.com/index.php?showtopic=687966&p=4936966"
+        },
+        {
+            "name": "Beam Down Drone",
+            "author": "Shadow Gamer",
+            "genre": "Platformer Adventure",
+            "occasion": "Assist",
+            "magnitude": "Large",
+            "summary": "A creative platformer that I did some voice acting for",
+            "finished": [7, 2016],
+            "page": "https://shadowoverseer.itch.io/beam-down-drone"
+        },
+        {
+            "name": "Troubles of Post-Mortal Times",
+            "author": "Mercerenies / Alice",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Even the Grim Reaper needs a job on the side",
+            "finished": [7, 2016],
+            "page": "https://forum.yoyogames.com/index.php?threads/the-post-apocalyptic-gmc-jam-1-games-topic.3455/#post-26223"
+        },
+        {
+            "name": "Rocket Science",
+            "author": "Mercerenies",
+            "genre": "Casual Sandbox",
+            "occasion": "Project",
+            "magnitude": "Medium",
+            "summary": "Launch things into space; highest launch wins",
+            "finished": [9, 2016],
+            "page": "http://gamejolt.com/games/rocket-science/192153"
+        },
+        {
+            "name": "Suspicious City of Wonders",
+            "author": "Mercerenies / Alice",
+            "genre": "Point-and-click Adventure",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "A smalltown girl explores the big city, run by a nefarious Inquisitor",
+            "finished": [10, 2016],
+            "page": "https://forum.yoyogames.com/index.php?threads/the-humble-gmc-jam-2-games-topic.11473/#post-74591"
+        },
+        {
+            "name": "Tricks, Traps, and Tower Maps",
+            "author": "Mercerenies",
+            "genre": "Strategy",
+            "occasion": "Project",
+            "magnitude": "Medium",
+            "summary": "Reach the top of the tower; what could be simpler",
+            "finished": [3, 2017],
+            "page": "http://gamejolt.com/games/tower_maps/243888"
+        },
+        {
+            "name": "No-E",
+            "author": "Mercerenies",
+            "genre": "Casual",
+            "occasion": "Challenge",
+            "magnitude": "Joke",
+            "summary": "A simple bullet-dodging game, written without the letter E",
+            "finished": [4, 2017],
+            "page": "https://www.mediafire.com/folder/2cn4p1cqslfq9/NoE%20Game"
+        }
+    ]
+}

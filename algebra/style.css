@@ -1,0 +1,140 @@
+
+body {
+    background-color: dimgray;
+}
+
+div.content {
+    background-color: slategray;
+    border: 1px ridge black;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 75px;
+    margin-right: 75px;
+    color: black;
+}
+
+a {
+    color: lightgray;
+}
+
+div.page {
+}
+
+div.top {
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 250%;
+    color: black;
+}
+
+div.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+div.project-header {
+    font-weight: bold;
+    background-color: #908b90;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 3px 3px 0px 0px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+div.project-contents {
+    background-color: #908b90;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 0px;
+    display: none;
+    overflow: hidden;
+}
+
+img.thumbnail {
+    width: 100px;
+    height: 100px;
+    vertical-align: text-top;
+    float: left;
+    padding: 5px;
+}
+
+.project-text {
+    display: inline;
+}
+
+.navbutton {
+    border-style: dashed;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+    text-decoration-line: none;
+}
+
+.navbutton:hover {
+    border-style: solid;
+}
+
+#games-table th {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+#games-table {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+
+#games-table td, #games-table th {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+td.cname {
+    width: 21%;
+}
+
+td.cauthor {
+    width: 15%;
+}
+
+td.cgenre {
+    width: 17%;
+}
+
+td.csummary {
+    width: 27%;
+}
+
+td.cfinish {
+    width: 12%;
+}
+
+td.cpage {
+    width: 10%;
+}
+
+tr.rowhead {
+    background-color: #949292;
+}
+
+tr.roweven {
+    background-color: #949292;
+}
+
+tr.rowodd {
+    background-color: #8b8989;
+}

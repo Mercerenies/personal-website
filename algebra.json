@@ -1,0 +1,1766 @@
+{
+    "set": {
+        "name": "Set",
+        "tagline": "A set is a collection of elements with no additional structure imposed upon them.",
+        "props": [],
+        "examples": [
+            "The set \\(\\mathbb{Z}\\) consists of all of the integers.",
+            "The notation \\(\\emptyset\\) denotes the empty set, which contains no elements.",
+            "For any sets \\(A\\) and \\(B\\), \\(B^A\\) is the set of all functions from \\(A\\) to \\(B\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Set_(mathematics)",
+            "http://mathworld.wolfram.com/Set.html",
+            "http://www.c2.com/cgi/wiki?SetTheory",
+            "https://www.encyclopediaofmath.org/index.php/Set"
+        ],
+        "edges": [
+            {
+                "algebra": "Set + Binary Operation",
+                "result": "magma"
+            },
+            {
+                "algebra": "Set + Binary Relation",
+                "result": "relation"
+            },
+            {
+                "algebra": "Set + Set of Subsets",
+                "result": "family"
+            }
+        ]
+    },
+    "magma": {
+        "name": "Magma",
+        "tagline": "A magma is a set with a single binary operation, often denoted \\(\\ast\\), defined on it. The term \"magma\" will be used interchangeably with \"groupoid\" in some older texts.",
+        "props": [],
+        "examples": [
+            "The empty set \\(\\emptyset\\) is trivially a magma under the trivial operation.",
+            "For a set \\(S\\), the free magma \\(M(S)\\) contains all binary trees with elements of \\(S\\) at its leaves. In this magma, \\(a b\\) is the tree with \\(a\\) on the left-hand side and \\(b\\) on the right-hand side.",
+            "The set \\(\\{r, p, s\\}\\) of rock-paper-scissors gestures forms a commutative magma under the operation \"defeats\", where every element is idempotent and the result of the operation on two elements is the \"winner\" in a classic game of rock-paper-scissors."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Magma_(algebra)",
+            "http://mathworld.wolfram.com/Magma.html",
+            "https://www.encyclopediaofmath.org/index.php/Magma",
+            "https://proofwiki.org/wiki/Definition:Magma",
+            "https://oeis.org/A001329"
+        ],
+        "edges": [
+            {
+                "algebra": "Magma - Binary Operation",
+                "result": "set"
+            },
+            {
+                "algebra": "Magma + Associativity",
+                "result": "semigroup"
+            },
+            {
+                "algebra": "Magma + Division",
+                "result": "quasigroup"
+            },
+            {
+                "algebra": "Magma + Left Division + Left Self-Distributivity",
+                "result": "rack"
+            }
+        ]
+    },
+    "semigroup": {
+        "name": "Semigroup",
+        "tagline": "A semigroup \\(S\\) consists of a set and a single binary operation, satisfying the following property.",
+        "props": [
+            "Associativity: \\(\\forall a, b, c \\in S: (a b) c = a (b c)\\)"
+        ],
+        "examples": [
+            "The empty set forms a semigroup under a trivial operation.",
+            "The set containing a single element trivially forms a semigroup.",
+            "The set of positive integers forms a semigroup under addition.",
+            "Any set forms a semigroup under the \"first\" operation \\(a b = a\\), as well as the \"last\" operation \\(a b = b\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Semigroup",
+            "http://mathworld.wolfram.com/Semigroup.html",
+            "https://www.encyclopediaofmath.org/index.php/Semi-group",
+            "https://hackage.haskell.org/package/semigroups",
+            "https://proofwiki.org/wiki/Definition:Semigroup"
+        ],
+        "edges": [
+            {
+                "algebra": "Semigroup - Associativity",
+                "result": "magma"
+            },
+            {
+                "algebra": "Semigroup + Identity",
+                "result": "monoid"
+            },
+            {
+                "algebra": "Semigroup + Idempotence",
+                "result": "band"
+            },
+            {
+                "algebra": "Semigroup + Additive Monoid",
+                "result": "semiring"
+            },
+            {
+                "algebra": "Semigroup + Additive Group",
+                "result": "nearring"
+            },
+            {
+                "algebra": "Semigroup + Additive Abelian Group",
+                "result": "ring"
+            },
+            {
+                "algebra": "Semigroup + Commutativity + Additive Abelian Group",
+                "result": "commring"
+            }
+        ]
+    },
+    "monoid": {
+        "name": "Monoid",
+        "tagline": "A monoid \\(M\\) consists of a set and a single binary operation, satisfying these properties.",
+        "props": [
+            "Associativity: \\(\\forall a, b, c \\in M: (a b) c = a (b c)\\)",
+            "Identity: \\(\\exists e \\in M: \\forall a \\in M: e a = a = a e\\)"
+        ],
+        "examples": [
+            "The set \\(\\{e\\}\\) forms the trivial monoid, containing only the identity element.",
+            "Given an alphabet \\(\\Sigma\\), the set \\(\\Sigma^*\\) of strings over the alphabet forms a monoid under concatenation, with the identity element being the empty string \\lambda.",
+            "The nonnegative integers \\(\\mathbb{Z}^+\\) form a monoid under both addition and multiplication."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Monoid",
+            "http://mathworld.wolfram.com/Monoid.html",
+            "https://www.encyclopediaofmath.org/index.php/Monoid",
+            "https://hackage.haskell.org/package/base-4.9.0.0/docs/Data-Monoid.html",
+            "https://proofwiki.org/wiki/Definition:Monoid",
+            "https://wiki.haskell.org/Typeclassopedia#Monoid",
+            "http://groupprops.subwiki.org/wiki/Monoid"
+        ],
+        "edges": [
+            {
+                "algebra": "Monoid - Identity",
+                "result": "semigroup"
+            },
+            {
+                "algebra": "Monoid + Inverse",
+                "result": "group"
+            },
+            {
+                "algebra": "Monoid + Commutativity + Multiplicative Semigroup",
+                "result": "semiring"
+            },
+            {
+                "algebra": "Monoid + Additive Abelian Group",
+                "result": "unitalring"
+            },
+            {
+                "algebra": "Monoid + Multiplicative Monoid + Nonzero + Nonzero Cancellativity",
+                "result": "integraldomain"
+            }
+        ]
+    },
+    "group": {
+        "name": "Group",
+        "tagline": "A group \\(G\\) consists of a set and a single binary operation, satisfying these properties.",
+        "props": [
+            "Associativity: \\(\\forall a, b, c \\in G: (a b) c = a (b c)\\)",
+            "Identity: \\(\\exists e \\in G: \\forall a \\in G: e a = a = a e\\)",
+            "Inverse: \\(\\forall a \\in G: \\exists b \\in G: a b = b a = e\\)"
+        ],
+        "examples": [
+            "For any natural number \\(n\\), \\(Z_n = \\{0, 1, \\dots n\\}\\) is the cyclic group of order \\(n\\), with the operation of addition modulo \\(n\\).",
+            "The real numbers \\(\\mathbb{R}\\) under addition form a group. Likewise, the nonzero reals \\(\\mathbb{R}^*\\) under multiplication form a group.",
+            "Given a set of order \\(n\\), the set of bijective functions on that set forms the permutation group \\(S_n\\) under the operation of function composition.",
+            "The integers \\(\\mathbb{Z}\\) under addition form a group. They do not, however, form a group under multiplication.",
+            "Given any group \\(G\\), the automorphism group \\(Aut(G)\\) consists of all isomorphisms from \\(G\\) to itself under the operation of morphism composition."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Group_(mathematics)",
+            "http://mathworld.wolfram.com/Group.html",
+            "https://www.mathsisfun.com/sets/groups-introduction.html",
+            "http://www.tutorialspoint.com/discrete_mathematics/discrete_mathematics_group_theory.htm",
+            "https://www.encyclopediaofmath.org/index.php/Group",
+            "http://groupprops.subwiki.org/wiki/Group"
+        ],
+        "edges": [
+            {
+                "algebra": "Group - Inverse",
+                "result": "monoid"
+            },
+            {
+                "algebra": "Group - Associativity",
+                "result": "loop"
+            },
+            {
+                "algebra": "Group + Action Space",
+                "result": "groupaction"
+            },
+            {
+                "algebra": "Group + Operator Domain",
+                "result": "omegagroup"
+            },
+            {
+                "algebra": "Group + Commutativity",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Group + Multiplicative Semigroup",
+                "result": "nearring"
+            },
+            {
+                "algebra": "Group + Zero Element + Nonzero + Additive Abelian Group",
+                "result": "divisionring"
+            }
+        ]
+    },
+    "abgroup": {
+        "name": "Abelian Group",
+        "tagline": "An Abelian group \\(G\\) is a group in which the operation is commutative. Specifically, the following properties hold in an Abelian group.",
+        "props": [
+            "Associativity: \\(\\forall a, b, c \\in G: (a b) c = a (b c)\\)",
+            "Identity: \\(\\exists e \\in G: \\forall a \\in G: e a = a = a e\\)",
+            "Inverse: \\(\\forall a \\in G: \\exists b \\in G: a b = b a = e\\)",
+            "Commutativity: \\(\\forall a, b \\in G: a b = b a\\)"
+        ],
+        "examples": [
+            "The operations of \"addition\" and \"multiplication\" are, often, intuitively commutative. Thus, the groups \\(\\mathbb{R}\\) and \\(\\mathbb{R}^*\\) are both Abelian groups, as well as \\(\\mathbb{Z}\\).",
+            "The set of \\(n \\times m\\) matrices \\(\\mathbb{R}^{n \\times m}\\) forms an Abelian group under addition for all natural numbers \\(n\\) and \\(m\\).",
+            "For any set \\(S\\), the power set \\(\\mathcal{P}(S)\\) forms a Abelian group under symmetric set difference, where the identity is the empty set and the inverse of an element is its complement in \\(S\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Abelian_group",
+            "https://www.encyclopediaofmath.org/index.php/Abelian_group",
+            "http://mathworld.wolfram.com/AbelianGroup.html",
+            "http://groupprops.subwiki.org/wiki/Abelian_group"
+        ],
+        "edges": [
+            {
+                "algebra": "Abelian Group - Commutativity",
+                "result": "group"
+            },
+            {
+                "algebra": "Abelian Group + Multiplicative Semigroup",
+                "result": "ring"
+            },
+            {
+                "algebra": "Abelian Group + Multiplicative Semigroup + Commutativity (Multiplicative)",
+                "result": "commring"
+            },
+            {
+                "algebra": "Abelian Group + Multiplicative Semigroup + Idempotence (Multiplicative)",
+                "result": "booleanring"
+            },
+            {
+                "algebra": "Abelian Group + Multiplicative Monoid",
+                "result": "unitalring"
+            },
+            {
+                "algebra": "Abelian Group + Multiplicative Monoid + Nonzero + Nonzero Cancellativity",
+                "result": "integraldomain"
+            },
+            {
+                "algebra": "Abelian Group + Nonzero + Multiplicative Group",
+                "result": "divisionring"
+            },
+            {
+                "algebra": "Abelian Group + Nonzero + Multiplicative Abelian Group",
+                "result": "field"
+            },
+            {
+                "algebra": "Abelian Group + Nonzero + Zero Element + Additive Abelian Group",
+                "result": "field"
+            },
+            {
+                "algebra": "Abelian Group + Left Scalar Ring",
+                "result": "leftmodule"
+            },
+            {
+                "algebra": "Abelian Group + Right Scalar Ring",
+                "result": "rightmodule"
+            },
+            {
+                "algebra": "Abelian Group + Scalar Field",
+                "result": "vectorspace"
+            }
+        ]
+    },
+    "quasigroup": {
+        "name": "Quasigroup",
+        "tagline": "A quasigroup \\(Q\\) is a set equipped with a single binary operation satisfying the following properties.",
+        "props": [
+            "Left Division: \\(\\forall a, b \\in Q: \\exists! x \\in Q: a \\ast x = b\\)",
+            "Right Division: \\(\\forall a, b \\in Q: \\exists! y \\in Q: y \\ast a = b\\)"
+        ],
+        "examples": [
+            "For any group, the subtraction operation of the group forms a quasigroup."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Quasigroup",
+            "http://mathworld.wolfram.com/Quasigroup.html",
+            "http://groupprops.subwiki.org/wiki/Quasigroup",
+            "https://www.encyclopediaofmath.org/index.php/Quasi-group",
+            "https://proofwiki.org/wiki/Definition:Quasigroup",
+            "http://math.ucdenver.edu/~wcherowi/courses/m6406/csln2.html"
+        ],
+        "edges": [
+            {
+                "algebra": "Quasigroup - Division",
+                "result": "magma"
+            },
+            {
+                "algebra": "Quasigroup + Identity",
+                "result": "loop"
+            },
+            {
+                "algebra": "Quasigroup + Associativity",
+                "result": "group"
+            }
+        ]
+    },
+    "loop": {
+        "name": "Loop",
+        "tagline": "A loop \\(Q\\) is a quasigroup which contains an identity element. More formally, the following must hold in a loop.",
+        "props": [
+            "Left Division: \\(\\forall a, b \\in Q: \\exists! x \\in Q: a \\ast x = b\\)",
+            "Right Division: \\(\\forall a, b \\in Q: \\exists! y \\in Q: y \\ast a = b\\)",
+            "Identity: \\(\\exists e \\in Q: \\forall a \\in Q: e \\ast a = a = a \\ast e\\)"
+        ],
+        "examples": [
+            "The set of nonzero octonions forms a loop under multiplication; the real number \\(1\\) is the identity, but octonion multiplication is not associative."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Quasigroup#Loop",
+            "http://groupprops.subwiki.org/wiki/Loop",
+            "https://www.encyclopediaofmath.org/index.php/Loop",
+            "http://math.ucdenver.edu/~wcherowi/courses/m6406/csln2.html",
+            "https://proofwiki.org/wiki/Definition:Algebra_Loop"
+        ],
+        "edges": [
+            {
+                "algebra": "Loop - Identity",
+                "result": "quasigroup"
+            },
+            {
+                "algebra": "Loop + Associativity",
+                "result": "group"
+            }
+        ]
+    },
+    "rack": {
+        "name": "Rack",
+        "tagline": "A rack \\(R\\) is a set equipped with a single binary operation, often represented as a left-facing triangle \\(\\triangleleft\\), satisfying the following.",
+        "props": [
+            "Left Division: \\(\\forall a, b \\in R: \\exists! x \\in R: a \\triangleleft x = b\\)",
+            "Left Self-Distributivity: \\(\\forall a, b, c \\in R: a \\triangleleft (b \\triangleleft c) = (a \\triangleleft b) \\triangleleft (a \\triangleleft c)\\)"
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Racks_and_quandles#Racks"
+        ],
+        "edges": [
+            {
+                "algebra": "Rack - Left Division - Left Self-Distributivity",
+                "result": "magma"
+            },
+            {
+                "algebra": "Rack + Idempotence",
+                "result": "quandle"
+            }
+        ]
+    },
+    "quandle": {
+        "name": "Quandle",
+        "tagline": "A quandle \\(Q\\) is an idempotent rack. More specifically, a quandle satisfies the following properties.",
+        "props": [
+            "Left Division: \\(\\forall a, b \\in Q: \\exists! x \\in Q: a \\triangleleft x = b\\)",
+            "Left Self-Distributivity: \\(\\forall a, b, c \\in Q: a \\triangleleft (b \\triangleleft c) = (a \\triangleleft b) \\triangleleft (a \\triangleleft c)\\)",
+            "Idempotence: \\(\\forall a \\in Q: a \\triangleleft a = a\\)"
+        ],
+        "examples": [
+            "Every group \\(G\\) gives rise to a quandle defined by conjugation. That is, \\(a \\triangleleft b = a b a^{-1}\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Racks_and_quandles#Quandles",
+            "http://www1.cmc.edu/pages/faculty/VNelson/quandles.html",
+            "http://www.ams.org/publications/journals/notices/201604/rnoti-p378.pdf"
+        ],
+        "edges": [
+            {
+                "algebra": "Quandle - Idempotence",
+                "result": "rack"
+            }
+        ]
+    },
+    "semiring": {
+        "name": "Semiring",
+        "tagline": "A semiring \\(R\\) is a set equipped with two binary operations, referred to as addition and multiplication, where addition is a commutative monoid and multiplication is a semigroup satisfying distributivity. That is, the following properties are satisfied.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)"
+        ],
+        "examples": [
+            "The extended natural numbers \\(\\mathbb{N} \\cup \\{\\infty\\}\\) form a semiring under standard addition and multiplication, with the assumption that \\(0 \\cdot \\infty = 0\\).",
+            "The set of even natural numbers \\(2 \\mathbb{N}\\) form a semiring. Note that this set lacks a multiplicative identity."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Semiring",
+            "http://mathworld.wolfram.com/Semiring.html",
+            "https://www.encyclopediaofmath.org/index.php/Semi-ring",
+            "https://proofwiki.org/wiki/Definition:Semiring_(Abstract_Algebra)"
+        ],
+        "edges": [
+            {
+                "algebra": "Semiring - Commutativity (Additive) - Multiplication",
+                "result": "monoid"
+            },
+            {
+                "algebra": "Semiring - Addition",
+                "result": "semigroup"
+            },
+            {
+                "algebra": "Semiring + Inverse (Additive)",
+                "result": "ring"
+            }
+        ]
+    },
+    "nearring": {
+        "name": "Near-ring",
+        "tagline": "A near-ring \\(N\\) is a set together with addition and multiplication operations, where addition forms a group and multiplication forms a semigroup satisfying distributivity. That is, the following properties define a near-ring.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in N: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in N: \\forall a \\in N: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in N: \\exists b \\in N: a + b = b + a = 0\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in N: (a b) c = a (b c)\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in N: (a + b) c = a c + b c\\)"
+        ],
+        "examples": [
+            "For any group \\(G\\), the set of endomorphisms \\(End(G)\\) forms a near-ring with addition defined pointwise and multiplication defined as morphism composition."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Near-ring",
+            "http://www.ams.org/journals/proc/1953-004-05/S0002-9939-1953-0057844-9/S0002-9939-1953-0057844-9.pdf"
+        ],
+        "edges": [
+            {
+                "algebra": "Near-ring - Multiplication",
+                "result": "group"
+            },
+            {
+                "algebra": "Near-ring - Addition",
+                "result": "semigroup"
+            },
+            {
+                "algebra": "Near-ring + Left-Distributivity + Commutativity (Additive)",
+                "result": "ring"
+            }
+        ]
+    },
+    "ring": {
+        "name": "Ring",
+        "tagline": "A ring \\(R\\) is an Abelian group with a multiplicative semigroup that distributes over it. The following properties are satisfied.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in R: \\exists b \\in R: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)"
+        ],
+        "form": [
+            "Note that some texts require a multiplicative identity in a ring. Those texts generally refer to this structure as a \"pseudo-ring\". Conversely, some texts remove the constraint that multiplication be associative."
+        ],
+        "examples": [
+            "The smallest ring is a ring of one element \\(\\{0\\}\\). This is referred to as the zero ring.",
+            "The integers \\(\\mathbb{Z}\\) form a ring under standard addition and multiplication.",
+            "The even integers \\(2 \\mathbb{Z}\\) form a ring under standard addition and multiplication. This example is notable in that it lacks a unity (multiplicative identity) element.",
+            "The set of square matrices \\(\\mathbb{R}^{n \\times n}\\) forms a ring under matrix addition and multiplication for any natural number \\(n\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Rng_(algebra)",
+            "http://mathworld.wolfram.com/Ring.html",
+            "http://www-history.mcs.st-and.ac.uk/~john/MT4517/index.html",
+            "https://www.encyclopediaofmath.org/index.php/Ring"
+        ],
+        "edges": [
+            {
+                "algebra": "Ring - Multiplication",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Ring - Addition",
+                "result": "semigroup"
+            },
+            {
+                "algebra": "Ring - Left Distributivity - Commutativity (Additive)",
+                "result": "nearring"
+            },
+            {
+                "algebra": "Ring - Inverse (Additive)",
+                "result": "semiring"
+            },
+            {
+                "algebra": "Ring + Commutativity (Multiplicative)",
+                "result": "commring"
+            },
+            {
+                "algebra": "Ring + Identity (Multiplicative)",
+                "result": "unitalring"
+            },
+            {
+                "algebra": "Ring + Idempotence (Multiplicative)",
+                "result": "booleanring"
+            },
+            {
+                "algebra": "Ring + Action Space + Left Scalar Multiplication",
+                "result": "leftmodule"
+            },
+            {
+                "algebra": "Ring + Action Space + Right Scalar Multiplication",
+                "result": "rightmodule"
+            },
+            {
+                "algebra": "Ring - Associativity (Multiplicative) + Scalar Field",
+                "result": "algebra"
+            },
+            {
+                "algebra": "Ring + Scalar Field",
+                "result": "assocalgebra"
+            }
+        ]
+    },
+    "commring": {
+        "name": "Commutative Ring",
+        "tagline": "A commutative ring \\(R\\) is a ring in which the multiplication operation is also commutative. Specifically, the following hold.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in R: \\exists b \\in R: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Commutativity (Multiplicative): \\(\\forall a, b \\in R: a b = b a\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)"
+        ],
+        "examples": [
+            "The zero ring \\(\\{0\\}\\) is trivially a commutative ring.",
+            "The integers \\(\\mathbb{Z}\\), rationals \\(\\mathbb{Q}\\), and reals \\(\\mathbb{R}\\) all form commutative rings under the natural addition and multiplication operations."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Commutative_ring",
+            "http://cims.nyu.edu/~kiryl/teaching/aa/les112403.pdf",
+            "https://proofwiki.org/wiki/Definition:Commutative_Ring"
+        ],
+        "edges": [
+            {
+                "algebra": "Commutative Ring - Multiplication",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Commutative Ring - Commutativity (Multiplicative) - Addition",
+                "result": "semigroup"
+            },
+            {
+                "algebra": "Commutative Ring - Commutativity (Multiplicative)",
+                "result": "ring"
+            },
+            {
+                "algebra": "Commutative Ring - Commutativity (Multiplicative) + Idempotence (Multiplicative)",
+                "result": "booleanring"
+            },
+            {
+                "algebra": "Commutative Ring + Nonzero + Nonzero Cancellativity + Identity (Multiplicative)",
+                "result": "integraldomain"
+            },
+            {
+                "algebra": "Commutative Ring + Inverse (Multiplicative) + Identity (Multiplicative) + Nonzero",
+                "result": "field"
+            }
+        ]
+    },
+    "unitalring": {
+        "name": "Unital Ring",
+        "tagline": "A unital ring \\(R\\) is a ring which has a multiplicative identity, often called the unity element. Note that some texts refer to this structure simply as a ring. A unital ring satisfies the following.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in R: \\exists b \\in R: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Identity (Multiplicative): \\(\\exists 1 \\in R: \\forall a \\in R: 1 a = a = a 1\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)"
+        ],
+        "examples": [
+            "The integers \\(\\mathbb{Z}\\), rationals \\(\\mathbb{Q}\\), and reals \\(\\mathbb{R}\\) are all unital rings with the unity element equal to the number \\(1\\).",
+            "The ring of square matrices \\(\\mathbb{R}^{n \\times n}\\) is unital for any natural number \\(n\\). The unity element is the identity matrix \\(I_n\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Ring_(mathematics)",
+            "https://en.wikipedia.org/wiki/Unit_(ring_theory)",
+            "https://proofwiki.org/wiki/Definition:Ring_with_Unity"
+        ],
+        "edges": [
+            {
+                "algebra": "Unital Ring - Multiplication",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Unital Ring - Addition",
+                "result": "monoid"
+            },
+            {
+                "algebra": "Unital Ring - Identity (Multiplicative)",
+                "result": "ring"
+            },
+            {
+                "algebra": "Unital Ring + Nonzero + Nonzero Cancellativity + Commutativity (Multiplicative)",
+                "result": "integraldomain"
+            },
+            {
+                "algebra": "Unital Ring + Nonzero + Inverse (Multiplicative)",
+                "result": "divisionring"
+            },
+            {
+                "algebra": "Unital Ring + Inverse (Multiplicative) + Commutativity (Multiplicative) + Nonzero",
+                "result": "field"
+            }
+        ]
+    },
+    "integraldomain": {
+        "name": "Integral Domain",
+        "tagline": "An integral domain \\(R\\)is a nonzero commutative ring with unity in which the product of any two nonzero elements is nonzero. Precisely, the following properties hold.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in R: \\exists b \\in R: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Identity (Multiplicative): \\(\\exists 1 \\in R: \\forall a \\in R: 1 a = a = a 1\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)",
+            "Nonzero: \\(0 \\neq 1\\)",
+            "Nonzero Cancellativity: \\(\\forall b, c \\in R: \\forall a \\in R - \\{0\\}: a b = a c \\Rightarrow b = c\\)"
+        ],
+        "examples": [
+            "The integers \\(\\mathbb{Z}\\) under the natural operations are the typical example of an integral domain.",
+            "The ring \\(Z_p\\) of nonnegative integers less than \\(p\\) forms an integral domain if and only if \\(p\\) is prime.",
+            "The polynomial ring \\(\\mathbb{R}[x]\\) forms an integral domain."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Integral_domain",
+            "http://mathworld.wolfram.com/IntegralDomain.html",
+            "http://www-history.mcs.st-and.ac.uk/~john/MT4517/Lectures/L4.html",
+            "https://proofwiki.org/wiki/Definition:Integral_Domain",
+            "https://www.encyclopediaofmath.org/index.php/Integral_domain"
+        ],
+        "edges": [
+            {
+                "algebra": "Integral Domain - Multiplication",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Integral Domain - Addition - Zero Element",
+                "result": "monoid"
+            },
+            {
+                "algebra": "Integral Domain - Nonzero - Nonzero Cancellativity - Identity (Multiplicative)",
+                "result": "commring"
+            },
+            {
+                "algebra": "Integral Domain - Nonzero - Nonzero Cancellativity - Commutativity (Multiplicative)",
+                "result": "unitalring"
+            },
+            {
+                "algebra": "Integral Domain + Inverse (Multiplicative)",
+                "result": "field"
+            }
+        ]
+    },
+    "divisionring": {
+        "name": "Division Ring",
+        "alt": ["Skew Field"],
+        "tagline": "A division ring \\(R\\) is a nonzero, unital ring in which every nonzero element has a multiplicative inverse. Division rings are also called skew fields. They satisfy the following properties.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in R: \\exists b \\in R: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Identity (Multiplicative): \\(\\exists 1 \\in R: \\forall a \\in R: 1 a = a = a 1\\)",
+            "Inverse (Multiplicative): \\(\\forall a \\in R: a \\neq 0 \\Rightarrow \\exists b \\in R: a b = b a = 1\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)",
+            "Nonzero: \\(0 \\neq 1\\)"
+        ],
+        "examples": [
+            "The quaternions \\(\\mathbb{H}\\) form a division ring which is not a field."
+        ],
+        "links": [
+            "https://proofwiki.org/wiki/Definition:Division_Ring",
+            "https://en.wikipedia.org/wiki/Division_ring",
+            "https://en.wiktionary.org/wiki/division_ring",
+            "https://www.encyclopediaofmath.org/index.php/Division_ring"
+        ],
+        "edges": [
+            {
+                "algebra": "Division Ring - Multiplication",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Division Ring - Addition - Zero Element",
+                "result": "group"
+            },
+            {
+                "algebra": "Division Ring - Inverse (Multiplicative)",
+                "result": "unitalring"
+            },
+            {
+                "algebra": "Division Ring + Commutativity (Multiplicative)",
+                "result": "field"
+            }
+        ]
+    },
+    "field": {
+        "name": "Field",
+        "tagline": "A field \\(F\\) is a nonzero ring whose nonzero elements form an Abelian group under multiplication. They satisfy the following properties.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in F: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in F: \\forall a \\in F: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in F: \\exists b \\in F: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in F: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in F: (a b) c = a (b c)\\)",
+            "Identity (Multiplicative): \\(\\exists 1 \\in F: \\forall a \\in F: 1 a = a = a 1\\)",
+            "Inverse (Multiplicative): \\(\\forall a \\in F: a \\neq 0 \\Rightarrow \\exists b \\in F: a b = b a = 1\\)",
+            "Commutativity (Multiplicative): \\(\\forall a, b \\in F: a b = b a\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in F: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in F: (a + b) c = a c + b c\\)",
+            "Nonzero: \\(0 \\neq 1\\)"
+        ],
+        "examples": [
+            "The ring \\(Z_p\\) of nonnegative integers less than \\(p\\) form a field if and only if \\(p\\) is prime.",
+            "The real numbers \\(\\mathbb{R}\\) and the rational numbers \\(\\mathbb{Q}\\) form fields under the natural operations."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Field_(mathematics)",
+            "http://mathworld.wolfram.com/Field.html",
+            "https://proofwiki.org/wiki/Definition:Field_(Abstract_Algebra)",
+            "https://www.encyclopediaofmath.org/index.php/Field"
+        ],
+        "edges": [
+            {
+                "algebra": "Field - Multiplication",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Field - Addition - Zero Element",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Field - Commutativity (Multiplicative)",
+                "result": "divisionring"
+            },
+            {
+                "algebra": "Field - Inverse (Multiplicative) - Identity (Multiplicative) - Nonzero",
+                "result": "commring"
+            },
+            {
+                "algebra": "Field - Inverse (Multiplicative) - Commutativity (Multiplicative) - Nonzero",
+                "result": "unitalring"
+            },
+            {
+                "algebra": "Field - Inverse (Multiplicative) + Nonzero Cancellativity",
+                "result": "integraldomain"
+            },
+            {
+                "algebra": "Field + Exponential Function",
+                "result": "expfield"
+            },
+            {
+                "algebra": "Field + Order Structure",
+                "result": "orderedfield"
+            },
+            {
+                "algebra": "Field + Action Space",
+                "result": "vectorspace"
+            },
+            {
+                "algebra": "Field + Action Space + Vector Multiplication",
+                "result": "algebra"
+            },
+            {
+                "algebra": "Field + Action Space + Vector Multiplication + Associativity (Vector Multiplicative)",
+                "result": "assocalgebra"
+            }
+        ]
+    },
+    "expfield": {
+        "name": "Exponential Field",
+        "tagline": "An exponential field \\(F\\) is a field with an additional function \\(E : F \rightarrow F\\) that is called the exponential function and is required to be a homomorphism from the additive group of \\(F\\) to the multiplicative group of \\(F\\). The exponential field as a whole satisfies the following properties.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in F: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in F: \\forall a \\in F: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in F: \\exists b \\in F: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in F: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in F: (a b) c = a (b c)\\)",
+            "Identity (Multiplicative): \\(\\exists 1 \\in F: \\forall a \\in F: 1 a = a = a 1\\)",
+            "Inverse (Multiplicative): \\(\\forall a \\in F: a \\neq 0 \\Rightarrow \\exists b \\in F: a b = b a = 1\\)",
+            "Commutativity (Multiplicative): \\(\\forall a, b \\in F: a b = b a\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in F: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in F: (a + b) c = a c + b c\\)",
+            "Nonzero: \\(0 \\neq 1\\)",
+            "Exponential Preservation: \\(\\forall a, b \\in F: E(a + b) = E(a) E(b)\\)",
+            "Exponential Identity: \\(E(0) = 1\\)"
+        ],
+        "examples": [
+            "Every field gives rise to a trivial exponential field defined by \\(E(x) = 1\\).",
+            "The field of real numbers \\(\\mathbb{R}\\) forms infinitely many distinct exponential fields. For any positive real number \\(a\\), a corresponding exponential function can be defined \\(E(x) = a^x\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Exponential_field"
+        ],
+        "edges": [
+            {
+                "algebra": "Exponential Field - Exponential Function",
+                "result": "field"
+            }
+        ]
+    },
+    "proset": {
+        "name": "Proset",
+        "alt": ["Preorder"],
+        "tagline": "A proset \\(P\\) is a set equipped with a relation, usually denoted \\(\\le\\), which is transitive and reflexive. The relation is called a preorder or quasiorder. The following properties are met.",
+        "props": [
+            "Reflexivity: \\(\\forall a \\in P: a \\le a\\)",
+            "Transitivity: \\(\\forall a, b, c \\in P: a \\le b \\wedge b \\le c \\Rightarrow a \\le b\\)"
+        ],
+        "examples": [
+            "Given a directed graph, the \"reachability\" relation defined so that \\(a \\le b\\) if and only if there exists an \\(a b\\)-path is a proset."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Preorder",
+            "http://mathworld.wolfram.com/Preorder.html"
+        ],
+        "edges": [
+            {
+                "algebra": "Proset - Reflexivity - Transitivity",
+                "result": "relation"
+            },
+            {
+                "algebra": "Proset + Antisymmetry",
+                "result": "poset"
+            },
+            {
+                "algebra": "Proset + Symmetry",
+                "result": "setoid"
+            }
+        ]
+    },
+    "poset": {
+        "name": "Poset",
+        "alt": ["Partial Ordering"],
+        "tagline": "A poset is a set \\(P\\) equipped with a relation \\(\\le\\) which is reflexive, antisymmetric, and transitive. The relation is called a partial order. More precisely, the following are satisfied.",
+        "props": [
+            "Reflexivity: \\(\\forall a \\in P: a \\le a\\)",
+            "Antisymmetry: \\(\\forall a, b \\in P: a \\le b \\wedge b \\le a \\Rightarrow a = b\\)",
+            "Transitivity: \\(\\forall a, b, c \\in P: a \\le b \\wedge b \\le c \\Rightarrow a \\le b\\)"
+        ],
+        "examples": [
+            "For any set \\(S\\), the power set \\(\\mathcal{P}(S)\\) forms a partial ordering on the relation of subset \\(\\subseteq\\).",
+            "The integers \\(\\mathbb{Z}\\) form a partial ordering under the relation of divisibility \\(a \\le b \\Leftrightarrow a | b"
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Partially_ordered_set",
+            "https://www.encyclopediaofmath.org/index.php/Partially_ordered_set",
+            "https://proofwiki.org/wiki/Definition:Partial_Ordering"
+        ],
+        "edges": [
+            {
+                "algebra": "Poset - Antisymmetry",
+                "result": "proset"
+            },
+            {
+                "algebra": "Poset + Totality",
+                "result": "chain"
+            },
+            {
+                "algebra": "Poset + Greatest Lower Bound",
+                "result": "semilattice"
+            },
+            {
+                "algebra": "Poset + Least Upper Bound",
+                "result": "semilattice"
+            }
+        ]
+    },
+    "setoid": {
+        "name": "Setoid",
+        "alt": ["Equivalence Relation", "Partition"],
+        "tagline": "A setoid \\(S\\) is a set equipped with an equivalence relation \\(\\sim\\) which is reflexive, symmetric, and transitive. Formally, the following properties are satisfied.",
+        "props": [
+            "Reflexivity: \\(\\forall a \\in S: a \\sim a\\)",
+            "Symmetry: \\(\\forall a, b \\in S: a \\sim b \\Rightarrow b \\sim a\\)",
+            "Transitivity: \\(\\forall a, b, c \\in S: a \\sim b \\wedge b \\sim c \\Rightarrow a \\sim b\\)"
+        ],
+        "form": [
+            "A setoid can also be defined in terms of its partitions, or equivalence classes. An equivalence relation \\(S\\) defined in this way is defined as a set of nonempty subsets \\(S_i\\) of the underlying set, with the property that the intersection of any two such distinct subsets is the empty set and that the union of all the \\(S_i\\) subsets is the original set."
+        ],
+        "examples": [
+            "Equality forms an equivalence relation that makes every set a setoid. That is, \\(a \\sim b \\Leftrightarrow a = b\\).",
+            "Another trivial equivalence relation comes about by relating every element to every other element so that \\(a \\sim b\\) is true for all \\(a\\) and \\(b\\).",
+            "Parity on the integers forms an equivalence relation, defined as \\(a \\sim b\\) iff \\(a\\) and \\(b\\) are either both even or both odd."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Equivalence_relation",
+            "https://www.encyclopediaofmath.org/index.php/Equivalence_relation"
+        ],
+        "edges": [
+            {
+                "algebra": "Setoid - Symmetry",
+                "result": "proset"
+            },
+            {
+                "algebra": "Setoid - Reflexivity",
+                "result": "partialsetoid"
+            }
+        ]
+    },
+    "chain": {
+        "name": "Chain",
+        "alt": ["Totally Ordered Set"],
+        "tagline": "A chain \\(X\\) is a set equipped with a total order. The following properties are satisfied by a chain.",
+        "props": [
+            "Reflexivity: \\(\\forall a \\in X: a \\le a\\)",
+            "Antisymmetry: \\(\\forall a, b \\in X: a \\le b \\wedge b \\le a \\Rightarrow a = b\\)",
+            "Transitivity: \\(\\forall a, b, c \\in X: a \\le b \\wedge b \\le c \\Rightarrow a \\le b\\)",
+            "Totality: \\(\\forall a, b \\in X: a \\le b \\vee b \\le a\\)"
+        ],
+        "examples": [
+            "The standard ordering on the integers \\(\\mathbb{Z}\\) is a total ordering. Likewise, the rationals \\(\\mathbb{Q}\\) and the reals \\(\\mathbb{R}\\) form a chain under the natural ordering.",
+            "Given an ordered alphabet \\(\\Sigma\\), the set \\(\\Sigma^*\\) of strings over the alphabet is totally ordered under the lexicographical ordering, also called dictionary ordering."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Total_order",
+            "https://www.encyclopediaofmath.org/index.php/Totally_ordered_set",
+            "https://proofwiki.org/wiki/Definition:Total_Ordering"
+        ],
+        "edges": [
+            {
+                "algebra": "Chain - Totality",
+                "result": "poset"
+            },
+            {
+                "algebra": "Chain + Well-Ordering Property",
+                "result": "wellorder"
+            },
+            {
+                "algebra": "Chain + Field Structure",
+                "result": "orderedfield"
+            }
+        ]
+    },
+    "wellorder": {
+        "name": "Well-Ordered Set",
+        "tagline": "A well-ordered set \\(S\\) is a totally ordered set in which every subset has a least element. Formally speaking, the following holds.",
+        "props": [
+            "Reflexivity: \\(\\forall a \\in S: a \\le a\\)",
+            "Antisymmetry: \\(\\forall a, b \\in S: a \\le b \\wedge b \\le a \\Rightarrow a = b\\)",
+            "Transitivity: \\(\\forall a, b, c \\in S: a \\le b \\wedge b \\le c \\Rightarrow a \\le b\\)",
+            "Totality: \\(\\forall a, b \\in S: a \\le b \\vee b \\le a\\)",
+            "Well-Ordering Property: \\(\\forall X \\in P(S): \\exists l \\in X: \\forall x \\in X: l \\le x\\)"
+        ],
+        "examples": [
+            "Any set of ordinal numbers is well-ordered. As well, every individual ordinal number is well-ordered. Every well-ordered set is order isomorphic to exactly one ordinal number.",
+            "The set of natural numbers \\(\\mathbb{N}\\) is well-ordered under the natural ordering."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Well-order"
+        ],
+        "edges": [
+            {
+                "algebra": "Well-Ordered Set - Well-Ordering Property",
+                "result": "chain"
+            }
+        ]
+    },
+    "relation": {
+        "name": "Relation",
+        "tagline": "A relation \\(R\\) on a set \\(S\\) is a subset of \\(S \\times S\\).",
+        "props": [],
+        "examples": [
+            "The empty relation on any set relates no elements."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Binary_relation",
+            "https://en.wikipedia.org/wiki/Directed_graph",
+            "https://proofwiki.org/wiki/Definition:Directed_Graph"
+        ],
+        "edges": [
+            {
+                "algebra": "Relation - Binary Relation",
+                "result": "set"
+            },
+            {
+                "algebra": "Directed Graph + Reflexivity + Transitivity",
+                "result": "proset"
+            },
+            {
+                "algebra": "Relation + Irreflexivity",
+                "result": "directedgraph"
+            }
+        ]
+    },
+    "directedgraph": {
+        "name": "Directed Graph",
+        "tagline": "A directed graph \\(G\\) is a set of vertices and an irreflexive binary relation, often referred to as the edge set.",
+        "props": [
+            "Irreflexivity: \\(\\forall a \\in G: a \\nsim a\\)"
+        ],
+        "examples": [
+            "Any set trivially forms a directed graph with no edges."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Binary_relation",
+            "https://en.wikipedia.org/wiki/Directed_graph",
+            "https://proofwiki.org/wiki/Definition:Directed_Graph"
+        ],
+        "edges": [
+            {
+                "algebra": "Directed Graph - Irreflexivity",
+                "result": "relation"
+            },
+            {
+                "algebra": "Directed Graph + Symmetry",
+                "result": "graph"
+            }
+        ]
+    },
+    "graph": {
+        "name": "Graph",
+        "tagline": "A graph \\(G\\) is a set of vertices and a binary relation, often referred to as the edge set and denoted \\(\\sim\\), in which the relation is symmetric and irreflexive. Formally, the following properties hold.",
+        "props": [
+            "Irreflexivity: \\(\\forall a \\in G: a \\nsim a\\)",
+            "Symmetry: \\(\\forall a, b \\in G: a \\sim b \\Rightarrow b \\sim a\\)"
+        ],
+        "examples": [
+            "The complete graph \\(K_n\\) is the graph with \\(n\\) vertices where every vertex is adjacent to every other vertex."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)",
+            "https://www.tutorialspoint.com/discrete_mathematics/graph_and_graph_models.htm",
+            "https://proofwiki.org/wiki/Definition:Graph_(Graph_Theory)",
+            "https://www.encyclopediaofmath.org/index.php/Graph"
+        ],
+        "edges": [
+            {
+                "algebra": "Graph - Symmetry",
+                "result": "directedgraph"
+            },
+            {
+                "algebra": "Graph + Connectivity",
+                "result": "connectedgraph"
+            },
+            {
+                "algebra": "Graph + Acyclic Property",
+                "result": "forest"
+            },
+            {
+                "algebra": "Graph - Irreflexivity + Transitivity",
+                "result": "partialsetoid"
+            }
+        ]
+    },
+    "partialsetoid": {
+        "name": "Partial Setoid",
+        "alt": ["Partial Equivalence Relation"],
+        "tagline": "A partial setoid \\(X\\) is a set equipped with a partial equivalence relation \\(\\sim\\), meaning it satisfies transitivity and symmetry. Specifically, the following hold.",
+        "props": [
+            "Symmetry: \\(\\forall a, b \\in S: a \\sim b \\Rightarrow b \\sim a\\)",
+            "Transitivity: \\(\\forall a, b, c \\in S: a \\sim b \\wedge b \\sim c \\Rightarrow a \\sim b\\)"
+        ],
+        "examples": [
+            "Any setoid \\(S\\) can be made a non-setoid which is a partial setoid by introducing a \"bottom\" element \\(\\perp\\) which is not equal to itself or any other element in the setoid."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Partial_equivalence_relation"
+        ],
+        "edges": [
+            {
+                "algebra": "Partial Setoid + Reflexivity",
+                "result": "setoid"
+            },
+            {
+                "algebra": "Partial Setoid - Transitivity + Irreflexivity",
+                "result": "graph"
+            }
+        ]
+    },
+    "orderedfield": {
+        "name": "Ordered Field",
+        "tagline": "An ordered field \\(F\\) is a field equipped with a total ordering \\(\\le\\) that is well behaved with respect to the operations of the field. That is, the following hold.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in F: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in F: \\forall a \\in F: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in F: \\exists b \\in F: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in F: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in F: (a b) c = a (b c)\\)",
+            "Identity (Multiplicative): \\(\\exists 1 \\in F: \\forall a \\in F: 1 a = a = a 1\\)",
+            "Inverse (Multiplicative): \\(\\forall a \\in F: a \\neq 0 \\Rightarrow \\exists b \\in F: a b = b a = 1\\)",
+            "Commutativity (Multiplicative): \\(\\forall a, b \\in F: a b = b a\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in F: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in F: (a + b) c = a c + b c\\)",
+            "Nonzero: \\(0 \\neq 1\\)",
+            "Reflexivity: \\(\\forall a \\in F: a \\le a\\)",
+            "Antisymmetry: \\(\\forall a, b \\in F: a \\le b \\wedge b \\le a \\Rightarrow a = b\\)",
+            "Transitivity: \\(\\forall a, b, c \\in F: a \\le b \\wedge b \\le c \\Rightarrow a \\le b\\)",
+            "Totality: \\(\\forall a, b \\in X: a \\le b \\vee b \\le a\\)",
+            "Order Preservation: \\(\\forall a, b, c \\in F: a \\le b \\Rightarrow a + c \\le b + c\\)",
+            "Order Positivity: \\(\\forall a, b \\in F: 0 \\le a \\wedge 0 \\le b \\Rightarrow 0 \\le a b\\)"
+        ],
+        "examples": [
+            "The rational numbers \\(\\mathbb{Q}\\) are the typical example of an ordered field, under the natural operations and relation.",
+            "The real numbers \\(\\mathbb{R}\\) form an ordered field under its natural operations and natural ordering as well."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Ordered_field",
+            "https://www.encyclopediaofmath.org/index.php/Ordered_field"
+        ],
+        "edges": [
+            {
+                "algebra": "Ordered Field - Field Structure",
+                "result": "chain"
+            },
+            {
+                "algebra": "Ordered Field - Order Structure",
+                "result": "field"
+            }
+        ]
+    },
+    "booleanring": {
+        "name": "Boolean Ring",
+        "tagline": "A Boolean ring \\(R\\) is a ring in which every element is idempotent. Specifically, the following hold.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in R: \\exists b \\in R: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Idempotence (Multiplicative): \\(\\forall a \\in R: a^2 = a\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)"
+        ],
+        "examples": [
+            "The power set \\(\\mathcal{P}(S)\\) of any set \\(S\\) is a Boolean ring, with addition defined as the symmetric set difference and multiplication defined to be set intersection."
+        ],
+        "links": [
+            "http://mathworld.wolfram.com/BooleanRing.html",
+            "https://en.wikipedia.org/wiki/Boolean_ring",
+            "https://www.encyclopediaofmath.org/index.php/Boolean_ring"
+        ],
+        "edges": [
+            {
+                "algebra": "Boolean Ring - Multiplication",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Boolean Ring - Addition",
+                "result": "band"
+            },
+            {
+                "algebra": "Boolean Ring - Idempotence (Multiplicative)",
+                "result": "ring"
+            },
+            {
+                "algebra": "Boolean Ring + Commutativity (Multiplicative)",
+                "result": "commring"
+            }
+        ]
+    },
+    "connectedgraph": {
+        "name": "Connected Graph",
+        "tagline": "A connected graph \\(G\\)is an undirected graph in which there is a path between any two distinct vertices. Specifically, a connected graph meets the following requirements.",
+        "props": [
+            "Irreflexivity: \\(\\forall a \\in G: a \\nsim a\\)",
+            "Symmetry: \\(\\forall a, b \\in G: a \\sim b \\Rightarrow b \\sim a\\)",
+            "Connectivity: \\(\\forall X \\in P(G): (\\exists x \\in X) \\wedge (\\exists y \\in G - X) \\Rightarrow \\exists x \\in X: \\exists y \\in G - X: x \\sim y\\)"
+        ],
+        "examples": [
+            "The complete graph \\(K_n\\) is trivially a connected graph for any \\(n\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Connectivity_(graph_theory)#Connected_graph"
+        ],
+        "edges": [
+            {
+                "algebra": "Connected Graph - Connectivity",
+                "result": "graph"
+            },
+            {
+                "algebra": "Connected Graph + Acyclic Property",
+                "result": "tree"
+            }
+        ]
+    },
+    "forest": {
+        "name": "Forest",
+        "tagline": "A forest \\(T\\) is an undirected graph which contains no cycles. More precisely, the following hold.",
+        "props": [
+            "Irreflexivity: \\(\\forall a \\in T: a \\nsim a\\)",
+            "Symmetry: \\(\\forall a, b \\in T: a \\sim b \\Rightarrow b \\sim a\\)",
+            "Acyclic Property: \\(\\forall x, y \\in T: \\exists! p \\in paths(T): x = p_0 \\wedge y = p_n\\)"
+        ],
+        "examples": [
+            "The trivial graph with no edges and any number of vertices is a forest."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Tree_(graph_theory)#Forest"
+        ],
+        "edges": [
+            {
+                "algebra": "Forest - Connectivity",
+                "result": "tree"
+            },
+            {
+                "algebra": "Forest - Acyclic Property",
+                "result": "graph"
+            }
+        ]
+    },
+    "tree": {
+        "name": "Tree",
+        "tagline": "A tree \\(T\\) is an undirected graph which is connected and acyclic. That is, the following properties hold.",
+        "props": [
+            "Irreflexivity: \\(\\forall a \\in T: a \\nsim a\\)",
+            "Symmetry: \\(\\forall a, b \\in T: a \\sim b \\Rightarrow b \\sim a\\)",
+            "Connectivity: \\(\\forall X \\in P(T): (\\exists x \\in X) \\wedge (\\exists y \\in T - X) \\Rightarrow \\exists x \\in X: \\exists y \\in T - X: x \\sim y\\)",
+            "Acyclic Property: \\(\\forall x, y \\in T: \\exists! p \\in paths(T): x = p_0 \\wedge y = p_n\\)"
+        ],
+        "examples": [
+            "A maze with no cycles forms a tree."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Tree_(graph_theory)",
+            "https://www.tutorialspoint.com/discrete_mathematics/introduction_to_trees.htm"
+        ],
+        "edges": [
+            {
+                "algebra": "Tree - Acyclic Property",
+                "result": "connectedgraph"
+            },
+            {
+                "algebra": "Tree - Connectivity",
+                "result": "forest"
+            }
+        ]
+    },
+    "omegagroup": {
+        "name": "&Omega;-group",
+        "alt": ["Group with Operators"],
+        "tagline": "An &Omega;-group \\(G\\) is a group with an set \\(\\Omega\\), called the operator domain, and a function from \\(G \\times \\Omega\\) to \\(G\\) denoted using exponential notation \\(g^\\omega\\). The structure must satisfy the following properties.",
+        "props": [
+            "Associativity: \\(\\forall a, b, c \\in G: (a b) c = a (b c)\\)",
+            "Identity: \\(\\exists e \\in G: \\forall a \\in G: e a = a = a e\\)",
+            "Inverse: \\(\\forall a \\in G: \\exists b \\in G: a b = b a = e\\)",
+            "Distributivity: \\(\\forall a, b \\in G: \\forall \\omega \\in \\Omega: (a b)^\\omega = a^\\omega b^\\omega\\)"
+        ],
+        "examples": [
+            "Trivially, any group \\(G\\) gives rise to an &Omega;-group with an empty operator domain."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Group_with_operators"
+        ],
+        "edges": [
+            {
+                "algebra": "&Omega;-group - Operator Domain",
+                "result": "group"
+            }
+        ]
+    },
+    "groupaction": {
+        "name": "Group Action",
+        "tagline": "A group action \\(G\\) is a group together with a set \\(X\\) and an acting function \\(\\phi : G \\times X \\rightarrow X\\). The acting function is often denoted with a simple dot \\(\\phi(g, x) = g . x\\). The group action satisfies the following coherence conditions.",
+        "props": [
+            "Associativity: \\(\\forall a, b, c \\in G: (a b) c = a (b c)\\)",
+            "Identity: \\(\\exists e \\in G: \\forall a \\in G: e a = a = a e\\)",
+            "Inverse: \\(\\forall a \\in G: \\exists b \\in G: a b = b a = e\\)",
+            "Identity Preservation: \\(\\forall x \\in X: e . x = x\\)",
+            "Compatibility: \\(\\forall g, h \\in G: \\forall x \\in X: (g h) . x = g . (h . x)\\)"
+        ],
+        "examples": [
+            "There exists a trivial action on any group defined by \\(g . x = x\\).",
+            "Group conjugation is a group action onto the group itself. That is, \\(g . x = g^{-1} x g\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Group_action"
+        ],
+        "edges": [
+            {
+                "algebra": "Group Action - Action Space",
+                "result": "group"
+            }
+        ]
+    },
+    "leftmodule": {
+        "name": "Left Module",
+        "tagline": "A left \\(R\\)-module \\(M\\), for a ring \\(R\\), is an Abelian group which defines a scalar multiplication \\(\\phi : R \\times M \\rightarrow M\\) (denoted here using a dot to differentiate from ring multiplication) satisfying the following conditions.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in R: \\exists b \\in R: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)",
+            "Associativity (Vector): \\(\\forall a, b, c \\in A: (a + b) + c = a + (b + c)\\)",
+            "Identity (Vector): \\(\\exists 0 \\in A: \\forall a \\in A: 0 + a = a = a + 0\\)",
+            "Inverse (Vector): \\(\\forall a \\in A: \\exists b \\in A: a + b = b + a = 0\\)",
+            "Commutativity (Vector): \\(\\forall a, b \\in A: a + b = b + a\\)",
+            "Compatibility: \\(\\forall a, b \\in R: \\forall x \\in M: (a b) . x = a . (b . x)\\)",
+            "Left Vector Distributivity: \\(\\forall a \\in R: \\forall x, y \\in X: a . (x + y) = a . x + a . y\\)",
+            "Right Vector Distributivity: \\(\\forall a, b \\in R: \\forall x \\in X: (a + b) . x = a . x + b . x\\)"
+        ],
+        "examples": [
+            "Every ring \\(R\\) results in the \\(R\\)-module of \\(R^n\\) for every natural number \\(n\\), formed by pointwise addition and scalar multiplication."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Module_(mathematics)"
+        ],
+        "edges": [
+            {
+                "algebra": "Left Module + Right Scalar Multiplication",
+                "result": "bimodule"
+            },
+            {
+                "algebra": "Left Module - Scalar Ring",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Left Module - Action Space",
+                "result": "ring"
+            }
+        ]
+    },
+    "rightmodule": {
+        "name": "Right Module",
+        "tagline": "A right \\(R\\)-module \\(M\\), for a ring \\(R\\), is an Abelian group which defines a scalar multiplication \\(\\phi : M \\times R \\rightarrow M\\) (denoted here using a dot to differentiate from ring multiplication) satisfying the following conditions.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in R: \\exists b \\in R: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Associativity (Vector): \\(\\forall a, b, c \\in A: (a + b) + c = a + (b + c)\\)",
+            "Identity (Vector): \\(\\exists 0 \\in A: \\forall a \\in A: 0 + a = a = a + 0\\)",
+            "Inverse (Vector): \\(\\forall a \\in A: \\exists b \\in A: a + b = b + a = 0\\)",
+            "Commutativity (Vector): \\(\\forall a, b \\in A: a + b = b + a\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)",
+            "Compatibility: \\(\\forall a, b \\in R: \\forall x \\in M: x . (a b) = (x . a) . b\\)",
+            "Left Vector Distributivity: \\(\\forall a, b \\in R: \\forall x \\in X: x . (a + b) = x . a + x . b\\)",
+            "Right Vector Distributivity: \\(\\forall a \\in R: \\forall x, y \\in X: (x + y) . a = x . a + y . a\\)"
+        ],
+        "examples": [
+            "Every ring \\(R\\) results in the \\(R\\)-module of \\(R^n\\) for every natural number \\(n\\), formed by pointwise addition and scalar multiplication."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Module_(mathematics)"
+        ],
+        "edges": [
+            {
+                "algebra": "Right Module + Left Scalar Multiplication",
+                "result": "bimodule"
+            },
+            {
+                "algebra": "Right Module - Scalar Ring",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Right Module - Action Space",
+                "result": "ring"
+            }
+        ]
+    },
+    "bimodule": {
+        "name": "Bimodule",
+        "tagline": "An \\(R\\)-\\(S\\)-bimodule for rings \\(R\\) and \\(S\\) is a left \\(R\\)-module and a right \\(S\\)-module in which the multiplication operations are compatible. Specifically, the following hold.",
+        "props": [
+            "Associativity (Additive, Left): \\(\\forall a, b, c \\in R: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive, Left): \\(\\exists 0 \\in R: \\forall a \\in R: 0 + a = a = a + 0\\)",
+            "Inverse (Additive, Left): \\(\\forall a \\in R: \\exists b \\in R: a + b = b + a = 0\\)",
+            "Commutativity (Additive, Left): \\(\\forall a, b \\in R: a + b = b + a\\)",
+            "Associativity (Multiplicative, Left): \\(\\forall a, b, c \\in R: (a b) c = a (b c)\\)",
+            "Left Distributivity (Left): \\(\\forall a, b, c \\in R: a (b + c) = a b + a c\\)",
+            "Right Distributivity (Left): \\(\\forall a, b, c \\in R: (a + b) c = a c + b c\\)",
+            "Compatibility (Left): \\(\\forall a, b \\in R: \\forall x \\in M: (a b) . x = a . (b . x)\\)",
+            "Left Vector Distributivity (Left): \\(\\forall a \\in R: \\forall x, y \\in X: a . (x + y) = a . x + a . y\\)",
+            "Right Vector Distributivity (Left): \\(\\forall a, b \\in R: \\forall x \\in X: (a + b) . x = a . x + b . x\\)",
+            "Associativity (Additive, Right): \\(\\forall a, b, c \\in S: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive, Right): \\(\\exists 0 \\in S: \\forall a \\in S: 0 + a = a = a + 0\\)",
+            "Inverse (Additive, Right): \\(\\forall a \\in S: \\exists b \\in S: a + b = b + a = 0\\)",
+            "Commutativity (Additive, Right): \\(\\forall a, b \\in S: a + b = b + a\\)",
+            "Associativity (Multiplicative, Right): \\(\\forall a, b, c \\in S: (a b) c = a (b c)\\)",
+            "Left Distributivity (Right): \\(\\forall a, b, c \\in S: a (b + c) = a b + a c\\)",
+            "Right Distributivity (Right): \\(\\forall a, b, c \\in S: (a + b) c = a c + b c\\)",
+            "Compatibility (Right): \\(\\forall a, b \\in S: \\forall x \\in M: x . (a b) = (x . a) . b\\)",
+            "Left Vector Distributivity (Right): \\(\\forall a, b \\in S: \\forall x \\in X: x . (a + b) = x . a + x . b\\)",
+            "Right Vector Distributivity (Right): \\(\\forall a \\in S: \\forall x, y \\in X: (x + y) . a = x . a + y . a\\)",
+            "Associativity (Vector): \\(\\forall a, b, c \\in A: (a + b) + c = a + (b + c)\\)",
+            "Identity (Vector): \\(\\exists 0 \\in A: \\forall a \\in A: 0 + a = a = a + 0\\)",
+            "Inverse (Vector): \\(\\forall a \\in A: \\exists b \\in A: a + b = b + a = 0\\)",
+            "Commutativity (Vector): \\(\\forall a, b \\in A: a + b = b + a\\)",
+            "Bimodule Compatibility: \\(\\forall a \\in R: \\forall b \\in S: \\forall x \\in M: (r . m) . s = r . (m . s)\\)"
+        ],
+        "examples": [
+            "Every ring \\(R\\) forms an \\(R\\)-bimodule over itself, with scalar multiplication defined as ring multiplication."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Bimodule",
+            "https://www.encyclopediaofmath.org/index.php/Bimodule"
+        ],
+        "edges": [
+            {
+                "algebra": "Bimodule - Right Scalar Multiplication",
+                "result": "leftmodule"
+            },
+            {
+                "algebra": "Bimodule - Left Scalar Multiplication",
+                "result": "rightmodule"
+            },
+            {
+                "algebra": "Bimodule + Commutativity (Multiplicative) + Inverse (Multiplicative)",
+                "result": "vectorspace"
+            }
+        ]
+    },
+    "vectorspace": {
+        "name": "Vector Space",
+        "tagline": "A vector space \\(V\\) over a field \\(F\\) is an Abelian group on which scalar multiplication is defined and is compatible with the field operations. Specifically, the following axioms hold.",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in F: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in F: \\forall a \\in F: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in F: \\exists b \\in F: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in F: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in F: (a b) c = a (b c)\\)",
+            "Identity (Multiplicative): \\(\\exists 1 \\in F: \\forall a \\in F: 1 a = a = a 1\\)",
+            "Inverse (Multiplicative): \\(\\forall a \\in F: a \\neq 0 \\Rightarrow \\exists b \\in F: a b = b a = 1\\)",
+            "Commutativity (Multiplicative): \\(\\forall a, b \\in F: a b = b a\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in F: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in F: (a + b) c = a c + b c\\)",
+            "Nonzero: \\(0 \\neq 1\\)",
+            "Associativity (Vector): \\(\\forall a, b, c \\in A: (a + b) + c = a + (b + c)\\)",
+            "Identity (Vector): \\(\\exists 0 \\in A: \\forall a \\in A: 0 + a = a = a + 0\\)",
+            "Inverse (Vector): \\(\\forall a \\in A: \\exists b \\in A: a + b = b + a = 0\\)",
+            "Commutativity (Vector): \\(\\forall a, b \\in A: a + b = b + a\\)",
+            "Compatibility: \\(\\forall a, b \\in F: \\forall x \\in V: (a b) . x = a . (b . x)\\)",
+            "Left Vector Distributivity: \\(\\forall a \\in F: \\forall x, y \\in V: a . (x + y) = a . x + a . y\\)",
+            "Right Vector Distributivity: \\(\\forall a, b \\in F: \\forall x \\in V: (a + b) . x = a . x + b . x\\)",
+            "Scalar Identity: \\(\\forall v \\in V: 1 . v = v\\)"
+        ],
+        "examples": [
+            "The basic example of a vector space over \\(F\\) is \\(F^k\\) for some natural number \\(k\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Vector_space",
+            "https://www.encyclopediaofmath.org/index.php/Vector_space"
+        ],
+        "edges": [
+            {
+                "algebra": "Vector Space - Commutativity (Multiplicative) - Inverse (Multiplicative) + Separate Scalar Multiplications",
+                "result": "bimodule"
+            },
+            {
+                "algebra": "Vector Space - Scalar Field",
+                "result": "abgroup"
+            },
+            {
+                "algebra": "Vector Space - Action Space",
+                "result": "field"
+            },
+            {
+                "algebra": "Vector Space + Vector Product",
+                "result": "algebra"
+            }
+        ]
+    },
+    "algebra": {
+        "name": "Algebra",
+        "tagline": "An algebra \\(A\\) over a field \\(F\\) is a vector space coupled with a bilinear vector product, denoted here with a middle dot \\(\\cdot\\).",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in F: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in F: \\forall a \\in F: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in F: \\exists b \\in F: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in F: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in F: (a b) c = a (b c)\\)",
+            "Identity (Multiplicative): \\(\\exists 1 \\in F: \\forall a \\in F: 1 a = a = a 1\\)",
+            "Inverse (Multiplicative): \\(\\forall a \\in F: a \\neq 0 \\Rightarrow \\exists b \\in F: a b = b a = 1\\)",
+            "Commutativity (Multiplicative): \\(\\forall a, b \\in F: a b = b a\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in F: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in F: (a + b) c = a c + b c\\)",
+            "Nonzero: \\(0 \\neq 1\\)",
+            "Associativity (Vector): \\(\\forall a, b, c \\in A: (a + b) + c = a + (b + c)\\)",
+            "Identity (Vector): \\(\\exists 0 \\in A: \\forall a \\in A: 0 + a = a = a + 0\\)",
+            "Inverse (Vector): \\(\\forall a \\in A: \\exists b \\in A: a + b = b + a = 0\\)",
+            "Commutativity (Vector): \\(\\forall a, b \\in A: a + b = b + a\\)",
+            "Compatibility: \\(\\forall a, b \\in F: \\forall x \\in A: (a b) . x = a . (b . x)\\)",
+            "Left Vector Distributivity: \\(\\forall a \\in F: \\forall x, y \\in A: a . (x + y) = a . x + a . y\\)",
+            "Right Vector Distributivity: \\(\\forall a, b \\in F: \\forall x \\in A: (a + b) . x = a . x + b . x\\)",
+            "Scalar Identity: \\(\\forall a \\in A: 1 . a = a\\)",
+            "Left Linearity: \\(\\forall x, y, z \\in A: x \\cdot (y + z) = x \\cdot y + x \\cdot z\\)",
+            "Right Linearity: \\(\\forall x, y, z \\in A: (x + y) \\cdot z = x \\cdot z + y \\cdot z\\)",
+            "Scalar compatibility: \\(\\forall x, y \\in A: \\forall a, b \\in F: (a . x) \\cdot (b . y) = (a b) . (x \\cdot y)\\)"
+        ],
+        "examples": [
+            "The set \\(\\mathbb{C}\\) of complex numbers forms an algebra over \\(\\mathbb{R}\\), with the vector product defined as the complex product.",
+            "The vector space \\(\\mathbb{R}^3\\) over \\(\\mathbb{R}\\) forms an algebra under the cross product operation."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Algebra_over_a_field"
+        ],
+        "edges": [
+            {
+                "algebra": "Algebra - Vector Product",
+                "result": "vectorspace"
+            },
+            {
+                "algebra": "Algebra - Scalar Field + Associativity (Vector Multiplicative)",
+                "result": "ring"
+            },
+            {
+                "algebra": "Algebra - Action Space",
+                "result": "field"
+            },
+            {
+                "algebra": "Algebra + Associativity (Vector Multiplicative)",
+                "result": "assocalgebra"
+            }
+        ]
+    },
+    "assocalgebra": {
+        "name": "Associative Algebra",
+        "tagline": "An associative algebra \\(A\\) over a field \\(F\\) is a vector space coupled with an associative bilinear product, denoted here with a middle dot \\(\\cdot\\).",
+        "props": [
+            "Associativity (Additive): \\(\\forall a, b, c \\in F: (a + b) + c = a + (b + c)\\)",
+            "Identity (Additive): \\(\\exists 0 \\in F: \\forall a \\in F: 0 + a = a = a + 0\\)",
+            "Inverse (Additive): \\(\\forall a \\in F: \\exists b \\in F: a + b = b + a = 0\\)",
+            "Commutativity (Additive): \\(\\forall a, b \\in F: a + b = b + a\\)",
+            "Associativity (Multiplicative): \\(\\forall a, b, c \\in F: (a b) c = a (b c)\\)",
+            "Identity (Multiplicative): \\(\\exists 1 \\in F: \\forall a \\in F: 1 a = a = a 1\\)",
+            "Inverse (Multiplicative): \\(\\forall a \\in F: a \\neq 0 \\Rightarrow \\exists b \\in F: a b = b a = 1\\)",
+            "Commutativity (Multiplicative): \\(\\forall a, b \\in F: a b = b a\\)",
+            "Left Distributivity: \\(\\forall a, b, c \\in F: a (b + c) = a b + a c\\)",
+            "Right Distributivity: \\(\\forall a, b, c \\in F: (a + b) c = a c + b c\\)",
+            "Nonzero: \\(0 \\neq 1\\)",
+            "Associativity (Vector): \\(\\forall a, b, c \\in A: (a + b) + c = a + (b + c)\\)",
+            "Identity (Vector): \\(\\exists 0 \\in A: \\forall a \\in A: 0 + a = a = a + 0\\)",
+            "Inverse (Vector): \\(\\forall a \\in A: \\exists b \\in A: a + b = b + a = 0\\)",
+            "Commutativity (Vector): \\(\\forall a, b \\in A: a + b = b + a\\)",
+            "Compatibility: \\(\\forall a, b \\in F: \\forall x \\in A: (a b) . x = a . (b . x)\\)",
+            "Left Vector Distributivity: \\(\\forall a \\in F: \\forall x, y \\in A: a . (x + y) = a . x + a . y\\)",
+            "Right Vector Distributivity: \\(\\forall a, b \\in F: \\forall x \\in A: (a + b) . x = a . x + b . x\\)",
+            "Scalar Identity: \\(\\forall a \\in A: 1 . a = a\\)",
+            "Left Linearity: \\(\\forall x, y, z \\in A: x \\cdot (y + z) = x \\cdot y + x \\cdot z\\)",
+            "Right Linearity: \\(\\forall x, y, z \\in A: (x + y) \\cdot z = x \\cdot z + y \\cdot z\\)",
+            "Scalar compatibility: \\(\\forall x, y \\in A: \\forall a, b \\in F: (a . x) \\cdot (b . y) = (a b) . (x \\cdot y)\\)",
+            "Associativity (Vector Multiplicative): \\(\\forall x, y, z \\in A: (x \\cdot y) \\cdot z) = x \\cdot (y \\cdot z)\\)"
+        ],
+        "examples": [
+            "The quaternions \\(\\mathbb{H}\\) over the field of reals \\(\\mathbb{R}\\) form an associative algebra."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Associative_algebra"
+        ],
+        "edges": [
+            {
+                "algebra": "Associative Algebra - Associativity (Vector Multiplicative)",
+                "result": "algebra"
+            },
+            {
+                "algebra": "Associative Algebra - Scalar Field",
+                "result": "ring"
+            },
+            {
+                "algebra": "Associative Algebra - Action Space",
+                "result": "field"
+            }
+        ]
+    },
+    "semilattice": {
+        "name": "Semilattice",
+        "tagline": "A semilattice \\(S\\) is a set coupled with a binary operation which is commutative, associative, and idempotent. Note that meet-semilattices (defined here) are usually denoted with the operation \\(\\bigtriangleup\\), while the dual but equivalent concept of a join-semilattice is denoted with \\(\\bigtriangledown\\).",
+        "props": [
+            "Associativity: \\(\\forall a, b, c \\in S: (a \\bigtriangleup b) \\bigtriangleup c = a \\bigtriangleup (b \\bigtriangleup c)\\)",
+            "Commutativity: \\(\\forall a, b \\in S: a \\bigtriangleup b = b \\bigtriangleup a\\)",
+            "Idempotence: \\(\\forall a \\in S: a \\bigtriangleup a = a\\)"
+        ],
+        "form": [
+            "Intuitively, a meet-semilattice is a partial order in which each pair of elements has a greatest lower bound. Likewise, a join-semilattice is a partial order in which each pair of elements has a least upper bound."
+        ],
+        "examples": [
+            "Every total order on a set \\(S\\) forms two distinct semilattices with the operations of \\(\\min\\) and \\(\\max\\).",
+            "Given an alphabet \\(\\Sigma\\), the set \\(\\Sigma^*\\) on the partial order of \"is a prefix of\"."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Semilattice",
+            "https://www.encyclopediaofmath.org/index.php/Semi-lattice"
+        ],
+        "edges": [
+            {
+                "algebra": "Semilattice - Greatest Lower Bound",
+                "result": "poset"
+            },
+            {
+                "algebra": "Semilattice - Least Upper Bound",
+                "result": "poset"
+            },
+            {
+                "algebra": "Semilattice - Commutativity",
+                "result": "band"
+            },
+            {
+                "algebra": "Semilattice + Join Semilattice",
+                "result": "lattice"
+            },
+            {
+                "algebra": "Semilattice + Meet Semilattice",
+                "result": "lattice"
+            }
+        ]
+    },
+    "band": {
+        "name": "Band",
+        "tagline": "A band \\(S\\) is an idempotent semigroup. Specifically, it satisfies the following properties.",
+        "props": [
+            "Associativity: \\(\\forall a, b, c \\in S: (a b) c = a (b c)\\)",
+            "Idempotence: \\(\\forall a \\in S: a a = a\\)"
+        ],
+        "examples": [
+            "Every set \\(S\\) forms a trivial band under the \"first\" operation. That is, defining \\(a b = a\\) for all \\(a, b \\in S\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Band_(mathematics)"
+        ],
+        "edges": [
+            {
+                "algebra": "Band - Idempotence",
+                "result": "semigroup"
+            },
+            {
+                "algebra": "Band + Commutativity",
+                "result": "semilattice"
+            },
+            {
+                "algebra": "Band + Additive Abelian Group",
+                "result": "booleanring"
+            }
+        ]
+    },
+    "lattice": {
+        "name": "Lattice",
+        "tagline": "A lattice \\(L\\) is a meet-semilattice and a join-semilattice over the same underlying set in which the two operations satisfy absorption properties.",
+        "props": [
+            "Associativity (Meet): \\(\\forall a, b, c \\in L: (a \\bigtriangleup b) \\bigtriangleup c = a \\bigtriangleup (b \\bigtriangleup c)\\)",
+            "Commutativity (Meet): \\(\\forall a, b \\in L: a \\bigtriangleup b = b \\bigtriangleup a\\)",
+            "Associativity (Join): \\(\\forall a, b, c \\in L: (a \\bigtriangledown b) \\bigtriangledown c = a \\bigtriangledown (b \\bigtriangledown c)\\)",
+            "Commutativity (Join): \\(\\forall a, b \\in L: a \\bigtriangledown b = b \\bigtriangledown a\\)",
+            "Absorption (Join-Meet): \\(\\forall a, b \\in L: a \\bigtriangledown (a \\bigtriangleup b) = a\\)",
+            "Absorption (Meet-Join): \\(\\forall a, b \\in L: a \\bigtriangleup (a \\bigtriangledown b) = a\\)"
+        ],
+        "form": [
+            "Equivalently, a lattice can be defined as a partially-ordered set in which every pair of elements has a meet and a join, where the join is the least-upper bound and the meet is the greatest-lower bound."
+        ],
+        "examples": [
+            "The set of natural numbers \\(\\mathbb{N}\\) form a lattice under the ordering of divisibility."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Lattice_(order)",
+            "http://mathworld.wolfram.com/LatticeTheory.html",
+            "https://www.encyclopediaofmath.org/index.php/Lattice"
+        ],
+        "edges": [
+            {
+                "algebra": "Lattice - Join Semilattice",
+                "result": "semilattice"
+            },
+            {
+                "algebra": "Lattice - Meet Semilattice",
+                "result": "semilattice"
+            }
+        ]
+    },
+    "family": {
+        "name": "Family",
+        "alt": ["Set System"],
+        "tagline": "A family \\(\\mathcal{F}\\) is a set of subsets of a ground set \\(S\\).",
+        "props": [],
+        "examples": [
+            "The power set \\(\\mathcal{P}(S)\\) is the largest possible family of subsets for a set \\(S\\).",
+            "The empty set \\(\\emptyset\\) is the empty family of sets."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Family_of_sets"
+        ],
+        "edges": [
+            {
+                "algebra": "Family - Set of Subsets",
+                "result": "set"
+            },
+            {
+                "algebra": "Family + Nonempty + Hereditary Property",
+                "result": "indsystem"
+            }
+        ]
+    },
+    "indsystem": {
+        "name": "Independence System",
+        "tagline": "An independence system \\(I\\) on a ground set \\(E\\) is a collection of subsets, called independent sets, satisfying certain properties.",
+        "props": [
+            "Nonempty: \\(I \\neq \\emptyset\\)",
+            "Hereditary Property: \\(\\forall X \\in \\mathcal{P}(E): X \\in I \\Rightarrow \\forall Y \\subseteq X: Y \\in I\\)"
+        ],
+        "examples": [
+            "For any natural number \\(n\\), the set of all subsets consisting only of elements strictly less than \\(n\\) forms an independence system.",
+            "Over the integers \\(\\mathbb{Z}\\), the set of all subsets whose elements are either all even or all odd forms an independence system"
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Independence_system"
+        ],
+        "edges": [
+            {
+                "algebra": "Independence System - Nonempty - Hereditary Property",
+                "result": "family"
+            },
+            {
+                "algebra": "Independence System - Augmentation Property",
+                "result": "matroid"
+            }
+        ]
+    },
+    "matroid": {
+        "name": "Matroid",
+        "tagline": "A matroid \\(M\\) is a ground set \\(E\\) with an associated family \\(I\\) of subsets satisfying certain conditions.",
+        "props": [
+            "Nonempty: \\(I \\neq \\emptyset\\)",
+            "Hereditary Property: \\(\\forall X \\in \\mathcal{P}(E): X \\in I \\Rightarrow \\forall Y \\subseteq X: Y \\in I\\)",
+            "Augmentation Property: \\(\\forall A, B \\in I: |A| > |B| \\Rightarrow \\exists x \\in A - B: B \\cup \\{x\\} \\in I\\)"
+        ],
+        "form": [
+            "There are several equivalent ways to define a matroid. The above definition is based on the notion of independent sets. A matroid can also be defined in terms of its bases, or maximally independent sets, as well as its circuits, or minimally dependent sets."
+        ],
+        "examples": [
+            "Given any vector space \\(V\\), the set of linearly independent sets of vectors in \\(V\\) forms a matroid.",
+            "Every undirected graph \\(G\\) gives rise to a matroid with ground set \\(E(G)\\) whose circuits are all of the circuits in the graph \\(G\\)."
+        ],
+        "links": [
+            "https://en.wikipedia.org/wiki/Matroid",
+            "https://www.encyclopediaofmath.org/index.php/Matroid"
+        ],
+        "edges": [
+            {
+                "algebra": "Matroid - Augmentation Property",
+                "result": "indsystem"
+            }
+        ]
+    }
+}

@@ -1,0 +1,5 @@
+<center>
+<i>Hosting for this site is provided by</i>
+<p><a target=new href=http://sdf.org><img src=http://sdf.org/sdfbanner.png />
+<p><b>The SDF Public Access UNIX System</b></a>
+</center>
