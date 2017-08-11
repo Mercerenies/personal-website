@@ -59,7 +59,7 @@
             <img src="ss_game.png" width="300" />
           </a>
         </div>
-        <b>A recent game project that I designed with a good friend</b>
+        <b>A game project that I designed with a good friend</b>
       </div>
       <div class="imgbox">
         <div class="imgbox1">
