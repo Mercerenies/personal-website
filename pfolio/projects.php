@@ -75,8 +75,8 @@
           <td>
             One of my hobbies is learning new programming
             languages. My main languages are Haskell, Common Lisp, and
-            Ruby, and I also have a great deal of experience in C++,
-            JAVA, Python, Perl, and Javascript. As a result of this
+            Perl, and I also have a great deal of experience in Ruby,
+            C++, Java, Python, and Javascript. As a result of this
             multilingualism, I can easily pick up new languages as
             needed.
           </td>
