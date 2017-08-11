@@ -62,9 +62,10 @@
             <b>TTU Functional Programming Club</b>
           </td>
           <td>
-            As the current president of the TTU Functional Programming
-            Club, I have delivered several presentations of
-            miscellaneous functional programming topics and languages.
+            As the former president and current vice president of the
+            TTU Functional Programming Club, I have delivered several
+            presentations of miscellaneous functional programming
+            topics and languages.
           </td>
         </tr>
         <tr>
