@@ -1732,7 +1732,7 @@
                 "result": "family"
             },
             {
-                "algebra": "Independence System - Augmentation Property",
+                "algebra": "Independence System + Augmentation Property",
                 "result": "matroid"
             }
         ]
