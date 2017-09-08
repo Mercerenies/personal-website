@@ -963,13 +963,13 @@
     },
     "wellorder": {
         "name": "Well-Ordered Set",
-        "tagline": "A well-ordered set \\(S\\) is a totally ordered set in which every subset has a least element. Formally speaking, the following holds.",
+        "tagline": "A well-ordered set \\(S\\) is a totally ordered set in which every nonempty subset has a least element. Formally speaking, the following holds.",
         "props": [
             "Reflexivity: \\(\\forall a \\in S: a \\le a\\)",
             "Antisymmetry: \\(\\forall a, b \\in S: a \\le b \\wedge b \\le a \\Rightarrow a = b\\)",
             "Transitivity: \\(\\forall a, b, c \\in S: a \\le b \\wedge b \\le c \\Rightarrow a \\le b\\)",
             "Totality: \\(\\forall a, b \\in S: a \\le b \\vee b \\le a\\)",
-            "Well-Ordering Property: \\(\\forall X \\in P(S): \\exists l \\in X: \\forall x \\in X: l \\le x\\)"
+            "Well-Ordering Property: \\(\\forall X \\in P(S) - \\{\\emptyset\\}: \\exists l \\in X: \\forall x \\in X: l \\le x\\)"
         ],
         "examples": [
             "Any set of ordinal numbers is well-ordered. As well, every individual ordinal number is well-ordered. Every well-ordered set is order isomorphic to exactly one ordinal number.",
