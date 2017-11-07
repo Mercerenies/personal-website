@@ -19,6 +19,9 @@
           <a href="algebra/">Algebraic Structure Reference</a> - I couldn't find a good comprehensive one of
           these, so I wrote my own. Check it out if you're interested in abstract algebra!
         </li>
+        <li>
+          <a href="puzzles.php">Puzzles and Riddles</a> - A few of my personal favorite puzzles.
+        </li>
       </ul>
     </div>
     <?php include('private/footer.php'); ?>
