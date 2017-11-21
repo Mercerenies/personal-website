@@ -62,7 +62,7 @@
             <b>TTU Functional Programming Club</b>
           </td>
           <td>
-            As the former president and current vice president of the
+            As the current vice president and former president of the
             TTU Functional Programming Club, I have delivered several
             presentations of miscellaneous functional programming
             topics and languages.
@@ -90,6 +90,19 @@
             subjects, from Algebra II tutoring in high school to
             discrete mathematics and now formal language theory
             tutoring at the college level.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b><a target="new" href="https://github.com/Mercerenies/latitude">
+                Latitude</a></b>
+          </td>
+          <td>
+            In response to what I perceive as an unfortunate gap in
+            the space of programming languages, I am actively working
+            on a general-purpose prototype-oriented programming
+            language, which is currently in an experimental but usable
+            state.
           </td>
         </tr>
         <tr>
