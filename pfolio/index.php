@@ -30,13 +30,12 @@
     <div class="page content">
       My name is Silvio Mayolo. I am a programmer and mathematician
       attending Tennessee Technological University. I am interested in
-      summer internships and research opportunities. I also am happy to
-      help or consult concerning programming questions or problems.
-      <br/><br/>
-      I am familiar with most modern programming languages, and my personal interests
-      lie in the study of programming languages, specifically of functional programming
-      and in unique or unusual languages.
-      <br/><br/>
+      summer internships and research opportunities. I also am happy
+      to help or consult concerning programming questions or problems.
+      <br/><br/> I am familiar with most modern programming languages,
+      and my academic interests lie in the intersection of mathematics
+      and computer science, specifically in the study of category
+      theory, formal language theory, and abstract algebra. <br/><br/>
       <div class="imgbox">
         <div class="imgbox1">
           <a href="asm_img.png">
