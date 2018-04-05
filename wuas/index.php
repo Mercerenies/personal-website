@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php $GLOBALS["file"] = isset($_GET["file"]) ? $_GET["file"] : 0; ?>
+<?php $GLOBALS["file"] = isset($_GET["file"]) ? $_GET["file"] : 2; ?>
 
 <html>
   <head>
@@ -24,20 +24,11 @@
       <div>
         <img src="banner.png" alt="Wish Upon A Star" />
       </div>
-      Wish Upon A Star is a forum game I run on a webforum that I frequent. I'll be using these pages
-      as reference material for space and item effects.
+      Wish Upon A Star is an online game I run. It was once run on the
+      Game Maker Community forum but has since migrated to a Discord
+      server. I'll be using these pages as reference material for
+      space and item effects.
       <ul>
-        <li>
-          <a target="new"
-             href="https://forum.yoyogames.com/index.php?threads/wish-upon-a-star-turn-2-4-%E2%88%9E.879/">
-            Current Game
-          </a>
-        </li>
-        <li>
-          <a target="new" href="http://gmc.yoyogames.com/index.php?showtopic=603991&page=1">
-            Old GMC Game (Archived)
-          </a>
-        </li>
         <li>
           <a href="interactive.php">
             Interactive Game Board
@@ -46,6 +37,17 @@
         <li>
           <a href="wishes.php">
             Wishing Guide
+          </a>
+        </li>
+        <li>
+          <a target="new"
+             href="https://forum.yoyogames.com/index.php?threads/wish-upon-a-star-turn-2-4-%E2%88%9E.879/">
+            2017 Game Topic
+          </a>
+        </li>
+        <li>
+          <a target="new" href="http://gmc.yoyogames.com/index.php?showtopic=603991&page=1">
+            2016 Game Topic
           </a>
         </li>
       </ul>

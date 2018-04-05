@@ -1,3 +1,4 @@
+# -*- coffee-tab-width: 4 -*-
 
 (($) ->
 
@@ -32,14 +33,19 @@
         file_struct =
             switch file_number
                 when 0 then {
+                    json:   "../wuas_old.json"
+                    spaces: "./spaces_old.png"
+                    tokens: "./tokens_old.png"
+                }
+                when 1 then {
                     json:   "../wuas.json"
                     spaces: "./spaces.png"
                     tokens: "./tokens.png"
                 }
-                when 1 then {
-                    json:   "../wuas_old.json"
-                    spaces: "./spaces_old.png"
-                    tokens: "./tokens_old.png"
+                when 2 then {
+                    json:   "../wuas_new.json"
+                    spaces: "./spaces_new.png"
+                    tokens: "./tokens_new.png"
                 }
 
     spaceMapLine = (key, data) ->
@@ -79,8 +85,15 @@
             if obj.thumbnail?
                 xpos = - obj.thumbnail[0]
                 ypos = - obj.thumbnail[1]
+                spanx = 1
+                spany = 1
+                if 'span' of obj
+                    spanx = obj.span[0]
+                    spany = obj.span[1]
+                spanx *= 16
+                spany *= 16
                 name = """
-                    <div style='width: 16px; height: 16px;
+                    <div style='width: #{spanx}px; height: #{spany}px;
                         background-image: url("#{file_struct.tokens}");
                         background-position: #{xpos}px #{ypos}px; display: inline-block' />
                     <b>#{obj.name}</b>
@@ -152,19 +165,37 @@
         tag_current = "an unknown dictionary"
         tag_old = "an unknown dictionary"
         tag_link = "here"
+        file0 = "<a href='index.php?file=0'>2016 Game</a>"
+        file1 = "<a href='index.php?file=1'>2017 Game</a>"
+        file2 = "<a href='index.php?file=2'>Current Game</a>"
         switch file_number
             when 0
-                tag_current = "the most recent WUAS dictionary"
-                tag_old = "the previous game's dictionary"
-                tag_link = "<a href='index.php?file=1'>here</a>"
+                file0 = "2016 Game"
             when 1
-                tag_current = "the archived 2016 WUAS dictionary"
-                tag_old = "the current dictionary"
-                tag_link = "<a href='index.php?file=0'>here</a>"
+                file1 = "2017 Game"
+            when 2
+                file2 = "Current Game"
         $("#wuas-footer-tagline").html """
+            Available Game Dictionaries
+            <ul>
+                <li>#{file0}</li>
+                <li>#{file1}</li>
+                <li>#{file2}</li>
+            </ul>
+        """
+
+    window.fillInHeader = ->
+        text = ""
+        switch file_number
+            when 0
+                text = "Wish Upon A Star - 2016"
+            when 1
+                text = "Wish Upon A Star - 2017"
+            when 2
+                text = "Wish Upon A Star - 2018 (Current)"
+        $("#file-header").html """
             <em>
-                You're currently vieweing #{tag_current}. To view
-                #{tag_old}, click #{tag_link}.
+                Currently viewing: #{text}
             </em>
         """
 

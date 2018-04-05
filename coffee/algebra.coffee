@@ -1,3 +1,4 @@
+# -*- coffee-tab-width: 4 -*-
 
 (($) ->
 
