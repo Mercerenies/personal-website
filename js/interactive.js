@@ -162,7 +162,7 @@
         id = "#image-map";
       }
       return $(id).mousemove(function(e) {
-        var dist_x, dist_y, i, len, now, obj, offset, ref, rel_x, rel_x1, rel_y, rel_y1, spaces, the_space, token_data, x0, y0;
+        var data, dist_x, dist_y, i, len, now, obj, offset, ref, rel_x, rel_x1, rel_y, rel_y1, spaces, the_space, threshold, token_data, tx, ty, x0, y0;
         rel_x1 = null;
         rel_y1 = null;
         spaces = window.thisTurnData().spaces;
@@ -197,11 +197,15 @@
           obj = ref[i];
           dist_x = rel_x1 - obj.position[0];
           dist_y = rel_y1 - obj.position[1];
-          if ((0 <= dist_x && dist_x < 16) && (0 <= dist_y && dist_y < 16)) {
+          data = window.wuas().tokens[obj.object] || window.wuas().items[obj.object];
+          threshold = 'span' in data ? data['span'] : [1, 1];
+          tx = threshold[0] * 16;
+          ty = threshold[1] * 16;
+          if ((0 <= dist_x && dist_x < tx) && (0 <= dist_y && dist_y < ty)) {
             if (window.wuas().tokens[obj.object] != null) {
-              token_data += tokenDescriptor(window.wuas().tokens[obj.object]);
+              token_data += tokenDescriptor(data);
             } else if (window.wuas().items[obj.object] != null) {
-              token_data += itemDescriptor(window.wuas().items[obj.object]);
+              token_data += itemDescriptor(data);
             }
           }
         }

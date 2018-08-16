@@ -148,11 +148,15 @@
             for obj in window.thisTurnData().tokens
                 dist_x = rel_x1 - obj.position[0]
                 dist_y = rel_y1 - obj.position[1]
-                if 0 <= dist_x < 16 and 0 <= dist_y < 16
+                data = window.wuas().tokens[obj.object] or window.wuas().items[obj.object]
+                threshold = if 'span' of data then data['span'] else [1, 1]
+                tx = threshold[0] * 16
+                ty = threshold[1] * 16
+                if 0 <= dist_x < tx and 0 <= dist_y < ty
                     if window.wuas().tokens[obj.object]?
-                        token_data += tokenDescriptor window.wuas().tokens[obj.object]
+                        token_data += tokenDescriptor data
                     else if window.wuas().items[obj.object]?
-                        token_data += itemDescriptor window.wuas().items[obj.object]
+                        token_data += itemDescriptor data
             $("#int-token").html "<dl>#{token_data}</dl>"
 
     window.getActiveTurn = ->
