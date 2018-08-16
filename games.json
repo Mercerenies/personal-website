@@ -264,6 +264,16 @@
             "summary": "A simple bullet-dodging game, written without the letter E",
             "finished": [4, 2017],
             "page": "https://www.mediafire.com/folder/2cn4p1cqslfq9/NoE%20Game"
+        },
+        {
+            "name": "Maze of the Sun",
+            "author": "Mercerenies",
+            "genre": "Maze Adventure",
+            "occasion": "Project",
+            "magnitude": "Medium",
+            "summary": "A maze crawler and the spiritual successor to Maze of the Moon",
+            "finished": [8, 2018],
+            "page": "https://gamejolt.com/games/sun_maze/359827"
         }
     ]
 }
