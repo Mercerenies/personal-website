@@ -12,6 +12,9 @@
         <li>
           <a href="blog/argorder.php">Woes of Argument Order</a> <em>(Posted December 22, 2016)</em>
         </li>
+        <li>
+          <a href="blog/symbols.php">Javascript did Something Clever</a> <em>(Posted June 4, 2018)</em>
+        </li>
       </ul>
     </div>
     <?php include('private/footer.php'); ?>
