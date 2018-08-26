@@ -274,6 +274,26 @@
             "summary": "A maze crawler and the spiritual successor to Maze of the Moon",
             "finished": [8, 2018],
             "page": "https://gamejolt.com/games/sun_maze/359827"
+        },
+        {
+            "name": "Caves and Lasers",
+            "author": "Mercerenies",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Block-smashing puzzle about escaping a cavern",
+            "finished": [8, 2018],
+            "page": "https://gamejolt.com/games/cave_laser/364023"
+        },
+        {
+            "name": "Crank it Up",
+            "author": "Mercerenies",
+            "genre": "Incremental",
+            "occasion": "Joke",
+            "magnitude": "Joke",
+            "summary": "An idling game about generating energy",
+            "finished": [8, 2018],
+            "page": "https://gamejolt.com/games/crank_up/364269"
         }
     ]
 }
