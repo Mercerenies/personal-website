@@ -10,7 +10,16 @@
 
     window.loadData = (file) ->
         file_number = file
-        file_struct = initFileStruct()
+        $.ajax
+            url: "../wuas_codex.json"
+            dataType: "json"
+            success: (data) ->
+                codex_struct = data
+                fillInFooter()
+                initFileStruct()
+
+    initFileStruct = () ->
+        file_struct = codex_struct.dicts[file_number]
         $.ajax
             url: file_struct.json
             dataType: "json"
@@ -29,31 +38,6 @@
                 $("#search-field").bind "change input keyup paste", ->
                     window.updateSearch 'wuas-search-results', 'search-field'
                 f() for f in cb
-        $.ajax
-            url: "../wuas_codex.json"
-            dataType: "json"
-            success: (data) ->
-                codex_struct = data
-                fillInFooter()
-
-    initFileStruct = () ->
-        file_struct =
-            switch file_number
-                when 0 then {
-                    json:   "../wuas_old.json"
-                    spaces: "./spaces_old.png"
-                    tokens: "./tokens_old.png"
-                }
-                when 1 then {
-                    json:   "../wuas.json"
-                    spaces: "./spaces.png"
-                    tokens: "./tokens.png"
-                }
-                when 2 then {
-                    json:   "../wuas_new.json"
-                    spaces: "./spaces_new.png"
-                    tokens: "./tokens_new.png"
-                }
 
     spaceMapLine = (key, data) ->
         area = $("<area/>")
@@ -193,7 +177,9 @@
             when 1
                 text = "Wish Upon A Star - 2017"
             when 2
-                text = "Wish Upon A Star - 2018 (Current)"
+                text = "Wish Upon A Star - 2018"
+            when 3
+                text = "Wish Upon A Star - 2018 (BR)"
         $("#file-header").html """
             <em>
                 Currently viewing: #{text}

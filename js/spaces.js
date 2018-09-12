@@ -9,8 +9,19 @@
     cb = [];
     window.loadData = function(file) {
       file_number = file;
-      file_struct = initFileStruct();
-      $.ajax({
+      return $.ajax({
+        url: "../wuas_codex.json",
+        dataType: "json",
+        success: function(data) {
+          codex_struct = data;
+          fillInFooter();
+          return initFileStruct();
+        }
+      });
+    };
+    initFileStruct = function() {
+      file_struct = codex_struct.dicts[file_number];
+      return $.ajax({
         url: file_struct.json,
         dataType: "json",
         success: function(data, _0, _1) {
@@ -33,38 +44,6 @@
           return results1;
         }
       });
-      return $.ajax({
-        url: "../wuas_codex.json",
-        dataType: "json",
-        success: function(data) {
-          codex_struct = data;
-          return fillInFooter();
-        }
-      });
-    };
-    initFileStruct = function() {
-      return file_struct = (function() {
-        switch (file_number) {
-          case 0:
-            return {
-              json: "../wuas_old.json",
-              spaces: "./spaces_old.png",
-              tokens: "./tokens_old.png"
-            };
-          case 1:
-            return {
-              json: "../wuas.json",
-              spaces: "./spaces.png",
-              tokens: "./tokens.png"
-            };
-          case 2:
-            return {
-              json: "../wuas_new.json",
-              spaces: "./spaces_new.png",
-              tokens: "./tokens_new.png"
-            };
-        }
-      })();
     };
     spaceMapLine = function(key, data) {
       var area;
@@ -264,7 +243,10 @@
           text = "Wish Upon A Star - 2017";
           break;
         case 2:
-          text = "Wish Upon A Star - 2018 (Current)";
+          text = "Wish Upon A Star - 2018";
+          break;
+        case 3:
+          text = "Wish Upon A Star - 2018 (BR)";
       }
       return $("#file-header").html("<em>\n    Currently viewing: " + text + "\n</em>");
     };

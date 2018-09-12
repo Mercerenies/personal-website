@@ -2,19 +2,31 @@
   "dicts": [
     {
       "name": "2016 Game",
-      "shortname": "2016"
+      "shortname": "2016",
+      "json": "../wuas_old.json",
+      "spaces": "./spaces_old.png",
+      "tokens": "./tokens_old.png"
     },
     {
       "name": "2017 Game",
-      "shortname": "2017"
+      "shortname": "2017",
+      "json": "../wuas.json",
+      "spaces": "./spaces.png",
+      "tokens": "./tokens.png"
     },
     {
       "name": "2018 Game",
-      "shortname": "2018"
+      "shortname": "2018",
+      "json": "../wuas_new.json",
+      "spaces": "./spaces_new.png",
+      "tokens": "./tokens_new.png"
     },
     {
       "name": "2018 Game (Battle Royale)",
-      "shortname": "BR"
+      "shortname": "BR",
+      "json": "../wuas_spaghetti.json",
+      "spaces": "./spaces_spaghetti.png",
+      "tokens": "./tokens_spaghetti.png"
     }
   ]
 }
