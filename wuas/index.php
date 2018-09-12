@@ -28,30 +28,38 @@
       Game Maker Community forum but has since migrated to a Discord
       server. I'll be using these pages as reference material for
       space and item effects.
-      <ul>
-        <li>
-          <a href="interactive.php">
-            Interactive Game Board
-          </a>
-        </li>
-        <li>
-          <a href="wishes.php">
-            Wishing Guide
-          </a>
-        </li>
-        <li>
-          <a target="new"
-             href="https://forum.yoyogames.com/index.php?threads/wish-upon-a-star-turn-2-4-%E2%88%9E.879/">
-            2017 Game Topic
-          </a>
-        </li>
-        <li>
-          <a target="new" href="http://gmc.yoyogames.com/index.php?showtopic=603991&page=1">
-            2016 Game Topic
-          </a>
-        </li>
-      </ul>
+      <section>
+        <ul>
+          <li>
+            <a href="interactive.php">
+              Interactive Game Board
+            </a>
+          </li>
+          <li>
+            <a href="wishes.php">
+              Wishing Guide
+            </a>
+          </li>
+          <li>
+            <a href="royale.php">
+              Battle Royale
+            </a>
+          </li>
+          <li>
+            <a target="new"
+               href="https://forum.yoyogames.com/index.php?threads/wish-upon-a-star-turn-2-4-%E2%88%9E.879/">
+              2017 Game Topic
+            </a>
+          </li>
+          <li>
+            <a target="new" href="http://gmc.yoyogames.com/index.php?showtopic=603991&page=1">
+              2016 Game Topic
+            </a>
+          </li>
+        </ul>
+      </section>
       <div id="wuas-footer-tagline">
+        <!-- Will be filled in by script -->
       </div>
       <br/>
       <div class="project-header" onclick="window.doShow('wuas-spaces')">
