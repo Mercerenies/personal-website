@@ -46,6 +46,12 @@
             </a>
           </li>
           <li>
+            <a href="history.php">
+              History
+            </a>
+          </li>
+          </li>
+          <li>
             <a target="new"
                href="https://forum.yoyogames.com/index.php?threads/wish-upon-a-star-turn-2-4-%E2%88%9E.879/">
               2017 Game Topic
