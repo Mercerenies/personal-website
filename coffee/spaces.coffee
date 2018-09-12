@@ -172,22 +172,16 @@
         tag_current = "an unknown dictionary"
         tag_old = "an unknown dictionary"
         tag_link = "here"
-        file0 = "<a href='index.php?file=0'>2016 Game</a>"
-        file1 = "<a href='index.php?file=1'>2017 Game</a>"
-        file2 = "<a href='index.php?file=2'>Current Game</a>"
-        switch file_number
-            when 0
-                file0 = "2016 Game"
-            when 1
-                file1 = "2017 Game"
-            when 2
-                file2 = "Current Game"
+        files = for data, i in codex_struct.dicts
+            if file_number == i
+                data.name
+            else
+                "<a href='index.php?file=#{i}'>#{data.name}</a>"
+        list_data = ("<li>#{curr}</li>" for curr in files)
         $("#wuas-footer-tagline").html """
             Available Game Dictionaries
             <ul>
-                <li>#{file0}</li>
-                <li>#{file1}</li>
-                <li>#{file2}</li>
+                #{list_data.join "\n"}
             </ul>
         """
 

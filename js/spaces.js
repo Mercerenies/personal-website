@@ -14,7 +14,7 @@
         url: file_struct.json,
         dataType: "json",
         success: function(data, _0, _1) {
-          var f, i, len, results1;
+          var f, j, len, results1;
           wuas = data;
           $("#wuas-space-map").html("<img src=\"" + file_struct.spaces + "\" usemap=\"#spaces-map\" />\n<map name=\"spaces-map\" id=\"spaces-map\">\n</map>");
           setupSpaceMap();
@@ -26,8 +26,8 @@
             return window.updateSearch('wuas-search-results', 'search-field');
           });
           results1 = [];
-          for (i = 0, len = cb.length; i < len; i++) {
-            f = cb[i];
+          for (j = 0, len = cb.length; j < len; j++) {
+            f = cb[j];
             results1.push(f());
           }
           return results1;
@@ -38,7 +38,6 @@
         dataType: "json",
         success: function(data) {
           codex_struct = data;
-          fillInHeader();
           return fillInFooter();
         }
       });
@@ -89,20 +88,20 @@
       return results1;
     };
     listOut = function(list, jqObj) {
-      var i, len, obj, ul;
+      var j, len, obj, ul;
       ul = $("<ul></ul>");
-      for (i = 0, len = list.length; i < len; i++) {
-        obj = list[i];
+      for (j = 0, len = list.length; j < len; j++) {
+        obj = list[j];
         ul.append($("<li>" + obj.desc + "</li>"));
       }
       jqObj.html('');
       return jqObj.append(ul);
     };
     listOutWithNames = function(list, jqObj) {
-      var dl, i, len, obj;
+      var dl, j, len, obj;
       dl = $("<dl></dl>");
-      for (i = 0, len = list.length; i < len; i++) {
-        obj = list[i];
+      for (j = 0, len = list.length; j < len; j++) {
+        obj = list[j];
         dl.append($("<dt><b>" + obj.name + "</b></dt><dd>" + obj.desc + "</dd>"));
       }
       jqObj.html('');
@@ -154,7 +153,7 @@
       }
     };
     window.updateSearch = function(divId, textId) {
-      var divField, dl, effect, i, item, j, key, len, len1, ref, ref1, ref2, ref3, result, results, space, text, textField, token, tokenDescriptor;
+      var divField, dl, effect, item, j, k, key, len, len1, ref, ref1, ref2, ref3, result, results, space, text, textField, token, tokenDescriptor;
       tokenDescriptor = function(token) {
         var thumbnail, xpos, ypos;
         thumbnail = "";
@@ -185,8 +184,8 @@
           }
         }
         ref2 = wuas.effects;
-        for (i = 0, len = ref2.length; i < len; i++) {
-          effect = ref2[i];
+        for (j = 0, len = ref2.length; j < len; j++) {
+          effect = ref2[j];
           if (effect.name.toLowerCase().includes(text)) {
             results.push("<dt><b>" + effect.name + "</b></dt><dd>" + effect.desc + "</dd>");
           }
@@ -204,8 +203,8 @@
           return divField.html("No results found.");
         } else {
           dl = $("<dl></dl>");
-          for (j = 0, len1 = results.length; j < len1; j++) {
-            result = results[j];
+          for (k = 0, len1 = results.length; k < len1; k++) {
+            result = results[k];
             dl.append($(result));
           }
           divField.html('');
@@ -225,24 +224,34 @@
       return file_struct;
     };
     window.fillInFooter = function() {
-      var file0, file1, file2, tag_current, tag_link, tag_old;
+      var curr, data, files, i, list_data, tag_current, tag_link, tag_old;
       tag_current = "an unknown dictionary";
       tag_old = "an unknown dictionary";
       tag_link = "here";
-      file0 = "<a href='index.php?file=0'>2016 Game</a>";
-      file1 = "<a href='index.php?file=1'>2017 Game</a>";
-      file2 = "<a href='index.php?file=2'>Current Game</a>";
-      switch (file_number) {
-        case 0:
-          file0 = "2016 Game";
-          break;
-        case 1:
-          file1 = "2017 Game";
-          break;
-        case 2:
-          file2 = "Current Game";
-      }
-      return $("#wuas-footer-tagline").html("Available Game Dictionaries\n<ul>\n    <li>" + file0 + "</li>\n    <li>" + file1 + "</li>\n    <li>" + file2 + "</li>\n</ul>");
+      files = (function() {
+        var j, len, ref, results1;
+        ref = codex_struct.dicts;
+        results1 = [];
+        for (i = j = 0, len = ref.length; j < len; i = ++j) {
+          data = ref[i];
+          if (file_number === i) {
+            results1.push(data.name);
+          } else {
+            results1.push("<a href='index.php?file=" + i + "'>" + data.name + "</a>");
+          }
+        }
+        return results1;
+      })();
+      list_data = (function() {
+        var j, len, results1;
+        results1 = [];
+        for (j = 0, len = files.length; j < len; j++) {
+          curr = files[j];
+          results1.push("<li>" + curr + "</li>");
+        }
+        return results1;
+      })();
+      return $("#wuas-footer-tagline").html("Available Game Dictionaries\n<ul>\n    " + (list_data.join("\n")) + "\n</ul>");
     };
     return window.fillInHeader = function() {
       var text;
