@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php $GLOBALS["file"] = isset($_GET["file"]) ? $_GET["file"] : 2; ?>
+<?php $GLOBALS["file"] = isset($_GET["file"]) ? $_GET["file"] : 3; ?>
 <?php $GLOBALS["turn"] = isset($_GET["turn"]) ? $_GET["turn"] : -1; ?>
 <?php $GLOBALS["z"] = isset($_GET["z"]) ? $_GET["z"] : 0; ?>
 <?php $GLOBALS["zoom"] = isset($_GET["zoom"]) ? $_GET["zoom"] : 1; ?>
