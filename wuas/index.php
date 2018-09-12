@@ -15,7 +15,6 @@
     <script>
       var filename_n = <?php echo $GLOBALS["file"] ?>;
       jQuery(function() { window.loadData(filename_n); });
-      jQuery(function() { window.fillInFooter(); });
     </script>
   </head>
   <body>

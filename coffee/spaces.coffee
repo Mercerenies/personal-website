@@ -4,6 +4,7 @@
 
     wuas = null
     file_number = -1
+    codex_struct = {}
     file_struct = {}
     cb = []
 
@@ -28,6 +29,12 @@
                 $("#search-field").bind "change input keyup paste", ->
                     window.updateSearch 'wuas-search-results', 'search-field'
                 f() for f in cb
+        $.ajax
+            url: "../wuas_codex.json"
+            dataType: "json"
+            success: (data) ->
+                codex_struct = data
+                fillInFooter()
 
     initFileStruct = () ->
         file_struct =

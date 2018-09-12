@@ -1,0 +1,20 @@
+{
+  "dicts": [
+    {
+      "name": "2016 Game",
+      "shortname": "2016"
+    },
+    {
+      "name": "2017 Game",
+      "shortname": "2017"
+    },
+    {
+      "name": "2018 Game",
+      "shortname": "2018"
+    },
+    {
+      "name": "2018 Game (Battle Royale)",
+      "shortname": "BR"
+    }
+  ]
+}
