@@ -170,16 +170,7 @@
         """
 
     window.fillInHeader = ->
-        text = ""
-        switch file_number
-            when 0
-                text = "Wish Upon A Star - 2016"
-            when 1
-                text = "Wish Upon A Star - 2017"
-            when 2
-                text = "Wish Upon A Star - 2018"
-            when 3
-                text = "Wish Upon A Star - 2018 (BR)"
+        text = "Wish Upon A Star - #{codex_struct.dicts[file_number].name}"
         $("#file-header").html """
             <em>
                 Currently viewing: #{text}

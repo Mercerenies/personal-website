@@ -234,20 +234,7 @@
     };
     window.fillInHeader = function() {
       var text;
-      text = "";
-      switch (file_number) {
-        case 0:
-          text = "Wish Upon A Star - 2016";
-          break;
-        case 1:
-          text = "Wish Upon A Star - 2017";
-          break;
-        case 2:
-          text = "Wish Upon A Star - 2018";
-          break;
-        case 3:
-          text = "Wish Upon A Star - 2018 (BR)";
-      }
+      text = "Wish Upon A Star - " + codex_struct.dicts[file_number].name;
       return $("#file-header").html("<em>\n    Currently viewing: " + text + "\n</em>");
     };
     window.getCodexDict = function(n) {
