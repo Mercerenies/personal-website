@@ -186,4 +186,10 @@
             </em>
         """
 
+    window.getCodexDict = (n = file_number) ->
+        codex_struct.dicts[n]
+
+    window.fileCount = ->
+        codex_struct.dicts.length
+
 ) jQuery

@@ -232,7 +232,7 @@
       })();
       return $("#wuas-footer-tagline").html("Available Game Dictionaries\n<ul>\n    " + (list_data.join("\n")) + "\n</ul>");
     };
-    return window.fillInHeader = function() {
+    window.fillInHeader = function() {
       var text;
       text = "";
       switch (file_number) {
@@ -249,6 +249,15 @@
           text = "Wish Upon A Star - 2018 (BR)";
       }
       return $("#file-header").html("<em>\n    Currently viewing: " + text + "\n</em>");
+    };
+    window.getCodexDict = function(n) {
+      if (n == null) {
+        n = file_number;
+      }
+      return codex_struct.dicts[n];
+    };
+    return window.fileCount = function() {
+      return codex_struct.dicts.length;
     };
   })(jQuery);
 

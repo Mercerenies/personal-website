@@ -5,28 +5,32 @@
       "shortname": "2016",
       "json": "../wuas_old.json",
       "spaces": "./spaces_old.png",
-      "tokens": "./tokens_old.png"
+      "tokens": "./tokens_old.png",
+      "prefix": ""
     },
     {
       "name": "2017 Game",
       "shortname": "2017",
       "json": "../wuas.json",
       "spaces": "./spaces.png",
-      "tokens": "./tokens.png"
+      "tokens": "./tokens.png",
+      "prefix": "n"
     },
     {
       "name": "2018 Game",
       "shortname": "2018",
       "json": "../wuas_new.json",
       "spaces": "./spaces_new.png",
-      "tokens": "./tokens_new.png"
+      "tokens": "./tokens_new.png",
+      "prefix": "z"
     },
     {
       "name": "2018 Game (Battle Royale)",
       "shortname": "BR",
       "json": "../wuas_spaghetti.json",
       "spaces": "./spaces_spaghetti.png",
-      "tokens": "./tokens_spaghetti.png"
+      "tokens": "./tokens_spaghetti.png",
+      "prefix": "y"
     }
   ]
 }

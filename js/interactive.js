@@ -18,14 +18,7 @@
       });
     });
     filePrefix = function() {
-      switch (file) {
-        case 0:
-          return "";
-        case 1:
-          return "n";
-        case 2:
-          return "z";
-      }
+      return window.getCodexDict().prefix;
     };
     setupMenus = function() {
       var _contents, doFileElem, doTurnElem, doZElem, doZoomElem, ff, files, tt, turn, turns, zaxes, zooms, zz;
@@ -40,10 +33,12 @@
         }
       };
       doFileElem = function(ff) {
+        var text;
+        text = window.getCodexDict(ff).shortname;
         if (("" + file) === ("" + ff)) {
-          return "" + ff;
+          return "" + text;
         } else {
-          return "<a href='interactive.php?zoom=" + leaflet + "&file=" + ff + "'>" + ff + "</a>";
+          return "<a href='interactive.php?zoom=" + leaflet + "&file=" + ff + "'>" + text + "</a>";
         }
       };
       doTurnElem = function(tt) {
@@ -72,11 +67,9 @@
       })();
       $("#zoom-menu").html("Zoom = " + (zooms.join(' | ')));
       files = (function() {
-        var i, len, ref, results;
-        ref = [0, 1, 2];
+        var i, ref, results;
         results = [];
-        for (i = 0, len = ref.length; i < len; i++) {
-          ff = ref[i];
+        for (ff = i = 0, ref = window.fileCount(); 0 <= ref ? i < ref : i > ref; ff = 0 <= ref ? ++i : --i) {
           results.push(doFileElem(ff));
         }
         return results;

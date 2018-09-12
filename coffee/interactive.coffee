@@ -23,10 +23,7 @@
                 """
 
     filePrefix = ->
-        switch file
-            when 0 then ""
-            when 1 then "n"
-            when 2 then "z"
+        window.getCodexDict().prefix
 
     setupMenus = ->
         turn = window.getActiveTurn()
@@ -38,10 +35,11 @@
             else
                 "<a href='interactive.php?zoom=#{norm}&file=#{file}&turn=#{turn}&z=#{zaxis}'>#{zz}</a>"
         doFileElem = (ff) ->
+            text = window.getCodexDict(ff).shortname
             if "#{file}" == "#{ff}"
-                "#{ff}"
+                "#{text}"
             else
-                "<a href='interactive.php?zoom=#{leaflet}&file=#{ff}'>#{ff}</a>"
+                "<a href='interactive.php?zoom=#{leaflet}&file=#{ff}'>#{text}</a>"
         doTurnElem = (tt) ->
             if "#{turn}" == "#{tt}"
                 "#{turn}"
@@ -54,7 +52,7 @@
                 "<a href='interactive.php?zoom=#{leaflet}&file=#{file}&turn=#{turn}&z=#{zz}'>#{zz}</a>"
         zooms = (doZoomElem(zz) for zz in ["On", "Off"])
         $("#zoom-menu").html "Zoom = #{zooms.join ' | '}"
-        files = (doFileElem(ff) for ff in [0, 1, 2])
+        files = (doFileElem(ff) for ff in [0...window.fileCount()])
         $("#file-menu").html "File = #{files.join ' | '}"
         turns = (doTurnElem(tt) for tt, _contents of window.wuas().turns when tt <= current_turn)
         $("#turn-menu").html "Turn = #{turns.join ' | '}"
