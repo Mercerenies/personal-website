@@ -42,9 +42,45 @@
             "coords": "0,66,33,99",
             "visual": "blue space with watery texture",
             "desc": "A player who moves onto this space must stop here."
+        },
+        "whirl": {
+            "name": "Whirlpool Space",
+            "coords": "33,33,66,66",
+            "visual": "blue space with watery texture and light blue swirl",
+            "desc": "A player who stops here moves in counterclockwise order to the next Whirlpool Space. This space is also treated as a Water Space."
+        },
+        "bowser": {
+            "name": "Bowser Space",
+            "coords": "33,66,66,99",
+            "visual": "dark red space with Bowser space icon",
+            "desc": "A player who lands on this space will suffer a penalty as decided by Mercerenies. After triggering, this space has a 50% chance of turning back into whatever space it was before it was Bowser."
+        },
+        "rconvey": {
+            "name": "Conveyer Belt (Right)",
+            "coords": "0,99,33,132",
+            "visual": "pink space with black right arrows",
+            "desc": "Every token, player, and item that ends on this space moves one space to the right. If this conveyer pushes an item off the map, it disappears. If this conveyer pushes a player off, they suffer the usual penalty for falling off the board."
+        },
+        "lconvey": {
+            "name": "Conveyer Belt (Left)",
+            "coords": "33,99,66,132",
+            "visual": "pink space with black left arrows",
+            "desc": "Every token, player, and item that ends on this space moves one space to the left. If this conveyer pushes an item off the map, it disappears. If this conveyer pushes a player off, they suffer the usual penalty for falling off the board."
         }
     },
     "items": {
+        "heavysteps": {
+            "name": "Heavy Steps",
+            "desc": "Single use. On the turn you use this item, every space you move off of will crumble as though it was a Crumbled Space."
+        },
+        "bowserrep": {
+            "name": "Bowser Repellent",
+            "desc": "Single use. This item activates automatically when you land on a Bowser Space. The Bowser Space is revealed but has no effect."
+        },
+        "soulshoes": {
+            "name": "Soul Shoes",
+            "desc": "MOV is halved (rounded down). You may move further than your MOV by spending 1 HP per additional space you'd like to move."
+        }
     },
     "effects": [
     ],
@@ -60,6 +96,36 @@
             "stats": "N/A",
             "thumbnail": [16, 0],
             "desc": "Can be picked up by a player. Always protected from wishes."
+        },
+        "hatcrafter": {
+            "name": "Hatcrafter",
+            "stats": "Player",
+            "thumbnail": [0, 48],
+            "desc": "A player token."
+        },
+        "dolphinhats": {
+            "name": "Dolphinhats",
+            "stats": "Player",
+            "thumbnail": [0, 16],
+            "desc": "A player token."
+        },
+        "htsirohn": {
+            "name": "HTSirohn",
+            "stats": "Player",
+            "thumbnail": [0, 32],
+            "desc": "A player token."
+        },
+        "rougebare": {
+            "name": "rougebare",
+            "stats": "Player",
+            "thumbnail": [0, 64],
+            "desc": "A player token."
+        },
+        "holly": {
+            "name": "Mr. Hollywood",
+            "stats": "5 MOV",
+            "thumbnail": [16, 16],
+            "desc": "Moves around the board randomly, giving gifts to anyone he encounters. The gifts may be good or bad, but they cannot be refused. Mr. Hollywood is smart enough to avoid harmful spaces and does not collapse Crumbled Spaces."
         }
     },
     "rulings": [
@@ -79,8 +145,11 @@
             "desc": "The larger the magnitude of a wish, the less likely it is to end up in the wisher's favor. That is, a simple wish is likely to go exactly as intended. A large and complicated wish may be interpreted extremely literally and the results may not be what was desired."
         }
     ],
-    "current_turn": 1,
+    "current_turn": 4,
     "turns": {
-      "1": {"0": {"tokens": [], "spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "altar", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "crumbled", "neutral", "neutral", "neutral", "crumbled", "gap", "gap"], ["gap", "gap", "gap", "neutral", "water", "neutral", "water", "neutral", "gap", "gap"], ["gap", "gap", "gap", "neutral", "water", "neutral", "water", "neutral", "gap", "gap"], ["gap", "gap", "shop", "neutral", "neutral", "neutral", "neutral", "neutral", "shop", "gap"], ["gap", "gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]]}}
+      "1": {"0": {"tokens": [{"object": "goldcoin", "position": [40, 168]}, {"object": "goldcoin", "position": [296, 168]}, {"object": "htsirohn", "position": [164, 228]}, {"object": "hatcrafter", "position": [176, 224]}, {"object": "dolphinhats", "position": [168, 240]}, {"object": "goldcoin", "position": [168, 296]}], "spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "altar", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "crumbled", "neutral", "neutral", "neutral", "crumbled", "gap", "gap"], ["gap", "gap", "gap", "neutral", "water", "neutral", "water", "neutral", "gap", "gap"], ["gap", "neutral", "gap", "neutral", "water", "neutral", "water", "neutral", "gap", "neutral"], ["gap", "gap", "shop", "neutral", "neutral", "neutral", "neutral", "neutral", "shop", "gap"], ["gap", "gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "crumbled", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]]}},
+      "2": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "altar", "gap", "gap", "gap", "gap"], ["gap", "gap", "rconvey", "rconvey", "rconvey", "rconvey", "rconvey", "rconvey", "rconvey", "gap"], ["gap", "gap", "neutral", "whirl", "whirl", "crumbled", "whirl", "whirl", "neutral", "gap"], ["gap", "neutral", "neutral", "whirl", "whirl", "crumbled", "whirl", "whirl", "neutral", "neutral"], ["gap", "shop", "lconvey", "lconvey", "lconvey", "lconvey", "lconvey", "lconvey", "lconvey", "shop"], ["gap", "gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "crumbled", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "goldcoin", "position": [40, 168]}, {"object": "goldcoin", "position": [296, 168]}, {"object": "htsirohn", "position": [164, 228]}, {"object": "hatcrafter", "position": [176, 224]}, {"object": "dolphinhats", "position": [168, 240]}, {"object": "rougebare", "position": [176, 232]}, {"object": "goldcoin", "position": [168, 296]}]}},
+      "3": {"0": {"tokens": [{"position": [200, 104], "object": "holly"}, {"position": [40, 168], "object": "goldcoin"}, {"position": [296, 168], "object": "goldcoin"}, {"position": [48, 192], "object": "hatcrafter"}, {"position": [292, 196], "object": "htsirohn"}, {"position": [168, 240], "object": "dolphinhats"}, {"position": [176, 232], "object": "rougebare"}, {"position": [168, 296], "object": "goldcoin"}], "spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "altar", "gap", "gap", "gap", "gap"], ["gap", "gap", "crumbled", "rconvey", "rconvey", "rconvey", "rconvey", "rconvey", "crumbled", "gap"], ["gap", "gap", "crumbled", "whirl", "whirl", "gap", "whirl", "whirl", "crumbled", "gap"], ["gap", "neutral", "crumbled", "whirl", "whirl", "gap", "whirl", "whirl", "crumbled", "neutral"], ["gap", "bowser", "crumbled", "lconvey", "lconvey", "lconvey", "lconvey", "lconvey", "crumbled", "shop"], ["gap", "gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "crumbled", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]]}},
+      "4": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "altar", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "rconvey", "rconvey", "rconvey", "rconvey", "rconvey", "crumbled", "gap"], ["gap", "gap", "gap", "whirl", "whirl", "gap", "whirl", "whirl", "crumbled", "gap"], ["gap", "neutral", "gap", "whirl", "whirl", "gap", "whirl", "whirl", "crumbled", "neutral"], ["gap", "bowser", "crumbled", "lconvey", "lconvey", "lconvey", "lconvey", "lconvey", "crumbled", "shop"], ["gap", "gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "crumbled", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "hatcrafter", "position": [144, 96]}, {"object": "holly", "position": [136, 136]}, {"object": "htsirohn", "position": [292, 196]}, {"object": "dolphinhats", "position": [168, 240]}, {"object": "rougebare", "position": [176, 232]}, {"object": "goldcoin", "position": [168, 296]}]}}
     }
 }
