@@ -1588,18 +1588,19 @@
     },
     "semilattice": {
         "name": "Semilattice",
-        "tagline": "A semilattice \\(S\\) is a set coupled with a binary operation which is commutative, associative, and idempotent. Note that meet-semilattices (defined here) are usually denoted with the operation \\(\\bigtriangleup\\), while the dual but equivalent concept of a join-semilattice is denoted with \\(\\bigtriangledown\\).",
+        "tagline": "A semilattice \\(S\\) is a set coupled with a binary operation which is commutative, associative, and idempotent. Note that meet-semilattices (defined here) are usually denoted with the operation \\(\\triangle\\), while the dual but equivalent concept of a join-semilattice is denoted with \\(\\triangledown\\).",
         "props": [
-            "Associativity: \\(\\forall a, b, c \\in S: (a \\bigtriangleup b) \\bigtriangleup c = a \\bigtriangleup (b \\bigtriangleup c)\\)",
-            "Commutativity: \\(\\forall a, b \\in S: a \\bigtriangleup b = b \\bigtriangleup a\\)",
-            "Idempotence: \\(\\forall a \\in S: a \\bigtriangleup a = a\\)"
+            "Associativity: \\(\\forall a, b, c \\in S: (a \\triangle b) \\triangle c = a \\triangle (b \\triangle c)\\)",
+            "Commutativity: \\(\\forall a, b \\in S: a \\triangle b = b \\triangle a\\)",
+            "Idempotence: \\(\\forall a \\in S: a \\triangle a = a\\)"
         ],
         "form": [
             "Intuitively, a meet-semilattice is a partial order in which each pair of elements has a greatest lower bound. Likewise, a join-semilattice is a partial order in which each pair of elements has a least upper bound."
         ],
         "examples": [
             "Every total order on a set \\(S\\) forms two distinct semilattices with the operations of \\(\\min\\) and \\(\\max\\).",
-            "Given an alphabet \\(\\Sigma\\), the set \\(\\Sigma^*\\) on the partial order of \"is a prefix of\"."
+            "Given an alphabet \\(\\Sigma\\), the set \\(\\Sigma^*\\) on the partial order of \"is a prefix of\".",
+            "Given any set \\(S\\), the set \\(S \\sqcup \\{ \\bot \\}\\) forms a semilattice where \\(\\bot\\) is less than every element in \\(S\\) and no two distinct elements of \\(S\\) are comparable."
         ],
         "links": [
             "https://en.wikipedia.org/wiki/Semilattice",
@@ -1660,12 +1661,12 @@
         "name": "Lattice",
         "tagline": "A lattice \\(L\\) is a meet-semilattice and a join-semilattice over the same underlying set in which the two operations satisfy absorption properties.",
         "props": [
-            "Associativity (Meet): \\(\\forall a, b, c \\in L: (a \\bigtriangleup b) \\bigtriangleup c = a \\bigtriangleup (b \\bigtriangleup c)\\)",
-            "Commutativity (Meet): \\(\\forall a, b \\in L: a \\bigtriangleup b = b \\bigtriangleup a\\)",
-            "Associativity (Join): \\(\\forall a, b, c \\in L: (a \\bigtriangledown b) \\bigtriangledown c = a \\bigtriangledown (b \\bigtriangledown c)\\)",
-            "Commutativity (Join): \\(\\forall a, b \\in L: a \\bigtriangledown b = b \\bigtriangledown a\\)",
-            "Absorption (Join-Meet): \\(\\forall a, b \\in L: a \\bigtriangledown (a \\bigtriangleup b) = a\\)",
-            "Absorption (Meet-Join): \\(\\forall a, b \\in L: a \\bigtriangleup (a \\bigtriangledown b) = a\\)"
+            "Associativity (Meet): \\(\\forall a, b, c \\in L: (a \\triangle b) \\triangle c = a \\triangle (b \\triangle c)\\)",
+            "Commutativity (Meet): \\(\\forall a, b \\in L: a \\triangle b = b \\triangle a\\)",
+            "Associativity (Join): \\(\\forall a, b, c \\in L: (a \\triangledown b) \\triangledown c = a \\triangledown (b \\triangledown c)\\)",
+            "Commutativity (Join): \\(\\forall a, b \\in L: a \\triangledown b = b \\triangledown a\\)",
+            "Absorption (Join-Meet): \\(\\forall a, b \\in L: a \\triangledown (a \\triangle b) = a\\)",
+            "Absorption (Meet-Join): \\(\\forall a, b \\in L: a \\triangle (a \\triangledown b) = a\\)"
         ],
         "form": [
             "Equivalently, a lattice can be defined as a partially-ordered set in which every pair of elements has a meet and a join, where the join is the least-upper bound and the meet is the greatest-lower bound."
