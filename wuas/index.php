@@ -23,11 +23,14 @@
       <div>
         <img src="banner.png" alt="Wish Upon A Star" />
       </div>
-      Wish Upon A Star is an online game I run. It was once run on the
-      Game Maker Community forum but has since migrated to a Discord
-      server. I'll be using these pages as reference material for
-      space and item effects.
+      <p>
+        Wish Upon A Star is an online game I run. It was once run on
+        the Game Maker Community forum but has since migrated to a
+        Discord server. I'll be using these pages as reference
+        material for space and item effects.
+      </p>
       <section>
+        Resources
         <ul>
           <li>
             <a href="interactive.php">
@@ -49,7 +52,16 @@
               History
             </a>
           </li>
+          <li>
+            <a href="destiny.php">
+              Destiny Star
+            </a>
           </li>
+        </ul>
+      </section>
+      <section>
+        External Resources
+        <ul>
           <li>
             <a target="new"
                href="https://forum.yoyogames.com/index.php?threads/wish-upon-a-star-turn-2-4-%E2%88%9E.879/">
@@ -62,10 +74,9 @@
             </a>
           </li>
         </ul>
-      </section>
-      <div id="wuas-footer-tagline">
+      <section id="wuas-footer-tagline">
         <!-- Will be filled in by script -->
-      </div>
+      </section>
       <br/>
       <div class="project-header" onclick="window.doShow('wuas-spaces')">
         Spaces
