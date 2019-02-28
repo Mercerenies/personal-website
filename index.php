@@ -28,11 +28,11 @@
   <body>
     <?php include('private/header.php'); ?>
     <div class="page content">
-      My name is Silvio Mayolo, known online as Mercerenies. I am a 20-year-old
-      programmer and mathematician attending Tennessee Technological University.
-      This is a website for me to showcase various projects and things
-      that I write, as well as neat stuff I find online. Click the buttons
-      in the top bar to navigate the site.
+      My name is Silvio Mayolo, known online as Mercerenies. I am a
+      22-year-old programmer and mathematician attending Purdue
+      University. This is a website for me to showcase various
+      projects and things that I write, as well as neat stuff I find
+      online. Click the buttons in the top bar to navigate the site.
       <br/><br/>
       If you're an employer or researcher, please take a look at my
       <a href="pfolio/">professional portfolio</a> to see the work I've done.
