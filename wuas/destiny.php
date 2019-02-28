@@ -73,11 +73,11 @@
           +2 MOV)</dd>
           <dt>Priest</dt>
           <dd>On your turn, you may heal yourself for 10% of your
-          maximum HP, rounded down. Alternatively, you may heal another player
-          within 5 tiles of you for 20% of your maximum health. When
-          you reach the Altar, you gain a benefit from the GM
-          proportional to how much you healed other players. (+2 HP,
-          +3 MOV)</dd>
+          maximum HP, rounded down. Alternatively, you may heal
+          another player within 5 tiles of you for 20% of your maximum
+          health. When you reach the Altar, you gain a benefit from
+          the GM proportional to how much you healed other players.
+          (+2 HP, +3 MOV)</dd>
           <dt>Shaman</dt>
           <dd>You may lay down a totem which projects an aura in a
           diameter of 50% of your MOV. You may only have one totem out
@@ -114,6 +114,57 @@
           the same space as another player. Additionally, you deal 50%
           more damage to any player who has purposely killed another
           player. (+3 HP, +2 DEF)</dd>
+        </dl>
+      </div>
+      <p>
+        Additionally, Nefarian has the ability to declare a unique
+        penalty for each class. These penalties are as follows.
+      </p>
+      <div>
+        <dl>
+          <dt>Warrior</dt>
+          <dd><em>Your strength becomes your weakness!</em> You must
+            charge in a random direction. If you hit Nefarian, you
+            take damage equal to the damage you inflict to him.</dd>
+          <dt>Rogue</dt>
+          <dd><em>Stop hiding and face me!</em> You cannot use stealth
+            this turn. You are teleported to a space underneath
+            Nefarian. All non-Rogues can use stealth this turn.</dd>
+          <dt>Hunter</dt>
+          <dd><em>The Hunters become the hunted!</em> Your pet will
+            move toward you and attempt to attack you. Your pet deals
+            half damage this turn.</dd>
+          <dt>Priest</dt>
+          <dd><em>The light serves me now!</em> You are required to
+            use your healing ability on Nefarian this turn. This does
+            not benefit you.</dd>
+          <dt>Shaman</dt>
+          <dd><em>Show me what your totems can do!</em> You are forced
+            to lay a totem down near Nefarian. These totems only benefit
+            Nefarian and do not provide anyone else with benefits. Any
+            negative effects to Nefarian are negated.</dd>
+          <dt>Warlock</dt>
+          <dd><em>See what happens when you play with magic you do not understand!</em> You
+            must summon an Infernal nearby. Infernals last 2 turns and
+            deal 4 fire damage to players on the same space, or 1 fire
+            damage on adjacent spaces.</dd>
+          <dt>Mage</dt>
+          <dd><em>You should be more careful when you play with magic!</em> You
+            will automatically use your blink ability at the end of
+            your turn in a random direction.</dd>
+          <dt>Druid</dt>
+          <dd><em>The wild is mine to control!</em> You must channel
+            the effect of a nearby space. If the space has positive
+            effect, it is used on Nefarian. If it has negative effect,
+            it is used on you.</dd>
+          <dt>Paladin</dt>
+          <dd><em>I've heard you have many lives. Show me!</em> You
+            must engage in combat this turn. Nefarian takes no damage
+            this turn. Any Paladin who fails to inflict damage will be
+            dealt 1 to 3 damage by Nefarian's shadowflames.</dd>
+          <dt>Mortal (no class)</dt>
+          <dd><em>Just what can you do, exactly?</em> You will
+            randomly suffer one of the above penalties.</dd>
         </dl>
       </div>
       <div>
