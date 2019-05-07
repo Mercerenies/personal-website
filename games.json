@@ -173,7 +173,7 @@
             "magnitude": "Joke",
             "summary": "Just a simple platformer; written in five minutes",
             "finished": [10, 2012],
-            "page": "http://gmc.yoyogames.com/index.php?showtopic=549609&p=4109711"
+            "page": "https://www.mediafire.com/file/6yv0y8mfeyhhy9v/Five+Minutes.exe"
         },
         {
             "name": "Endless Rail",
@@ -294,6 +294,16 @@
             "summary": "An idling game about generating energy",
             "finished": [8, 2018],
             "page": "https://gamejolt.com/games/crank_up/364269"
+        },
+        {
+            "name": "Fury of the Fire Gods",
+            "author": "Mercerenies",
+            "genre": "Casual Platformer",
+            "occasion": "Project",
+            "magnitude": "Medium",
+            "summary": "A side-view enemy-rush water-gun shooter",
+            "finished": [5, 2019],
+            "page": "https://gamejolt.com/games/fire_gods/412101"
         }
     ]
 }
