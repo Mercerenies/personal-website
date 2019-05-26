@@ -304,6 +304,26 @@
             "summary": "A side-view enemy-rush water-gun shooter",
             "finished": [5, 2019],
             "page": "https://gamejolt.com/games/fire_gods/412101"
+        },
+        {
+            "name": "Greenshield the Brave",
+            "author": "Mercerenies",
+            "genre": "Platformer",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Collect all of the bugs in this Metroidvania platformer",
+            "finished": [5, 2019],
+            "page": "https://forum.yoyogames.com/index.php?threads/the-thirsty-33rd-gmc-jam-games-topic-enter-here.63468/#post-380428"
+        },
+        {
+            "name": "On and Off, Back and Forth",
+            "author": "Mercerenies",
+            "genre": "Casual",
+            "occasion": "Joke",
+            "magnitude": "Joke",
+            "summary": "Table tennis with some options",
+            "finished": [5, 2019],
+            "page": "https://forum.yoyogames.com/index.php?threads/the-thirsty-33rd-gmc-jam-games-topic-enter-here.63468/#post-380900"
         }
     ]
 }
