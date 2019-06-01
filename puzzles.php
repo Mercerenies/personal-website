@@ -4,7 +4,7 @@
   <head>
     <title>Mercerenies - Fun</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
   </head>
   <body>
