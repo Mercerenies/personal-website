@@ -10,7 +10,7 @@
     <title>Mercerenies - WUAS</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+    <script src="../lib/jquery.min.js">
     </script>
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js">
     </script>

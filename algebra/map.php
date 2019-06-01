@@ -6,9 +6,9 @@
   <head>
     <title>Mercerenies - Algebra</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+    <script src="../lib/jquery.min.js">
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
     <script>
       window.structureCommand = "<?php echo $GLOBALS["struct"] ?>";
