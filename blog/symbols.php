@@ -169,7 +169,7 @@ T
 { smith: ..., banks: ..., 'ward-sachs': ..., iterator: ... }
       </code></pre>
       <p>
-        Uh-oh! Now my fancy databse is iterable, and my poor friend
+        Uh-oh! Now my fancy database is iterable, and my poor friend
         Johnny has been resigned to iterating over it. If we ever try
         to use <code>for ... of</code> on my object, it'll behave very
         strangely. This goes double if I already had a method

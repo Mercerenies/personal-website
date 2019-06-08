@@ -15,6 +15,9 @@
         <li>
           <a href="blog/symbols.php">Javascript did Something Clever</a> <em>(Posted June 4, 2018)</em>
         </li>
+        <li>
+          <a href="blog/raii.php">RAII is Just Continuations</a> <em>(Posted June 8, 2019)</em>
+        </li>
       </ul>
     </div>
     <?php include('private/footer.php'); ?>
