@@ -324,6 +324,26 @@
             "summary": "Table tennis with some options",
             "finished": [5, 2019],
             "page": "https://forum.yoyogames.com/index.php?threads/the-thirsty-33rd-gmc-jam-games-topic-enter-here.63468/#post-380900"
+        },
+        {
+            "name": "Clownometry",
+            "author": "Mercerenies",
+            "genre": "Strategy Card Game",
+            "occasion": "Project",
+            "magnitude": "Medium",
+            "summary": "A card game about staving off a murderous clown, a refined remake of GMCynchronized.",
+            "finished": [7, 2019],
+            "page": "https://gamejolt.com/games/clownometry/423574"
+        },
+        {
+            "name": "The Great Mech War of 2039",
+            "author": "Mercerenies",
+            "genre": "Fighting",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Build a mech suit and pit it against others.",
+            "finished": [8, 2019],
+            "page": "https://www.mediafire.com/file/sgcsk848t67e522/GreatMechWar.zip/file"
         }
     ]
 }
