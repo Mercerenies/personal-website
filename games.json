@@ -344,6 +344,16 @@
             "summary": "Build a mech suit and pit it against others.",
             "finished": [8, 2019],
             "page": "https://www.mediafire.com/file/sgcsk848t67e522/GreatMechWar.zip/file"
+        },
+        {
+            "name": "H.E.X.A.G.O.N.",
+            "author": "Mercerenies",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Puzzles centered around restricted movement of your robot avatar",
+            "finished": [3, 2020],
+            "page": "https://forum.yoyogames.com/index.php?threads/gmc-jam-36-games-topic.72584/#post-427642"
         }
     ]
 }
