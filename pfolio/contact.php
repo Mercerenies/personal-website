@@ -13,7 +13,7 @@
           Email: Mercerenies at comcast dot net
         </li>
         <li>
-          Secondary Email: sdmayolo42 at students dot tntech dot edu
+          Secondary Email: smayolo at purdue dot edu
         </li>
         <li>
           GitHub:
