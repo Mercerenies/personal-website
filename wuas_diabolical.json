@@ -1,0 +1,313 @@
+
+{
+    "spaces": {
+        "neutral": {
+            "name": "Neutral Space",
+            "coords": "0,0,33,33",
+            "visual": "empty gray space",
+            "desc": "This space can be freely traversed and have no additional effects."
+        },
+        "shop": {
+            "name": "Shop",
+            "coords": "33,0,66,33",
+            "visual": "blue space with white 'S'",
+            "desc": "A player who lands on this space receives a random item, if there is room in the player's inventory."
+        },
+        "altar": {
+            "name": "Altar",
+            "coords": "66,0,99,33",
+            "visual": "red space with black 'A'",
+            "desc": "A player on this space is allowed to make one wish. At the end of the turn, all players who made wishes have their wishes granted and then are returned to Start. Multiple players on this space do not engage in combat."
+        },
+        "start": {
+            "name": "Start Square",
+            "coords": "99,0,132,33",
+            "visual": "yellow space with black 'St'",
+            "desc": "All new players start on this square. Players sharing this space do not fight, and any player on this space does not lose HP for any reason. A player who ends his turn on Start is cured of any status ailments."
+        },
+        "gap": {
+            "name": "Empty Gap",
+            "coords": "132,0,165,33",
+            "visual": "empty white area",
+            "desc": "These spaces are ordinarily impassible to players. If a player is forced onto a gap, they immediately return to Start and loses 5 HP. A player who is adjacent to a gap can choose to leap into the gap."
+        },
+        "crumbled": {
+            "name": "Crumbled Space",
+            "coords": "0,33,33,66",
+            "visual": "dark gray space with cracks",
+            "desc": "When a player steps off this space, it crumbles and disappears. Any item on this space is removed from the game board when it does so."
+        },
+        "water": {
+            "name": "Water Space",
+            "coords": "0,66,33,99",
+            "visual": "blue space with watery texture",
+            "desc": "A player who moves onto this space must stop here."
+        },
+        "lava": {
+            "name": "Lava Space",
+            "coords": "0,99,33,132",
+            "visual": "red space with yellow lava texture",
+            "desc": "A player who moves onto this space must stop here. A player who stops on this space takes 2 damage (mitigated by DEF). This space will never reduce HP to less than 1."
+        },
+        "egg": {
+            "name": "Egg Space",
+            "coords": "33,33,66,66",
+            "visual": "dull yellow space with off-white egg",
+            "desc": "Duplicates itself randomly, and when a player moves off an Egg Space, the space moves to a random position on the board. In either situation, Egg Spaces will try to form paths from Start to the Altar."
+        },
+        "circus": {
+            "name": "Circus Space",
+            "coords": "66,33,99,66",
+            "visual": "orange space with circus tent",
+            "desc": "A player who passes this space will be randomly warped to another Circus Space on the board before continuing to move."
+        },
+        "bowser": {
+            "name": "Bowser Space",
+            "coords": "33,66,66,99",
+            "visual": "dark red space with Bowser space icon",
+            "desc": "A player who lands on this space will suffer a penalty as decided by Mercerenies. After triggering, this space has a 50% chance of turning back into whatever space it was before it was Bowser."
+        },
+        "waltar": {
+            "name": "Walmaltar",
+            "coords": "99,33,132,66",
+            "visual": "red space with black 'A' and Walmart logo",
+            "desc": "A player on this space is allowed to make one wish, provided the wish is of Walmart quality. A wish which is not of Walmart quality will not be granted. After a wish is successfully granted, the player making the wish returns to Start."
+        },
+        "baked": {
+            "name": "Baked Beans Ocean",
+            "coords": "66,66,99,99",
+            "visual": "brownish baked bean texture",
+            "desc": "+5 MOV to any player who passes this space. A player can only receive one movement bonus from Baked Beans Ocean spaces per turn."
+        },
+        "cshop": {
+            "name": "Costume Shop",
+            "coords": "33,99,66,132",
+            "visual": "blue space with white sideways 'S'",
+            "desc": "A player who lands on this space receives a random item, if there is room in the player's inventory. A player who lands on this space may, additionally, choose to change their player icon."
+        },
+        "happy": {
+            "name": "Happy Face of Pleasure",
+            "coords": "0,132,33,165",
+            "visual": "green space with black excited smiley",
+            "desc": "This space just loves being stepped on, but not too much. Any player who passes this space gains 3 HP as a result of shared happiness, but if two or more different players pass it in the same turn, it becomes a Grumpy Face of Rudeness."
+        },
+        "grumpy": {
+            "name": "Grumpy Face of Rudeness",
+            "coords": "0,165,33,198",
+            "visual": "red space with upside down smile",
+            "desc": "This space hates being stepped on. As soon as a player moves onto this space, it will teleport to a random position on the board, taking that player with it. The position will be a gap if possible but will replace another space if necessary. If there are multiple gaps available, the Grumpy Face will move to a position adjacent to a non-gap space. The player who passed this space will continue his movements normally from the new position."
+        },
+        "agony": {
+            "name": "Agony Space",
+            "coords": "33,132,66,165",
+            "visual": "pink space with black screaming face",
+            "desc": "Whenever a player passes this space, it cries out in agony and deals 1 damage to that player and any player on an adjacent or diagonally adjacent space. Afterward, it becomes a Happy Face of Pleasure."
+        }
+    },
+    "items": {
+        "moltenboots": {
+            "name": "Molten Boots",
+            "desc": "The next time you step on a Lava Space, these boots automatically activate. The Lava Space turns into a Molten Rock Space, which is just like a neutral space except that it will randomly turn back into a Lava Space several turns later. These boots disappear after use."
+        },
+        "eshuffle": {
+            "name": "The Electric Shuffle",
+            "desc": "Single use. At the end of the turn on which you use this item (after all wishes have been resolved), all players other than you randomly switch places with one another."
+        },
+        "lavabomb": {
+            "name": "Lava Bomb",
+            "desc": "Single use. Select a player. Every space with distance 3 or less from that player has a 25% chance of turning into lava."
+        },
+        "neutralize": {
+            "name": "Neutralizing Beam",
+            "desc": "Single use. Every space (including any gaps) that is horizontally or vertically aligned with you is turned into a neutral space. Any players caught in the blast take 1 damage (mitigated by DEF) from the beam."
+        },
+        "nostalgia": {
+            "name": "Nostalgia Bomb",
+            "desc": "Single use. Name a type of space that appeared in any previous WUAS game but which has not appeared yet in this one. Every neutral space on the board becomes that space."
+        },
+        "beer": {
+            "name": "Beer",
+            "desc": "Single use. Drink to restore 2 HP. 25% chance of losing 5 HP instead."
+        },
+        "temporal": {
+            "name": "Temporal Gun",
+            "desc": "This item was glitched into existence. It's supposed to be from a past game, but it doesn't exist. Single use. Select an item in your inventory. That item is launched into the next WUAS game, so that it will appear on the same turn in the next WUAS game."
+        },
+        "shrek5": {
+            "name": "Shrek 5 VHS",
+            "desc": "Its glory is too great to be experienced by mortal eyes. If you choose to view this video, you will be judged by the gods, who will either reward you for your purity of soul or smite you for your blasphemy."
+        },
+        "rbaked": {
+            "name": "Can of Reverse Baked Beans",
+            "desc": "You may pour these on an adjacent space. That space becomes a Reverse Baked Beans Ocean, which decreases the MOV of anyone who passes it by 5 for that turn. This can is single use, but Reverse Baked Beans will spread and infect any adjacent Baked Beans Oceans."
+        }
+    },
+    "effects": [
+    ],
+    "tokens": {
+        "item": {
+            "name": "Item",
+            "stats": "N/A",
+            "thumbnail": [0, 0],
+            "desc": "Icon used to represent items on the map."
+        },
+        "goldcoin": {
+            "name": "Gold Coin",
+            "stats": "N/A",
+            "thumbnail": [16, 0],
+            "desc": "Can be picked up by a player. Always protected from wishes."
+        },
+        "lukasmah": {
+            "name": "Lukasmah",
+            "stats": "Player",
+            "thumbnail": [0, 16],
+            "desc": "A player token."
+        },
+        "roytheshort": {
+            "name": "Roytheshort",
+            "stats": "Player",
+            "thumbnail": [16, 16],
+            "desc": "A player token."
+        },
+        "htsirohn": {
+            "name": "HTSirohn",
+            "stats": "Player",
+            "thumbnail": [0, 32],
+            "desc": "A player token."
+        },
+        "hatcrafter": {
+            "name": "Hatcrafter",
+            "stats": "Player",
+            "thumbnail": [0, 48],
+            "desc": "A player token."
+        },
+        "rougebare": {
+            "name": "rougebare",
+            "stats": "Player",
+            "thumbnail": [0, 64],
+            "desc": "A player token."
+        },
+        "dolphinhats": {
+            "name": "Dolphinhats",
+            "stats": "Player",
+            "thumbnail": [16, 32],
+            "desc": "A player token."
+        },
+        "misu": {
+            "name": "Misu",
+            "stats": "Player",
+            "thumbnail": [16, 48],
+            "desc": "A player token."
+        },
+        "masterofgames": {
+            "name": "Master of Games",
+            "stats": "100 HP; 10 DEF; 5 MOV; Beer; (Empty Inventory Slot); (Empty Inventory Slot)",
+            "thumbnail": [32, 0],
+            "span": [2, 2],
+            "desc": "Randomly pursues players. Can move freely as long as at least one of the spaces he is occupying is not a gap. Is not affected by water, lava, or other movement-slowing spaces. Any player he passes must play a game of chance against him. If the player wins the game, the Master of Games will give them something useful. If the player loses, the Master of Games steals something useful from that player. If the player has nothing useful, the Master of Games steals 9 HP (mitigated by DEF) in frustration. A player may bribe the Master of Games with a Beer, in which case the Master will leave without challenging that player."
+        },
+        "clown": {
+            "name": "Evil Clown",
+            "stats": "1 MOV",
+            "thumbnail": [16, 64],
+            "desc": "Moves randomly each turn. Any player he passes swaps bodies with him. The player's token is treated as a randomly moving CPU and the player himself takes control of the 1-MOV Evil Clown."
+        },
+        "elephant": {
+            "name": "Elephant",
+            "stats": "5 MOV",
+            "thumbnail": [32, 32],
+            "span": [2, 2],
+            "desc": "Does not move normally. A player on the same space as an elephant can ride the elephant, using the elephant's 5 MOV to move alongside it. Can move freely as long as at least one of the spaces he is occupying is not a gap, and is not affected by water, lava, or other movement-slowing spaces."
+        },
+        "firebreather": {
+            "name": "Fire-Breather",
+            "stats": "5 MOV",
+            "thumbnail": [32, 64],
+            "desc": "Moves randomly each turn. Every space he passes turns into a Bowser Space."
+        },
+        "quark": {
+            "name": "Quark",
+            "stats": "6 MOV",
+            "thumbnail": [64, 0],
+            "span": [2, 2],
+            "desc": "Sets up a wheel of fortune with five options and then pursues a random player. Quark can fly, ignores all space effects, and does not engage in combat. When he catches his intended target, he spins the wheel, applies the effect, and then sets up a new wheel and a new target."
+        },
+        "gunpuppy": {
+            "name": "Gun Puppy",
+            "stats": "5 HP; 0 DEF; 0 MOV",
+            "thumbnail": [64, 32],
+            "span": [2, 2],
+            "desc": "There are several varieties of Gun Puppy. They can never be moved by any means. Each turn, the Gun Puppy will pick a direction and fire, preferring directions that actually do something. Anything other than the Puppy on its space will get hit by the attack, regardless of direction. A Gun Puppy has a small change of upgrading to Mk 2, which doubles the damage of the attack and gives the Gun Puppy 1 DEF."
+        },
+        "yellowclown": {
+            "name": "Yellow Clown",
+            "stats": "? MOV",
+            "thumbnail": [0, 80],
+            "desc": "Each turn, Yellow Clown moves in a random direction and doesn't stop moving in that direction until he reaches a gap, stopping just before the gap. Any players that he encounters during the dash are dragged to Yellow Clown's ending space with him. Yellow Clown will always favor moving in directions that result in encountering players. Yellow Clown has no effect on non-player tokens and will not interact with them. A player on the same space as Yellow Clown can pick him up and carry him and can order the Yellow Clown to dash in a chosen direction."
+        },
+        "redclown": {
+            "name": "Red Clown",
+            "stats": "? MOV",
+            "thumbnail": [0, 96],
+            "desc": "As everyone knows, Red Clowns have rocket feet. Each turn, Red Clown will launch himself into the sky and land on a random neutral space somewhere on the board. Any players who are on the space he lands on take 4 damage, and any player on an adjacent space take 1 damage. A player on the same space as Red Clown can pick him up and carry him and can order the Red Clown to land on a particular neutral space."
+        },
+        "blueclown": {
+            "name": "Blue Clown",
+            "stats": "? MOV",
+            "thumbnail": [0, 112],
+            "desc": "Blue Clown does not normally move. Each turn, he will fire a laser in a random direction, dealing 1 damage to every player it hits. Blue Clown will favor directions which hit at least one player. A player on the same space as Blue Clown can pick him up and carry him and can order the Blue Clown to fire in a chosen direction."
+        },
+        "quark1": {
+            "name": "Quark",
+            "stats": "10 HP; 5 MOV",
+            "thumbnail": [16, 80],
+            "desc": "Moves around and commits various crimes on the board, including but not limited to: stealing player's lunch money, funding Bowser's malicious schemes, and exceeding the speed of light."
+        },
+        "aap": {
+            "name": "Alcoholics Anonymous Patron",
+            "stats": "20 HP; 5 MOV",
+            "thumbnail": [32, 80],
+            "desc": "Pursues the Master of Games in an attempt to tie him up. The AA Patron is immune to all of Master of Games' effects. If MoG does not exist or is already tied up, he will pursue any player who has any alcoholic item, such as Beer, and will tie them up as well. A player who is tied up has 0 ATK. A non-player token who is tied up has 0 ATK and cannot use any of their special abilities. The Patron's one weakness is beans. He will avoid the Baked Beans Ocean like a plague and will die if a player who is adjacent to him on a Baked Beans Ocean space elects to toss beans upon him. A tied up player cannot throw beans."
+        },
+        "cryer": {
+            "name": "Small Crying Man",
+            "stats": "10 HP; 5 MOV",
+            "thumbnail": [16, 96],
+            "desc": "The Small Crying Man can't benefit from Baked Beans Oceans. No matter how much he drinks, he gets no more MOV. It's so sad that he can't stop crying and drinking beans, desperately trying to speed himself up. Moves randomly each turn, preferring Baked Beans Ocean spaces whenever possible. If he runs into a player, his disease will temporarily spread to them, disabling the effect of Baked Beans spaces for that player on the following turn."
+        },
+        "lovepuppy": {
+            "name": "Love Puppy",
+            "stats": "5 HP; 0 DEF; 0 MOV",
+            "thumbnail": [96, 0],
+            "span": [2, 2],
+            "desc": "There are several varieties of Gun Puppy. They can never be moved by any means. Each turn, the Love Puppy will pick a direction and fire, preferring directions that actually do something. The projectile heals the target for 1 health. Anything other than the Puppy on its space will get hit by the attack, regardless of direction. A Love Puppy has a small change of upgrading to Mk 2, which doubles the healing capabilities of the attack, gives the Love Puppy 1 DEF, and has a chance of cleansing the target of a negative effect."
+        }
+    },
+    "rulings": [
+        {
+            "desc": "Any Altar wishes occur at the end of the turn, after all player movement is completed."
+        },
+        {
+            "desc": "Effects which target a stat that a token lacks have no effect on the token. For example, a space that deals damage will not affect a token who has no concept of HP."
+        },
+        {
+            "desc": "The specific nature of combat in the case of tokens which are deficient in some stats is this. All involved players or tokens who have an ATK stat will attack all involved players or tokens who have an HP stat. All such attacks happen simultaneously, and in general a token will never attack itself unless otherwise stated."
+        },
+        {
+            "desc": "In general, an action which attempts to move into a gap is considered to be a mistake or a typo, and the player will not be allowed to move into the gap. If the movement into the gap was intentional, this should be specified in the post. This ruling does not apply if the player in question has any equipment that would enable him or her to pass the gaps without the normal penalty."
+        },
+        {
+            "desc": "The larger the magnitude of a wish, the less likely it is to end up in the wisher's favor. That is, a simple wish is likely to go exactly as intended. A large and complicated wish may be interpreted extremely literally and the results may not be what was desired."
+        }
+    ],
+    "current_turn": 7,
+    "turns": {
+        "1": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "neutral", "neutral", "neutral", "neutral", "neutral", "gap", "gap", "gap"], ["neutral", "gap", "neutral", "lava", "crumbled", "lava", "neutral", "gap", "neutral", "gap"], ["gap", "gap", "crumbled", "lava", "altar", "lava", "crumbled", "gap", "gap", "gap"], ["gap", "gap", "neutral", "lava", "crumbled", "lava", "neutral", "gap", "gap", "gap"], ["gap", "gap", "shop", "neutral", "start", "neutral", "shop", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "goldcoin", "position": [136, 40]}, {"object": "goldcoin", "position": [8, 104]}, {"object": "goldcoin", "position": [264, 104]}]}},
+        "2": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "neutral", "neutral", "neutral", "neutral", "neutral", "gap", "gap", "gap"], ["neutral", "gap", "neutral", "lava", "crumbled", "lava", "neutral", "gap", "neutral", "gap"], ["gap", "gap", "crumbled", "lava", "altar", "lava", "crumbled", "gap", "gap", "gap"], ["gap", "gap", "neutral", "lava", "gap", "lava", "neutral", "gap", "gap", "gap"], ["gap", "gap", "shop", "neutral", "start", "neutral", "shop", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "goldcoin", "position": [136, 40]}, {"object": "goldcoin", "position": [8, 104]}, {"object": "goldcoin", "position": [264, 104]}, {"object": "lukasmah", "position": [136, 136]}, {"object": "hatcrafter", "position": [72, 200]}, {"object": "rougebare", "position": [142, 206]}, {"object": "roytheshort", "position": [132, 196]}, {"object": "htsirohn", "position": [200, 200]}]}},
+        "3": {"0": {"spaces": [["gap", "gap", "neutral", "gap", "neutral", "neutral", "gap", "neutral", "gap", "neutral"], ["neutral", "neutral", "neutral", "gap", "neutral", "neutral", "gap", "neutral", "gap", "gap"], ["gap", "neutral", "gap", "neutral", "gap", "gap", "gap", "gap", "neutral", "gap"], ["neutral", "neutral", "gap", "neutral", "gap", "gap", "neutral", "neutral", "neutral", "neutral"], ["neutral", "gap", "crumbled", "neutral", "altar", "neutral", "gap", "neutral", "neutral", "neutral"], ["neutral", "neutral", "gap", "neutral", "neutral", "gap", "neutral", "neutral", "neutral", "gap"], ["neutral", "gap", "gap", "neutral", "start", "neutral", "gap", "neutral", "gap", "gap"], ["gap", "neutral", "gap", "neutral", "neutral", "gap", "gap", "gap", "neutral", "neutral"], ["gap", "gap", "gap", "gap", "gap", "gap", "neutral", "gap", "gap", "neutral"], ["neutral", "gap", "neutral", "gap", "neutral", "gap", "gap", "neutral", "gap", "gap"], ["neutral", "neutral", "neutral", "gap", "neutral", "gap", "gap", "neutral", "neutral", "gap"]], "tokens": [{"object": "goldcoin", "position": [136, 40]}, {"object": "goldcoin", "position": [8, 104]}, {"object": "rougebare", "position": [206, 110]}, {"object": "goldcoin", "position": [264, 104]}, {"object": "roytheshort", "position": [100, 132]}, {"object": "lukasmah", "position": [130, 206]}, {"object": "misu", "position": [142, 194]}, {"object": "hatcrafter", "position": [130, 194]}, {"object": "dolphinhats", "position": [142, 206]}, {"object": "htsirohn", "position": [136, 200]}]}},
+        "4": {"0": {"spaces": [["neutral", "circus", "circus", "neutral", "neutral", "gap", "gap", "gap", "gap", "neutral"], ["neutral", "circus", "circus", "water", "neutral", "gap", "gap", "gap", "gap", "neutral"], ["gap", "crumbled", "crumbled", "water", "neutral", "neutral", "altar", "egg", "egg", "egg"], ["gap", "crumbled", "crumbled", "neutral", "neutral", "neutral", "neutral", "egg", "egg", "egg"], ["neutral", "gap", "gap", "circus", "circus", "gap", "gap", "gap", "gap", "circus"], ["water", "gap", "gap", "circus", "circus", "gap", "gap", "gap", "gap", "circus"], ["gap", "gap", "gap", "neutral", "water", "start", "neutral", "egg", "egg", "egg"], ["gap", "gap", "gap", "neutral", "neutral", "neutral", "neutral", "egg", "egg", "egg"], ["neutral", "neutral", "neutral", "neutral", "water", "water", "neutral", "gap", "gap", "neutral"], ["neutral", "water", "neutral", "neutral", "neutral", "bowser", "bowser", "gap", "gap", "water"], ["gap", "neutral", "neutral", "gap", "gap", "bowser", "bowser", "gap", "gap", "neutral"]], "tokens": [{"object": "masterofgames", "position": [48, 16]}, {"object": "rougebare", "position": [302, 14]}, {"object": "clown", "position": [104, 72]}, {"object": "lukasmah", "position": [162, 206]}, {"object": "misu", "position": [174, 194]}, {"object": "hatcrafter", "position": [162, 194]}, {"object": "dolphinhats", "position": [174, 206]}, {"object": "htsirohn", "position": [168, 200]}, {"object": "roytheshort", "position": [164, 196]}, {"object": "firebreather", "position": [168, 296]}, {"object": "temporal", "position": [40, 328]}]}},
+        "5": {"0": {"spaces": [["neutral", "circus", "circus", "neutral", "neutral", "gap", "gap", "gap", "gap", "neutral"], ["neutral", "circus", "circus", "water", "neutral", "egg", "egg", "gap", "gap", "neutral"], ["gap", "crumbled", "crumbled", "water", "neutral", "egg", "altar", "egg", "gap", "gap"], ["gap", "crumbled", "crumbled", "neutral", "neutral", "egg", "neutral", "egg", "egg", "egg"], ["neutral", "gap", "gap", "circus", "circus", "egg", "gap", "egg", "gap", "circus"], ["water", "gap", "gap", "circus", "circus", "egg", "egg", "egg", "gap", "circus"], ["gap", "gap", "gap", "neutral", "water", "start", "neutral", "gap", "gap", "gap"], ["gap", "gap", "gap", "neutral", "neutral", "egg", "egg", "egg", "egg", "egg"], ["neutral", "neutral", "neutral", "neutral", "water", "water", "neutral", "gap", "gap", "neutral"], ["neutral", "water", "bowser", "bowser", "bowser", "bowser", "bowser", "gap", "gap", "water"], ["gap", "bowser", "bowser", "gap", "gap", "bowser", "bowser", "gap", "gap", "neutral"]], "tokens": [{"object": "clown", "position": [104, 40]}, {"object": "gunpuppy", "position": [288, 32]}, {"object": "masterofgames", "position": [144, 80]}, {"object": "goldcoin", "position": [40, 104]}, {"object": "misu", "position": [142, 130]}, {"object": "goldcoin", "position": [232, 136]}, {"object": "roytheshort", "position": [292, 132]}, {"object": "lukasmah", "position": [130, 174]}, {"object": "htsirohn", "position": [104, 200]}, {"object": "rougebare", "position": [174, 206]}, {"object": "hatcrafter", "position": [162, 194]}, {"object": "dolphinhats", "position": [174, 206]}, {"object": "quark", "position": [272, 208]}, {"object": "goldcoin", "position": [200, 296]}, {"object": "temporal", "position": [36, 324]}, {"object": "firebreather", "position": [44, 332]}]}},
+        "6": {"0": {"spaces": [["neutral", "circus", "circus", "neutral", "neutral", "baked", "baked", "egg", "baked", "neutral"], ["neutral", "circus", "circus", "water", "neutral", "egg", "egg", "egg", "egg", "neutral"], ["baked", "crumbled", "crumbled", "water", "waltar", "baked", "altar", "baked", "egg", "baked"], ["baked", "crumbled", "crumbled", "neutral", "neutral", "egg", "neutral", "baked", "egg", "baked"], ["neutral", "baked", "baked", "circus", "circus", "egg", "egg", "egg", "waltar", "circus"], ["water", "baked", "baked", "circus", "circus", "baked", "baked", "baked", "egg", "circus"], ["baked", "baked", "cshop", "neutral", "water", "start", "neutral", "baked", "egg", "baked"], ["baked", "baked", "baked", "bowser", "neutral", "egg", "egg", "egg", "egg", "egg"], ["neutral", "neutral", "waltar", "bowser", "water", "egg", "egg", "egg", "waltar", "neutral"], ["neutral", "water", "bowser", "bowser", "bowser", "bowser", "bowser", "baked", "baked", "water"], ["baked", "bowser", "bowser", "baked", "baked", "bowser", "bowser", "baked", "baked", "neutral"]], "tokens": [{"object": "shrek5", "position": [72, 40]}, {"object": "quark1", "position": [168, 40]}, {"object": "aap", "position": [264, 40]}, {"object": "gunpuppy", "position": [288, 32]}, {"object": "clown", "position": [104, 72]}, {"object": "goldcoin", "position": [40, 104]}, {"object": "yellowclown", "position": [104, 104]}, {"object": "masterofgames", "position": [144, 144]}, {"object": "rougebare", "position": [238, 142]}, {"object": "lukasmah", "position": [130, 174]}, {"object": "htsirohn", "position": [136, 200]}, {"object": "quark", "position": [144, 208]}, {"object": "roytheshort", "position": [164, 196]}, {"object": "misu", "position": [174, 194]}, {"object": "hatcrafter", "position": [162, 194]}, {"object": "dolphinhats", "position": [174, 206]}, {"object": "firebreather", "position": [108, 236]}, {"object": "redclown", "position": [296, 232]}, {"object": "blueclown", "position": [200, 264]}, {"object": "goldcoin", "position": [200, 296]}, {"object": "temporal", "position": [36, 324]}]}},
+        "7": {"0": {"spaces": [["happy", "grumpy", "grumpy", "happy", "happy", "happy", "baked", "gap", "baked", "neutral", "neutral", "gap", "neutral", "happy", "grumpy", "grumpy", "happy", "gap", "gap", "baked"], ["gap", "happy", "happy", "baked", "baked", "baked", "baked", "baked", "baked", "baked", "baked", "baked", "baked", "gap", "happy", "happy", "gap", "gap", "gap", "gap"], ["gap", "gap", "baked", "neutral", "neutral", "neutral", "circus", "circus", "neutral", "neutral", "baked", "baked", "egg", "baked", "neutral", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "baked", "neutral", "neutral", "neutral", "circus", "circus", "water", "neutral", "egg", "egg", "egg", "egg", "neutral", "baked", "baked", "gap", "gap", "baked"], ["gap", "baked", "baked", "baked", "baked", "baked", "gap", "crumbled", "water", "waltar", "baked", "altar", "egg", "egg", "baked", "agony", "baked", "baked", "gap", "baked"], ["baked", "baked", "neutral", "neutral", "baked", "baked", "gap", "gap", "neutral", "neutral", "gap", "egg", "baked", "egg", "baked", "baked", "agony", "baked", "baked", "baked"], ["baked", "neutral", "neutral", "neutral", "neutral", "neutral", "baked", "baked", "circus", "circus", "egg", "egg", "gap", "waltar", "circus", "baked", "baked", "agony", "baked", "baked"], ["neutral", "neutral", "neutral", "neutral", "neutral", "water", "baked", "baked", "circus", "circus", "baked", "baked", "baked", "egg", "egg", "baked", "baked", "baked", "agony", "baked"], ["neutral", "neutral", "neutral", "neutral", "baked", "baked", "bowser", "bowser", "neutral", "water", "start", "egg", "egg", "egg", "egg", "baked", "baked", "baked", "baked", "agony"], ["baked", "neutral", "neutral", "neutral", "baked", "baked", "bowser", "bowser", "bowser", "neutral", "gap", "egg", "egg", "egg", "egg", "baked", "gap", "baked", "baked", "agony"], ["baked", "neutral", "neutral", "neutral", "neutral", "neutral", "neutral", "waltar", "bowser", "water", "gap", "gap", "gap", "waltar", "neutral", "neutral", "gap", "gap", "baked", "baked"], ["baked", "neutral", "neutral", "neutral", "neutral", "neutral", "water", "bowser", "bowser", "bowser", "bowser", "bowser", "baked", "baked", "water", "neutral", "neutral", "gap", "baked", "baked"], ["baked", "baked", "neutral", "neutral", "neutral", "baked", "bowser", "bowser", "baked", "baked", "bowser", "bowser", "baked", "baked", "neutral", "neutral", "happy", "baked", "baked", "baked"], ["baked", "baked", "baked", "gap", "gap", "baked", "baked", "neutral", "neutral", "baked", "gap", "gap", "baked", "baked", "neutral", "happy", "happy", "happy", "baked", "gap"], ["baked", "happy", "happy", "baked", "baked", "baked", "gap", "neutral", "neutral", "baked", "baked", "gap", "happy", "happy", "happy", "happy", "happy", "happy", "happy", "happy"]], "tokens": [{"object": "goldcoin", "position": [424, 8]}, {"object": "redclown", "position": [456, 72]}, {"object": "shrek5", "position": [232, 104]}, {"object": "rougebare", "position": [238, 110]}, {"object": "aap", "position": [424, 104]}, {"object": "quark1", "position": [424, 104]}, {"object": "gunpuppy", "position": [448, 96]}, {"object": "yellowclown", "position": [232, 136]}, {"object": "clown", "position": [296, 136]}, {"object": "cryer", "position": [232, 200]}, {"object": "lukasmah", "position": [290, 206]}, {"object": "lovepuppy", "position": [96, 224]}, {"object": "blueclown", "position": [456, 232]}, {"object": "htsirohn", "position": [232, 264]}, {"object": "masterofgames", "position": [240, 272]}, {"object": "misu", "position": [334, 258]}, {"object": "hatcrafter", "position": [322, 258]}, {"object": "dolphinhats", "position": [334, 270]}, {"object": "roytheshort", "position": [328, 264]}, {"object": "goldcoin", "position": [40, 296]}, {"object": "firebreather", "position": [236, 300]}, {"object": "quark", "position": [400, 304]}, {"object": "goldcoin", "position": [360, 360]}, {"object": "temporal", "position": [196, 388]}, {"object": "goldcoin", "position": [456, 392]}]}}
+    }
+}

@@ -31,6 +31,14 @@
       "spaces": "./spaces_spaghetti.png",
       "tokens": "./tokens_spaghetti.png",
       "prefix": "y"
+    },
+    {
+      "name": "2020 Game",
+      "shortname": "2020",
+      "json": "../wuas_diabolical.json",
+      "spaces": "./spaces_diabolical.png",
+      "tokens": "./tokens_diabolical.png",
+      "prefix": "x"
     }
   ]
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php $GLOBALS["file"] = isset($_GET["file"]) ? $_GET["file"] : 3; ?>
+<?php $GLOBALS["file"] = isset($_GET["file"]) ? $_GET["file"] : 4; ?>
 
 <html>
   <head>

@@ -21,7 +21,10 @@
       <p>
         WUAS began in 2013 and is currently on its eighth round. The
         first six were hosted on the GMC webforum, but the most recent
-        two rounds have been hosted on a Discord gaming server.
+        two rounds have been hosted on a Discord gaming server. Links
+        to the first few games are unfortunately not available, as the
+        original GMC forum on which they were hosted has been taken
+        down.
       </p>
       <table>
         <thead>
@@ -33,6 +36,8 @@
             <th>Length</th>
             <th>Location</th>
             <th>Dictionary</th>
+            <th>Players</th>
+            <th>Winner</th>
           </tr>
         </thead>
         <tbody>
@@ -42,8 +47,10 @@
             <td></td>
             <td>2013</td>
             <td>29 turns</td>
-            <td><a target="new" href="http://gmc.yoyogames.com/index.php?showtopic=603991&page=1">GMC</a></td>
+            <td>GMC</td>
             <td>N/A</td>
+            <td>12</td>
+            <td>Shadow Array / richardlord / KingPete</td>
           </tr>
           <tr>
             <td>2</td>
@@ -51,8 +58,10 @@
             <td></td>
             <td>2014</td>
             <td>58 turns</td>
-            <td><a target="new" href="http://gmc.yoyogames.com/index.php?showtopic=603991&p=4534607">GMC</a></td>
+            <td>GMC</td>
             <td>N/A</td>
+            <td>7</td>
+            <td>Mercerenies</td>
           </tr>
           <tr>
             <td>3</td>
@@ -60,8 +69,10 @@
             <td></td>
             <td>2015</td>
             <td>15 turns</td>
-            <td><a target="new" href="http://gmc.yoyogames.com/index.php?showtopic=603991&p=4723789">GMC</a></td>
+            <td>GMC</td>
             <td>N/A</td>
+            <td>6</td>
+            <td>AnuragRaghav</td>
           </tr>
           <tr>
             <td>4</td>
@@ -69,8 +80,10 @@
             <td></td>
             <td>2016</td>
             <td>2 turns</td>
-            <td><a target="new" href="http://gmc.yoyogames.com/index.php?showtopic=603991&p=4930041">GMC</a></td>
+            <td>GMC</td>
             <td>N/A</td>
+            <td>4</td>
+            <td>(Nobody)</td>
           </tr>
           <tr>
             <td>5</td>
@@ -80,6 +93,8 @@
             <td>15 turns</td>
             <td><a target="new" href="https://forum.yoyogames.com/index.php?threads/%E2%98%85-wish-upon-a-star-7-%E2%88%9E-turn-9-reached-the-cyberpunk-era-%E2%98%85.879/">GMC</a></td>
             <td><a href="index.php?file=0">Available</a></td>
+            <td>7</td>
+            <td>Lukasmah / Kepons</td>
           </tr>
           <tr>
             <td>6</td>
@@ -89,6 +104,8 @@
             <td>9 turns</td>
             <td><a target="new" href="https://forum.yoyogames.com/index.php?threads/%E2%98%85-wish-upon-a-star-7-%E2%88%9E-turn-9-reached-the-cyberpunk-era-%E2%98%85.879/page-3#post-185118">GMC</a></td>
             <td><a href="index.php?file=1">Available</a></td>
+            <td>7</td>
+            <td>Kepons</td>
           </tr>
           <tr>
             <td>7</td>
@@ -98,15 +115,30 @@
             <td>17 turns</td>
             <td>Discord</td>
             <td><a href="index.php?file=2">Available</a></td>
+            <td>9</td>
+            <td>Hatcrafter</td>
           </tr>
           <tr>
             <td>8</td>
             <td>Conveying the Message</td>
             <td>Battle Royale</td>
             <td>2018</td>
-            <td>Ongoing</td>
+            <td>22 turns</td>
             <td>Discord</td>
             <td><a href="index.php?file=3">Available</a></td>
+            <td>5</td>
+            <td>Dolphinhats / Misu</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>The Molten Shuffle</td>
+            <td></td>
+            <td>2020</td>
+            <td>Ongoing</td>
+            <td>Discord</td>
+            <td><a href="index.php?file=4">Available</a></td>
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
