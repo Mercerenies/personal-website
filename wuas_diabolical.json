@@ -108,6 +108,324 @@
             "coords": "66,99,99,132",
             "visual": "orange space with Chuck E Cheese icon",
             "desc": "Any player who passes this space becomes Vile and gets Mold Pizza."
+        },
+        "truck": {
+            "name": "Monster Truck",
+            "coords": "66,132,99,165",
+            "visual": "purple space with blue monster truck icon",
+            "desc": "Every turn, this space moves one space toward the Altar, replacing the adjacent space. The space it departs becomes a Ranting Rubble space. If two Monster Truck spaces would move onto the same space at the same time, they collide, converting into a Flamey Steve space."
+        },
+        "rubble": {
+            "name": "Ranting Rubble",
+            "coords": "66,165,99,198",
+            "visual": "gray rocky textured space",
+            "desc": "Spouts garbage into the update post, adding unnecessary garbage text to the post itself."
+        },
+        "flamey": {
+            "name": "Flamey Steve",
+            "coords": "33,165,66,198",
+            "visual": "Steve atop a flaming background texture",
+            "desc": "Any player or token which passes this space is launched randomly to somewhere else on the board. If a Monster Truck tries to move onto a Flamey Steve space, that Monster Truck is also launched. Multiple Monster Trucks which move onto this space simultaneously are launched separately, to potentially different destinations."
+        },
+        "blob00": {
+            "name": "Mr. Blobby",
+            "coords": "0,198,33,231",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob01": {
+            "name": "Mr. Blobby",
+            "coords": "0,231,33,264",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob02": {
+            "name": "Mr. Blobby",
+            "coords": "0,264,33,297",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob03": {
+            "name": "Mr. Blobby",
+            "coords": "0,297,33,330",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob04": {
+            "name": "Mr. Blobby",
+            "coords": "0,330,33,363",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob05": {
+            "name": "Mr. Blobby",
+            "coords": "0,363,33,396",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob06": {
+            "name": "Mr. Blobby",
+            "coords": "0,396,33,429",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob10": {
+            "name": "Mr. Blobby",
+            "coords": "33,198,66,231",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob11": {
+            "name": "Mr. Blobby",
+            "coords": "33,231,66,264",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob12": {
+            "name": "Mr. Blobby",
+            "coords": "33,264,66,297",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob13": {
+            "name": "Mr. Blobby",
+            "coords": "33,297,66,330",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob14": {
+            "name": "Mr. Blobby",
+            "coords": "33,330,66,363",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob15": {
+            "name": "Mr. Blobby",
+            "coords": "33,363,66,396",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob16": {
+            "name": "Mr. Blobby",
+            "coords": "33,396,66,429",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob20": {
+            "name": "Mr. Blobby",
+            "coords": "66,198,99,231",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob21": {
+            "name": "Mr. Blobby",
+            "coords": "66,231,99,264",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob22": {
+            "name": "Mr. Blobby",
+            "coords": "66,264,99,297",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob23": {
+            "name": "Mr. Blobby",
+            "coords": "66,297,99,330",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob24": {
+            "name": "Mr. Blobby",
+            "coords": "66,330,99,363",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob25": {
+            "name": "Mr. Blobby",
+            "coords": "66,363,99,396",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob26": {
+            "name": "Mr. Blobby",
+            "coords": "66,396,99,429",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob30": {
+            "name": "Mr. Blobby",
+            "coords": "99,198,132,231",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob31": {
+            "name": "Mr. Blobby",
+            "coords": "99,231,132,264",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob32": {
+            "name": "Mr. Blobby",
+            "coords": "99,264,132,297",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob33": {
+            "name": "Mr. Blobby",
+            "coords": "99,297,132,330",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob34": {
+            "name": "Mr. Blobby",
+            "coords": "99,330,132,363",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob35": {
+            "name": "Mr. Blobby",
+            "coords": "99,363,132,396",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob36": {
+            "name": "Mr. Blobby",
+            "coords": "99,396,132,429",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob40": {
+            "name": "Mr. Blobby",
+            "coords": "132,198,165,231",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob41": {
+            "name": "Mr. Blobby",
+            "coords": "132,231,165,264",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob42": {
+            "name": "Mr. Blobby",
+            "coords": "132,264,165,297",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob43": {
+            "name": "Mr. Blobby",
+            "coords": "132,297,165,330",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob44": {
+            "name": "Mr. Blobby",
+            "coords": "132,330,165,363",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob45": {
+            "name": "Mr. Blobby",
+            "coords": "132,363,165,396",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob46": {
+            "name": "Mr. Blobby",
+            "coords": "132,396,165,429",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob50": {
+            "name": "Mr. Blobby",
+            "coords": "165,198,198,231",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob51": {
+            "name": "Mr. Blobby",
+            "coords": "165,231,198,264",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob52": {
+            "name": "Mr. Blobby",
+            "coords": "165,264,198,297",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob53": {
+            "name": "Mr. Blobby",
+            "coords": "165,297,198,330",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob54": {
+            "name": "Mr. Blobby",
+            "coords": "165,330,198,363",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob55": {
+            "name": "Mr. Blobby",
+            "coords": "165,363,198,396",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob56": {
+            "name": "Mr. Blobby",
+            "coords": "165,396,198,429",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob60": {
+            "name": "Mr. Blobby",
+            "coords": "198,198,231,231",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob61": {
+            "name": "Mr. Blobby",
+            "coords": "198,231,231,264",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob62": {
+            "name": "Mr. Blobby",
+            "coords": "198,264,231,297",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob63": {
+            "name": "Mr. Blobby",
+            "coords": "198,297,231,330",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob64": {
+            "name": "Mr. Blobby",
+            "coords": "198,330,231,363",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob65": {
+            "name": "Mr. Blobby",
+            "coords": "198,363,231,396",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "blob66": {
+            "name": "Mr. Blobby",
+            "coords": "198,396,231,429",
+            "visual": "image of Mr. Blobby",
+            "desc": "When a player passes this space, it switches with another Mr. Blobby space, taking the player to the new location as well."
+        },
+        "solar": {
+            "name": "Solar Plexus Space",
+            "coords": "99,66,132,99",
+            "visual": "blue space with red space hero",
+            "desc": "If a player passes this space, an incoherent rant of at least 120 words long will be posted. The player, of course, will be pinged in this rant, to ensure that they see it."
         }
     },
     "items": {
@@ -150,6 +468,10 @@
         "mold": {
             "name": "Mold Pizza",
             "desc": "If you eat this pizza, you reduce to 1 HP and must move toward the Altar until you reach it. If you discard this pizza, it seeps into whatever space you dropped it on, turning that space into a Chuck E Cheese Play Area."
+        },
+        "psybeer": {
+            "name": "Psychic Beer",
+            "desc": "Single use. By drinking this, you steal the next movement bonus from a Baked Beans Ocean. You get +5 MOV on this turn only. The next time someone passes a Baked Beans Ocean space, that space has no effect for them, and the player who did so cannot use Baked Beans Oceans at all on that turn."
         }
     },
     "effects": [
@@ -307,6 +629,26 @@
             "stats": "3 HP",
             "thumbnail": [144, 0],
             "desc": "Loses 1 HP at the beginning of every turn. Any effects of the underlying space are negated as long as this token occupies the space. Can freely inhabit gaps. The effect of the underlying space becomes \"This space is treated as a neutral space.\" as long as this token occupies the space."
+        },
+        "chuckeboss": {
+            "name": "Giant Chuck E Cheese",
+            "stats": "20 HP; 3 ATK; 1 DEF; 2 MOV",
+            "thumbnail": [64, 64],
+            "span": [2, 2],
+            "desc": "Pursues players every turn, inflicting ATK damage to any player he passes. He also throws pizzas in each cardinal direction every turn (for a total of eight pizzas, two in each direction), which deal 1 damage to the first player or token they hit. If your HP hits zero because of one of his attacks, then you do not die. Instead, you turn into another Chuck E Cheese, a status effect which can only be healed by items or spaces which specifically state that they cure Chuck E Cheese. If every player becomes Chuck E Cheese, then the game of WUAS is over, and Chuck E Cheese is the only winner."
+        },
+        "announcer": {
+            "name": "Monster Truck Commentator",
+            "stats": "1 HP",
+            "thumbnail": [96, 32],
+            "span": [2, 2],
+            "desc": "Cries out \"Oh, the humanity!\" every turn. Loses 700 HP each turn."
+        },
+        "mimic": {
+            "name": "Mimic",
+            "stats": "∞ ATK",
+            "thumbnail": [16, 112],
+            "desc": "If a player tries to pick this up like an item, it will attack the player with its attack power (mitigated by DEF) and call the player an idiot."
         }
     },
     "rulings": [
@@ -326,7 +668,7 @@
             "desc": "The larger the magnitude of a wish, the less likely it is to end up in the wisher's favor. That is, a simple wish is likely to go exactly as intended. A large and complicated wish may be interpreted extremely literally and the results may not be what was desired."
         }
     ],
-    "current_turn": 8,
+    "current_turn": 9,
     "turns": {
         "1": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "neutral", "neutral", "neutral", "neutral", "neutral", "gap", "gap", "gap"], ["neutral", "gap", "neutral", "lava", "crumbled", "lava", "neutral", "gap", "neutral", "gap"], ["gap", "gap", "crumbled", "lava", "altar", "lava", "crumbled", "gap", "gap", "gap"], ["gap", "gap", "neutral", "lava", "crumbled", "lava", "neutral", "gap", "gap", "gap"], ["gap", "gap", "shop", "neutral", "start", "neutral", "shop", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "goldcoin", "position": [136, 40]}, {"object": "goldcoin", "position": [8, 104]}, {"object": "goldcoin", "position": [264, 104]}]}},
         "2": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "neutral", "neutral", "neutral", "neutral", "neutral", "gap", "gap", "gap"], ["neutral", "gap", "neutral", "lava", "crumbled", "lava", "neutral", "gap", "neutral", "gap"], ["gap", "gap", "crumbled", "lava", "altar", "lava", "crumbled", "gap", "gap", "gap"], ["gap", "gap", "neutral", "lava", "gap", "lava", "neutral", "gap", "gap", "gap"], ["gap", "gap", "shop", "neutral", "start", "neutral", "shop", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "goldcoin", "position": [136, 40]}, {"object": "goldcoin", "position": [8, 104]}, {"object": "goldcoin", "position": [264, 104]}, {"object": "lukasmah", "position": [136, 136]}, {"object": "hatcrafter", "position": [72, 200]}, {"object": "rougebare", "position": [142, 206]}, {"object": "roytheshort", "position": [132, 196]}, {"object": "htsirohn", "position": [200, 200]}]}},
@@ -335,6 +677,7 @@
         "5": {"0": {"spaces": [["neutral", "circus", "circus", "neutral", "neutral", "gap", "gap", "gap", "gap", "neutral"], ["neutral", "circus", "circus", "water", "neutral", "egg", "egg", "gap", "gap", "neutral"], ["gap", "crumbled", "crumbled", "water", "neutral", "egg", "altar", "egg", "gap", "gap"], ["gap", "crumbled", "crumbled", "neutral", "neutral", "egg", "neutral", "egg", "egg", "egg"], ["neutral", "gap", "gap", "circus", "circus", "egg", "gap", "egg", "gap", "circus"], ["water", "gap", "gap", "circus", "circus", "egg", "egg", "egg", "gap", "circus"], ["gap", "gap", "gap", "neutral", "water", "start", "neutral", "gap", "gap", "gap"], ["gap", "gap", "gap", "neutral", "neutral", "egg", "egg", "egg", "egg", "egg"], ["neutral", "neutral", "neutral", "neutral", "water", "water", "neutral", "gap", "gap", "neutral"], ["neutral", "water", "bowser", "bowser", "bowser", "bowser", "bowser", "gap", "gap", "water"], ["gap", "bowser", "bowser", "gap", "gap", "bowser", "bowser", "gap", "gap", "neutral"]], "tokens": [{"object": "clown", "position": [104, 40]}, {"object": "gunpuppy", "position": [288, 32]}, {"object": "masterofgames", "position": [144, 80]}, {"object": "goldcoin", "position": [40, 104]}, {"object": "misu", "position": [142, 130]}, {"object": "goldcoin", "position": [232, 136]}, {"object": "roytheshort", "position": [292, 132]}, {"object": "lukasmah", "position": [130, 174]}, {"object": "htsirohn", "position": [104, 200]}, {"object": "rougebare", "position": [174, 206]}, {"object": "hatcrafter", "position": [162, 194]}, {"object": "dolphinhats", "position": [174, 206]}, {"object": "quark", "position": [272, 208]}, {"object": "goldcoin", "position": [200, 296]}, {"object": "temporal", "position": [36, 324]}, {"object": "firebreather", "position": [44, 332]}]}},
         "6": {"0": {"spaces": [["neutral", "circus", "circus", "neutral", "neutral", "baked", "baked", "egg", "baked", "neutral"], ["neutral", "circus", "circus", "water", "neutral", "egg", "egg", "egg", "egg", "neutral"], ["baked", "crumbled", "crumbled", "water", "waltar", "baked", "altar", "baked", "egg", "baked"], ["baked", "crumbled", "crumbled", "neutral", "neutral", "egg", "neutral", "baked", "egg", "baked"], ["neutral", "baked", "baked", "circus", "circus", "egg", "egg", "egg", "waltar", "circus"], ["water", "baked", "baked", "circus", "circus", "baked", "baked", "baked", "egg", "circus"], ["baked", "baked", "cshop", "neutral", "water", "start", "neutral", "baked", "egg", "baked"], ["baked", "baked", "baked", "bowser", "neutral", "egg", "egg", "egg", "egg", "egg"], ["neutral", "neutral", "waltar", "bowser", "water", "egg", "egg", "egg", "waltar", "neutral"], ["neutral", "water", "bowser", "bowser", "bowser", "bowser", "bowser", "baked", "baked", "water"], ["baked", "bowser", "bowser", "baked", "baked", "bowser", "bowser", "baked", "baked", "neutral"]], "tokens": [{"object": "shrek5", "position": [72, 40]}, {"object": "quark1", "position": [168, 40]}, {"object": "aap", "position": [264, 40]}, {"object": "gunpuppy", "position": [288, 32]}, {"object": "clown", "position": [104, 72]}, {"object": "goldcoin", "position": [40, 104]}, {"object": "yellowclown", "position": [104, 104]}, {"object": "masterofgames", "position": [144, 144]}, {"object": "rougebare", "position": [238, 142]}, {"object": "lukasmah", "position": [130, 174]}, {"object": "htsirohn", "position": [136, 200]}, {"object": "quark", "position": [144, 208]}, {"object": "roytheshort", "position": [164, 196]}, {"object": "misu", "position": [174, 194]}, {"object": "hatcrafter", "position": [162, 194]}, {"object": "dolphinhats", "position": [174, 206]}, {"object": "firebreather", "position": [108, 236]}, {"object": "redclown", "position": [296, 232]}, {"object": "blueclown", "position": [200, 264]}, {"object": "goldcoin", "position": [200, 296]}, {"object": "temporal", "position": [36, 324]}]}},
         "7": {"0": {"spaces": [["happy", "grumpy", "grumpy", "happy", "happy", "happy", "baked", "gap", "baked", "neutral", "neutral", "gap", "neutral", "happy", "grumpy", "grumpy", "happy", "gap", "gap", "baked"], ["gap", "happy", "happy", "baked", "baked", "baked", "baked", "baked", "baked", "baked", "baked", "baked", "baked", "gap", "happy", "happy", "gap", "gap", "gap", "gap"], ["gap", "gap", "baked", "neutral", "neutral", "neutral", "circus", "circus", "neutral", "neutral", "baked", "baked", "egg", "baked", "neutral", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "baked", "neutral", "neutral", "neutral", "circus", "circus", "water", "neutral", "egg", "egg", "egg", "egg", "neutral", "baked", "baked", "gap", "gap", "baked"], ["gap", "baked", "baked", "baked", "baked", "baked", "gap", "crumbled", "water", "waltar", "baked", "altar", "egg", "egg", "baked", "agony", "baked", "baked", "gap", "baked"], ["baked", "baked", "neutral", "neutral", "baked", "baked", "gap", "gap", "neutral", "neutral", "gap", "egg", "baked", "egg", "baked", "baked", "agony", "baked", "baked", "baked"], ["baked", "neutral", "neutral", "neutral", "neutral", "neutral", "baked", "baked", "circus", "circus", "egg", "egg", "gap", "waltar", "circus", "baked", "baked", "agony", "baked", "baked"], ["neutral", "neutral", "neutral", "neutral", "neutral", "water", "baked", "baked", "circus", "circus", "baked", "baked", "baked", "egg", "egg", "baked", "baked", "baked", "agony", "baked"], ["neutral", "neutral", "neutral", "neutral", "baked", "baked", "bowser", "bowser", "neutral", "water", "start", "egg", "egg", "egg", "egg", "baked", "baked", "baked", "baked", "agony"], ["baked", "neutral", "neutral", "neutral", "baked", "baked", "bowser", "bowser", "bowser", "neutral", "gap", "egg", "egg", "egg", "egg", "baked", "gap", "baked", "baked", "agony"], ["baked", "neutral", "neutral", "neutral", "neutral", "neutral", "neutral", "waltar", "bowser", "water", "gap", "gap", "gap", "waltar", "neutral", "neutral", "gap", "gap", "baked", "baked"], ["baked", "neutral", "neutral", "neutral", "neutral", "neutral", "water", "bowser", "bowser", "bowser", "bowser", "bowser", "baked", "baked", "water", "neutral", "neutral", "gap", "baked", "baked"], ["baked", "baked", "neutral", "neutral", "neutral", "baked", "bowser", "bowser", "baked", "baked", "bowser", "bowser", "baked", "baked", "neutral", "neutral", "happy", "baked", "baked", "baked"], ["baked", "baked", "baked", "gap", "gap", "baked", "baked", "neutral", "neutral", "baked", "gap", "gap", "baked", "baked", "neutral", "happy", "happy", "happy", "baked", "gap"], ["baked", "happy", "happy", "baked", "baked", "baked", "gap", "neutral", "neutral", "baked", "baked", "gap", "happy", "happy", "happy", "happy", "happy", "happy", "happy", "happy"]], "tokens": [{"object": "goldcoin", "position": [424, 8]}, {"object": "redclown", "position": [456, 72]}, {"object": "shrek5", "position": [232, 104]}, {"object": "rougebare", "position": [238, 110]}, {"object": "aap", "position": [424, 104]}, {"object": "quark1", "position": [424, 104]}, {"object": "gunpuppy", "position": [448, 96]}, {"object": "yellowclown", "position": [232, 136]}, {"object": "clown", "position": [296, 136]}, {"object": "cryer", "position": [232, 200]}, {"object": "lukasmah", "position": [290, 206]}, {"object": "lovepuppy", "position": [96, 224]}, {"object": "blueclown", "position": [456, 232]}, {"object": "htsirohn", "position": [232, 264]}, {"object": "masterofgames", "position": [240, 272]}, {"object": "misu", "position": [334, 258]}, {"object": "hatcrafter", "position": [322, 258]}, {"object": "dolphinhats", "position": [334, 270]}, {"object": "roytheshort", "position": [328, 264]}, {"object": "goldcoin", "position": [40, 296]}, {"object": "firebreather", "position": [236, 300]}, {"object": "quark", "position": [400, 304]}, {"object": "goldcoin", "position": [360, 360]}, {"object": "temporal", "position": [196, 388]}, {"object": "goldcoin", "position": [456, 392]}]}},
-        "8": {"0": {"spaces": [["neutral", "circus", "circus", "neutral", "neutral", "baked", "egg", "egg", "egg", "neutral"], ["neutral", "circus", "circus", "water", "neutral", "egg", "egg", "egg", "egg", "neutral"], ["baked", "gap", "crumbled", "water", "waltar", "baked", "altar", "egg", "egg", "baked"], ["baked", "gap", "gap", "neutral", "neutral", "gap", "gap", "baked", "egg", "egg"], ["neutral", "chuck", "chuck", "chuck", "chuck", "gap", "gap", "gap", "waltar", "circus"], ["water", "chuck", "chuck", "chuck", "chuck", "baked", "baked", "baked", "egg", "egg"], ["baked", "chuck", "chuck", "chuck", "chuck", "start", "egg", "egg", "egg", "egg"], ["baked", "chuck", "chuck", "chuck", "chuck", "gap", "egg", "egg", "egg", "egg"], ["bowser", "bowser", "bowser", "bowser", "water", "gap", "gap", "gap", "waltar", "neutral"], ["bowser", "water", "bowser", "bowser", "bowser", "bowser", "bowser", "baked", "baked", "water"], ["baked", "bowser", "bowser", "baked", "baked", "bowser", "bowser", "baked", "baked", "neutral"]], "tokens": [{"object": "shrek5", "position": [72, 40]}, {"object": "masterofgames", "position": [80, 48]}, {"object": "rougebare", "position": [110, 46]}, {"object": "boa", "position": [168, 40]}, {"object": "aap", "position": [264, 40]}, {"object": "gunpuppy", "position": [288, 32]}, {"object": "clown", "position": [104, 72]}, {"object": "cryer", "position": [8, 104]}, {"object": "quark1", "position": [264, 136]}, {"object": "blueclown", "position": [296, 168]}, {"object": "quark", "position": [176, 208]}, {"object": "lukasmah", "position": [162, 206]}, {"object": "misu", "position": [174, 194]}, {"object": "hatcrafter", "position": [162, 194]}, {"object": "dolphinhats", "position": [174, 206]}, {"object": "roytheshort", "position": [168, 200]}, {"object": "htsirohn", "position": [168, 200]}, {"object": "boa", "position": [136, 264]}, {"object": "goldcoin", "position": [200, 296]}, {"object": "temporal", "position": [36, 324]}, {"object": "goldcoin", "position": [296, 328]}]}}
+        "8": {"0": {"spaces": [["neutral", "circus", "circus", "neutral", "neutral", "baked", "egg", "egg", "egg", "neutral"], ["neutral", "circus", "circus", "water", "neutral", "egg", "egg", "egg", "egg", "neutral"], ["baked", "gap", "crumbled", "water", "waltar", "baked", "altar", "egg", "egg", "baked"], ["baked", "gap", "gap", "neutral", "neutral", "gap", "gap", "baked", "egg", "egg"], ["neutral", "chuck", "chuck", "chuck", "chuck", "gap", "gap", "gap", "waltar", "circus"], ["water", "chuck", "chuck", "chuck", "chuck", "baked", "baked", "baked", "egg", "egg"], ["baked", "chuck", "chuck", "chuck", "chuck", "start", "egg", "egg", "egg", "egg"], ["baked", "chuck", "chuck", "chuck", "chuck", "gap", "egg", "egg", "egg", "egg"], ["bowser", "bowser", "bowser", "bowser", "water", "gap", "gap", "gap", "waltar", "neutral"], ["bowser", "water", "bowser", "bowser", "bowser", "bowser", "bowser", "baked", "baked", "water"], ["baked", "bowser", "bowser", "baked", "baked", "bowser", "bowser", "baked", "baked", "neutral"]], "tokens": [{"object": "shrek5", "position": [72, 40]}, {"object": "masterofgames", "position": [80, 48]}, {"object": "rougebare", "position": [110, 46]}, {"object": "boa", "position": [168, 40]}, {"object": "aap", "position": [264, 40]}, {"object": "gunpuppy", "position": [288, 32]}, {"object": "clown", "position": [104, 72]}, {"object": "cryer", "position": [8, 104]}, {"object": "quark1", "position": [264, 136]}, {"object": "blueclown", "position": [296, 168]}, {"object": "quark", "position": [176, 208]}, {"object": "lukasmah", "position": [162, 206]}, {"object": "misu", "position": [174, 194]}, {"object": "hatcrafter", "position": [162, 194]}, {"object": "dolphinhats", "position": [174, 206]}, {"object": "roytheshort", "position": [168, 200]}, {"object": "htsirohn", "position": [168, 200]}, {"object": "boa", "position": [136, 264]}, {"object": "goldcoin", "position": [200, 296]}, {"object": "temporal", "position": [36, 324]}, {"object": "goldcoin", "position": [296, 328]}]}},
+        "9": {"0": {"spaces": [["blob00", "blob10", "blob20", "blob30", "blob40", "blob50", "blob60", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "truck", "truck", "rubble"], ["blob01", "blob11", "blob21", "blob31", "blob41", "blob51", "blob61", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "flamey", "flamey", "truck", "rubble"], ["blob02", "blob12", "blob22", "blob32", "blob42", "blob52", "blob62", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "flamey", "flamey", "truck", "truck", "rubble"], ["blob03", "blob13", "blob23", "blob33", "blob43", "blob53", "blob63", "truck", "truck", "truck", "truck", "truck", "rubble", "truck", "flamey", "flamey", "truck", "truck", "truck", "rubble"], ["blob04", "blob14", "blob24", "blob34", "blob44", "blob54", "blob64", "rubble", "flamey", "flamey", "truck", "truck", "truck", "flamey", "flamey", "truck", "truck", "truck", "truck", "rubble"], ["blob05", "blob15", "blob25", "blob35", "blob45", "blob55", "blob65", "circus", "neutral", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "rubble"], ["blob06", "blob16", "blob26", "blob36", "blob46", "blob56", "blob66", "circus", "water", "neutral", "egg", "egg", "neutral", "egg", "truck", "truck", "truck", "truck", "truck", "rubble"], ["rubble", "truck", "truck", "truck", "truck", "truck", "gap", "crumbled", "water", "waltar", "baked", "altar", "neutral", "egg", "truck", "truck", "truck", "truck", "truck", "rubble"], ["rubble", "truck", "truck", "truck", "truck", "truck", "gap", "gap", "neutral", "neutral", "gap", "gap", "neutral", "egg", "truck", "truck", "truck", "truck", "truck", "rubble"], ["rubble", "truck", "truck", "truck", "truck", "truck", "chuck", "chuck", "chuck", "chuck", "gap", "egg", "neutral", "waltar", "truck", "rubble", "truck", "truck", "truck", "rubble"], ["rubble", "truck", "truck", "truck", "truck", "truck", "neutral", "neutral", "neutral", "neutral", "solar", "neutral", "neutral", "neutral", "truck", "truck", "truck", "rubble", "truck", "rubble"], ["rubble", "truck", "truck", "truck", "truck", "truck", "chuck", "chuck", "chuck", "chuck", "start", "gap", "neutral", "egg", "truck", "flamey", "truck", "truck", "truck", "rubble"], ["rubble", "truck", "truck", "truck", "truck", "truck", "chuck", "chuck", "chuck", "chuck", "gap", "egg", "solar", "egg", "egg", "flamey", "flamey", "truck", "truck", "rubble"], ["rubble", "truck", "truck", "truck", "truck", "truck", "bowser", "bowser", "bowser", "water", "gap", "gap", "neutral", "waltar", "neutral", "truck", "flamey", "flamey", "truck", "rubble"], ["rubble", "truck", "truck", "truck", "flamey", "truck", "water", "bowser", "bowser", "bowser", "bowser", "bowser", "neutral", "baked", "water", "truck", "truck", "flamey", "flamey", "rubble"], ["rubble", "truck", "truck", "flamey", "flamey", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "neutral", "truck", "truck", "truck", "flamey", "truck"], ["rubble", "truck", "flamey", "flamey", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck"], ["rubble", "flamey", "flamey", "truck", "truck", "truck", "truck", "rubble", "truck", "rubble", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck"], ["truck", "flamey", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck"], ["truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck", "truck"], ["rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble", "rubble"]], "tokens": [{"object": "goldcoin", "position": [264, 72]}, {"object": "mimic", "position": [328, 72]}, {"object": "mimic", "position": [104, 104]}, {"object": "mimic", "position": [200, 136]}, {"object": "shrek5", "position": [232, 200]}, {"object": "aap", "position": [270, 200]}, {"object": "chuckeboss", "position": [272, 208]}, {"object": "rougebare", "position": [259, 195]}, {"object": "boatail", "position": [296, 200]}, {"object": "boatail", "position": [328, 200]}, {"object": "gunpuppy", "position": [448, 192]}, {"object": "cryer", "position": [168, 232]}, {"object": "boatail", "position": [296, 232]}, {"object": "quark", "position": [432, 240]}, {"object": "mimic", "position": [456, 232]}, {"object": "clown", "position": [264, 264]}, {"object": "boa", "position": [296, 264]}, {"object": "goldcoin", "position": [520, 296]}, {"object": "blueclown", "position": [456, 328]}, {"object": "mimic", "position": [168, 360]}, {"object": "lukasmah", "position": [322, 366]}, {"object": "misu", "position": [334, 354]}, {"object": "hatcrafter", "position": [322, 354]}, {"object": "dolphinhats", "position": [334, 366]}, {"object": "htsirohn", "position": [328, 360]}, {"object": "roytheshort", "position": [328, 360]}, {"object": "gunpuppy", "position": [416, 384]}, {"object": "quark1", "position": [419, 387]}, {"object": "boatail", "position": [296, 424]}, {"object": "boatail", "position": [328, 424]}, {"object": "boatail", "position": [328, 456]}, {"object": "goldcoin", "position": [360, 456]}, {"object": "announcer", "position": [128, 480]}, {"object": "temporal", "position": [196, 484]}, {"object": "boa", "position": [328, 488]}, {"object": "goldcoin", "position": [456, 488]}, {"object": "mimic", "position": [72, 552]}, {"object": "goldcoin", "position": [232, 584]}]}}
     }
 }
