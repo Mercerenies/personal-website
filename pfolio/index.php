@@ -39,7 +39,7 @@
       computer science, specifically in the study of category theory,
       formal language theory, and abstract algebra. <br/><br/> Please
       check out <a href="https://github.com/mercerenies"
-      target="new">my GitHub page</a>!
+      target="new">my GitHub page</a>! <br/><br/>
       <div class="imgbox">
         <div class="imgbox1">
           <a href="asm_img.png">
