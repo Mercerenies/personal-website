@@ -18,6 +18,9 @@
         <li>
           <a href="blog/raii.php">RAII is Just Continuations</a> <em>(Posted June 8, 2019)</em>
         </li>
+        <li>
+          <a href="blog/roulette.php">Overanalyzing Yoshi's Island</a> <em>(Posted July 30, 2020)</em>
+        </li>
       </ul>
     </div>
     <?php include('private/footer.php'); ?>

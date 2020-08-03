@@ -351,19 +351,29 @@
             "genre": "Puzzle",
             "occasion": "GMC Jam",
             "magnitude": "Medium",
-            "summary": "Puzzles centered around restricted movement of your robot avatar",
+            "summary": "Puzzles centered around restricted movement of your robot avatar.",
             "finished": [3, 2020],
             "page": "https://forum.yoyogames.com/index.php?threads/gmc-jam-36-games-topic.72584/#post-427642"
         },
         {
             "name": "Growing Up",
             "author": "Mercerenies",
-            "genre": "Point-and-click Adventure",
+            "genre": "Point-and-click Interactive Fiction",
             "occasion": "GMC Jam",
             "magnitude": "Medium",
-            "summary": "Just a little slice of life",
-            "finished": [5, 2020],
-            "page": "https://forum.yoyogames.com/index.php?threads/gmc-jam-37-games-topic-enter-here.75650/#post-448513"
+            "summary": "An epic about life, aging, and existence.",
+            "finished": [6, 2020],
+            "page": "https://www.mediafire.com/file/hw4xa84amjb87g8/GrowingUp_Jam37.zip/file"
+        },
+        {
+            "name": "Onward!",
+            "author": "Mercerenies",
+            "genre": "Arcade",
+            "occasion": "Challenge",
+            "magnitude": "Medium",
+            "summary": "Made for the GBTK3, a top-down troll game.",
+            "finished": [7, 2020],
+            "page": "https://mercerenies.itch.io/onward"
         }
     ]
 }
