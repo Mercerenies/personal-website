@@ -35,8 +35,9 @@
       online. Click the buttons in the top bar to navigate the site.
       <br/><br/>
       If you're an employer or researcher, please take a look at my
-      <a href="pfolio/">professional portfolio</a> to see the work I've done.
-      <br/><br/>
+      <a href="pfolio/">professional portfolio</a>
+      and <a href="https://github.com/mercerenies" target="new">my
+      GitHub page</a> to see the work I've done. <br/><br/>
       <div class="imgbox">
         <div class="imgbox1">
           <a href="pfolio/asm_img.png">
