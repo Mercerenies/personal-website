@@ -354,6 +354,16 @@
             "summary": "Puzzles centered around restricted movement of your robot avatar",
             "finished": [3, 2020],
             "page": "https://forum.yoyogames.com/index.php?threads/gmc-jam-36-games-topic.72584/#post-427642"
+        },
+        {
+            "name": "Growing Up",
+            "author": "Mercerenies",
+            "genre": "Point-and-click Adventure",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Just a little slice of life",
+            "finished": [5, 2020],
+            "page": "https://forum.yoyogames.com/index.php?threads/gmc-jam-37-games-topic-enter-here.75650/#post-448513"
         }
     ]
 }
