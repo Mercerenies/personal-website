@@ -374,6 +374,16 @@
             "summary": "Made for the GBTK3, a top-down troll game.",
             "finished": [7, 2020],
             "page": "https://mercerenies.itch.io/onward"
+        },
+        {
+            "name": "Three Rules Standing",
+            "author": "Mercerenies / Alice",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Navigate a maze of arcane, totalitarian rulesets to get to the end",
+            "finished": [9, 2020],
+            "page": "https://www.dropbox.com/s/8tegke9mmz1suij/Three%20Rules%20Standing%20-%20Jam-complete.zip?dl=1"
         }
     ]
 }
