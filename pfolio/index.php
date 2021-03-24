@@ -29,10 +29,7 @@
     <?php include('private/header.php'); ?>
     <div class="page content">
       My name is Silvio Mayolo. I am a programmer and mathematician
-      attending Purdue University. I will be graduating in December,
-      2020, and am actively looking for interesting academic or
-      industrial career opportunities, in the areas of simulation,
-      modeling, and software design. I also am happy to help or
+      at Johns Hopkins University Applied Physics Lab. I also am happy to help or
       consult concerning programming questions or problems. <br/><br/>
       I am familiar with most modern programming languages, and my
       academic interests lie in the intersection of mathematics and
