@@ -394,6 +394,16 @@
             "summary": "Help Hopper, the flightless toucan, collect melons in this relaxing puzzler",
             "finished": [11, 2020],
             "page": "http://www.mediafire.com/file/jrrjzas7zxrqgwh/HopperTheToucan.zip/file"
+        },
+        {
+            "name": "Emmy & Sal",
+            "author": "Mercerenies",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Tell the whole town about the best party in the world",
+            "finished": [2, 2021],
+            "page": "http://www.mediafire.com/file/ni6nilr5bwyyfgf/EmmyAndSal_Mercerenies.zip/file"
         }
     ]
 }
