@@ -404,6 +404,16 @@
             "summary": "Tell the whole town about the best party in the world",
             "finished": [2, 2021],
             "page": "http://www.mediafire.com/file/ni6nilr5bwyyfgf/EmmyAndSal_Mercerenies.zip/file"
+        },
+        {
+            "name": "Lens of the Last Surviving Human",
+            "author": "Mercerenies",
+            "genre": "Platformer",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "A short platformer about exploring an inverted world through a lens",
+            "finished": [5, 2021],
+            "page": "https://www.mediafire.com/file/yqzg2aq79hd5qqz/TheLastSurvivingHuman_Mercerenies.zip/file"
         }
     ]
 }
