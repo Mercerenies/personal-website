@@ -414,6 +414,26 @@
             "summary": "A short platformer about exploring an inverted world through a lens",
             "finished": [5, 2021],
             "page": "https://www.mediafire.com/file/yqzg2aq79hd5qqz/TheLastSurvivingHuman_Mercerenies.zip/file"
+        },
+        {
+            "name": "Mars, God of War, and Sometimes Internships",
+            "author": "Mercerenies",
+            "genre": "Point-and-click",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "The god of war awakens as an intern in an office building",
+            "finished": [8, 2021],
+            "page": "https://www.mediafire.com/file/rzt110kfley9cmw/MarsGodOfWarAndSometimesInternships.zip/file"
+        },
+        {
+            "name": "The Adventures of Squaredude and Circlegirl",
+            "author": "Mercerenies",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Follow Squaredude and Circlegirl as they face the evil Icosaking",
+            "finished": [11, 2021],
+            "page": "https://www.mediafire.com/file/27qo32fiy671kq4/SquaredudeAndCirclegirl.zip/file"
         }
     ]
 }
