@@ -54,7 +54,7 @@ foreach ($dir as $fileinfo) {
     if (!$fileinfo->isDot()) {
         if ($fileinfo->getExtension() === "pem") {
             $pubkey = file_get_contents($fileinfo->getPathname());
-            $result = openssl_verify($data, $signature, $pubkey, "sha256WithRSAEncryption");
+            $result = openssl_verify($targetname.$data, $signature, $pubkey, "sha256WithRSAEncryption");
             if ($result === 1) {
                 $valid = true;
                 break;
