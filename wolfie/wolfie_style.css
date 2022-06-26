@@ -1,0 +1,33 @@
+
+.game-timestamp {
+    font-style: oblique;
+}
+
+.snapshot-record-table td {
+    padding: 1em;
+}
+
+.snapshot-record-role {
+    border: 1px solid black;
+    width: 120px;
+}
+
+.snapshot-record-player {
+    border: 1px dotted black;
+    width: 120px;
+}
+
+.main-list > li {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.player-votals-list {
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.player-votals-list > li {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
