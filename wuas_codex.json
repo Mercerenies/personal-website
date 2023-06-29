@@ -39,6 +39,14 @@
       "spaces": "./spaces_diabolical.png",
       "tokens": "./tokens_diabolical.png",
       "prefix": "x"
+    },
+    {
+      "name": "2023 Game",
+      "shortname": "2023",
+      "json": "../wuas_uncle.json",
+      "spaces": "./spaces_uncle.png",
+      "tokens": "./tokens_uncle.png",
+      "prefix": "u"
     }
   ]
 }

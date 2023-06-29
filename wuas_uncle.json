@@ -1,0 +1,74 @@
+
+{
+    "spaces": {
+        "neutral": {
+            "name": "Neutral Space",
+            "coords": "0,0,33,33",
+            "visual": "empty gray space",
+            "desc": "This space can be freely traversed and have no additional effects."
+        },
+        "shop": {
+            "name": "Shop",
+            "coords": "33,0,66,33",
+            "visual": "blue space with white 'S'",
+            "desc": "A player who lands on this space receives a random item, if there is room in the player's inventory."
+        },
+        "altar": {
+            "name": "Altar",
+            "coords": "66,0,99,33",
+            "visual": "red space with black 'A'",
+            "desc": "A player on this space is allowed to make one wish. At the end of the turn, all players who made wishes have their wishes granted and then are returned to Start. Multiple players on this space do not engage in combat."
+        },
+        "start": {
+            "name": "Start Square",
+            "coords": "99,0,132,33",
+            "visual": "yellow space with black 'St'",
+            "desc": "All new players start on this square. Players sharing this space do not fight, and any player on this space does not lose HP for any reason. A player who ends his turn on Start is cured of any status ailments."
+        },
+        "gap": {
+            "name": "Empty Gap",
+            "coords": "132,0,165,33",
+            "visual": "empty white area",
+            "desc": "These spaces are ordinarily impassible to players. If a player is forced onto a gap, they immediately return to Start and loses 5 HP. A player who is adjacent to a gap can choose to leap into the gap."
+        }
+    },
+    "items": {
+    },
+    "effects": [
+    ],
+    "tokens": {
+        "item": {
+            "name": "Item",
+            "stats": "N/A",
+            "thumbnail": [0, 0],
+            "desc": "Icon used to represent items on the map."
+        },
+        "goldcoin": {
+            "name": "Gold Coin",
+            "stats": "N/A",
+            "thumbnail": [16, 0],
+            "desc": "Can be picked up by a player. Always protected from wishes."
+        }
+    },
+    "rulings": [
+        {
+            "desc": "Any Altar wishes occur at the end of the turn, after all player movement is completed."
+        },
+        {
+            "desc": "Effects which target a stat that a token lacks have no effect on the token. For example, a space that deals damage will not affect a token who has no concept of HP."
+        },
+        {
+            "desc": "The specific nature of combat in the case of tokens which are deficient in some stats is this. All involved players or tokens who have an ATK stat will attack all involved players or tokens who have an HP stat. All such attacks happen simultaneously, and in general a token will never attack itself unless otherwise stated."
+        },
+        {
+            "desc": "In general, an action which attempts to move into a gap is considered to be a mistake or a typo, and the player will not be allowed to move into the gap. If the movement into the gap was intentional, this should be specified in the post. This ruling does not apply if the player in question has any equipment that would enable him or her to pass the gaps without the normal penalty."
+        },
+        {
+            "desc": "The larger the magnitude of a wish, the less likely it is to end up in the wisher's favor. That is, a simple wish is likely to go exactly as intended. A large and complicated wish may be interpreted extremely literally and the results may not be what was desired."
+        }
+    ],
+    "current_turn": 1,
+    "turns": {
+        "1": {}
+    }
+}
