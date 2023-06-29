@@ -48,6 +48,60 @@
             "stats": "N/A",
             "thumbnail": [16, 0],
             "desc": "Can be picked up by a player. Always protected from wishes."
+        },
+        "lukasmah": {
+            "name": "Lukasmah",
+            "stats": "Player",
+            "thumbnail": [0, 16],
+            "desc": "A player token."
+        },
+        "roytheshort": {
+            "name": "Roytheshort",
+            "stats": "Player",
+            "thumbnail": [16, 16],
+            "desc": "A player token."
+        },
+        "htsirohn": {
+            "name": "HTSirohn",
+            "stats": "Player",
+            "thumbnail": [0, 32],
+            "desc": "A player token."
+        },
+        "flip": {
+            "name": "Flip",
+            "stats": "Player",
+            "thumbnail": [0, 48],
+            "desc": "A player token."
+        },
+        "rougebare": {
+            "name": "rougebare",
+            "stats": "Player",
+            "thumbnail": [0, 64],
+            "desc": "A player token."
+        },
+        "southbridge": {
+            "name": "Southbridge",
+            "stats": "Player",
+            "thumbnail": [16, 32],
+            "desc": "A player token."
+        },
+        "misu": {
+            "name": "Misu",
+            "stats": "Player",
+            "thumbnail": [16, 48],
+            "desc": "A player token."
+        },
+        "yokcos": {
+            "name": "Yokcos",
+            "stats": "Player",
+            "thumbnail": [16, 64],
+            "desc": "A player token."
+        },
+        "evanski": {
+            "name": "Evanski",
+            "stats": "Player",
+            "thumbnail": [0, 80],
+            "desc": "A player token."
         }
     },
     "rulings": [
@@ -69,6 +123,6 @@
     ],
     "current_turn": 1,
     "turns": {
-        "1": {}
+        "1": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "altar", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "lukasmah", "position": [132, 164]}, {"object": "southbridge", "position": [136, 164]}, {"object": "evanski", "position": [140, 164]}, {"object": "flip", "position": [132, 172]}, {"object": "yokcos", "position": [136, 172]}, {"object": "rougebare", "position": [140, 172]}]}}
     }
 }
