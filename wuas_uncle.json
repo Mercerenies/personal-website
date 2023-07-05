@@ -197,6 +197,7 @@
     "attributes": {
         "fireproof": {
             "name": "Fireproof",
+            "outlinecolor": "blue",
             "desc": "This space can never be converted into a Fire Space."
         }
     },
