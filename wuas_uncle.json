@@ -194,6 +194,12 @@
             "desc": "Moves randomly each turn. If he lands on the same space as a player, that player may challenge Death to a deadly game of dice. If the player wins the game of chance, he gets a random useful item. If the player loses, he dies."
         }
     },
+    "attributes": {
+        "fireproof": {
+            "name": "Fireproof",
+            "desc": "This space can never be converted into a Fire Space."
+        }
+    },
     "rulings": [
         {
             "desc": "Any Altar wishes occur at the end of the turn, after all player movement is completed."

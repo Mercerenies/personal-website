@@ -70,6 +70,8 @@
             "<dt>#{thumbnail}<b>#{token.name}</b> <i>(#{token.stats})</i></dt><dd>#{token.desc}</dd>"
         itemDescriptor = (item) ->
             "<dt><b>#{item.name}</b></dt><dd>#{item.desc}</dd>"
+        attrDescriptor = (attr) ->
+            "<dt><b>#{attr.name}</b> [space attribute]</dt><dd>#{attr.desc}</dd>"
         setupMenus()
         window.fillInHeader()
         turn = window.getActiveTurn()
@@ -132,6 +134,10 @@
             now = spaces
             now &&= now[y0]
             now &&= now[x0]
+            attributes = []
+            if now? and typeof now == 'object'
+                attributes = now.attributes
+                now = now.space
             if now?
                 the_space = window.wuas().spaces[now]
                 $("#int-space").html """
@@ -143,6 +149,9 @@
             else
                 $("#int-space").html ""
             token_data = ""
+            for attr in attributes
+                attr_data = window.wuas().attributes[attr]
+                token_data += attrDescriptor attr_data
             for obj in window.thisTurnData().tokens
                 dist_x = rel_x1 - obj.position[0]
                 dist_y = rel_y1 - obj.position[1]

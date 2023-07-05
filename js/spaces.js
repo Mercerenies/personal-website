@@ -28,11 +28,16 @@
         success: function(data, _0, _1) {
           var f, j, len, results1;
           wuas = data;
+          if (!wuas.attributes) {
+            // Backward compatibility
+            wuas.attributes = {};
+          }
           $("#wuas-space-map").html(`<img src="${file_struct.spaces}" usemap="#spaces-map" />
 <map name="spaces-map" id="spaces-map">
 </map>`);
           setupSpaceMap();
           listOutValsWithNames(wuas.items, $("#wuas-items"));
+          listOutValsWithNames(wuas.attributes, $("#wuas-attributes"));
           listOutWithNames(wuas.effects, $("#wuas-effects"));
           listOutWithEntry(wuas.tokens, $("#wuas-tokens"));
           listOut(wuas.rulings, $("#wuas-rulings"));
@@ -139,7 +144,7 @@
       }
     };
     window.updateSearch = function(divId, textId) {
-      var divField, dl, effect, item, j, k, key, len, len1, ref, ref1, ref2, ref3, result, results, space, text, textField, token, tokenDescriptor;
+      var attribute, divField, dl, effect, item, j, k, key, len, len1, ref, ref1, ref2, ref3, ref4, result, results, space, text, textField, token, tokenDescriptor;
       tokenDescriptor = function(token) {
         var thumbnail, xpos, ypos;
         thumbnail = "";
@@ -183,6 +188,13 @@
           token = ref3[key];
           if (token.name.toLowerCase().includes(text)) {
             results.push(tokenDescriptor(token));
+          }
+        }
+        ref4 = wuas.attributes;
+        for (key in ref4) {
+          attribute = ref4[key];
+          if (attribute.name.toLowerCase().includes(text)) {
+            results.push(`<dt><b>${attribute.name}</b></dt><dd>${attribute.desc}</dd>`);
           }
         }
         if (results.length > 10) {

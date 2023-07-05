@@ -106,7 +106,7 @@
       return $("#axis-menu").html(`Z = ${zaxes.join(' | ')}`);
     };
     loadEverything = function() {
-      var bounds, div, id, img, itemDescriptor, loaded, map, suffix, tokenDescriptor, turn, url;
+      var attrDescriptor, bounds, div, id, img, itemDescriptor, loaded, map, suffix, tokenDescriptor, turn, url;
       tokenDescriptor = function(token) {
         var thumbnail, xpos, ypos;
         thumbnail = "";
@@ -120,6 +120,9 @@
       };
       itemDescriptor = function(item) {
         return `<dt><b>${item.name}</b></dt><dd>${item.desc}</dd>`;
+      };
+      attrDescriptor = function(attr) {
+        return `<dt><b>${attr.name}</b> [space attribute]</dt><dd>${attr.desc}</dd>`;
       };
       setupMenus();
       window.fillInHeader();
@@ -163,7 +166,7 @@
         id = "#image-map";
       }
       return $(id).mousemove(function(e) {
-        var data, dist_x, dist_y, i, len, now, obj, offset, ref, rel_x, rel_x1, rel_y, rel_y1, spaces, the_space, threshold, token_data, tx, ty, x0, y0;
+        var attr, attr_data, attributes, data, dist_x, dist_y, i, j, len, len1, now, obj, offset, ref, rel_x, rel_x1, rel_y, rel_y1, spaces, the_space, threshold, token_data, tx, ty, x0, y0;
         rel_x1 = null;
         rel_y1 = null;
         spaces = window.thisTurnData().spaces;
@@ -186,6 +189,11 @@
         now = spaces;
         now && (now = now[y0]);
         now && (now = now[x0]);
+        attributes = [];
+        if ((now != null) && typeof now === 'object') {
+          attributes = now.attributes;
+          now = now.space;
+        }
         if (now != null) {
           the_space = window.wuas().spaces[now];
           $("#int-space").html(`<dl>
@@ -196,9 +204,14 @@
           $("#int-space").html("");
         }
         token_data = "";
+        for (i = 0, len = attributes.length; i < len; i++) {
+          attr = attributes[i];
+          attr_data = window.wuas().attributes[attr];
+          token_data += attrDescriptor(attr_data);
+        }
         ref = window.thisTurnData().tokens;
-        for (i = 0, len = ref.length; i < len; i++) {
-          obj = ref[i];
+        for (j = 0, len1 = ref.length; j < len1; j++) {
+          obj = ref[j];
           dist_x = rel_x1 - obj.position[0];
           dist_y = rel_y1 - obj.position[1];
           data = window.wuas().tokens[obj.object] || window.wuas().items[obj.object];

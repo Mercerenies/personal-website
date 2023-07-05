@@ -106,6 +106,12 @@
       <div id="wuas-tokens" class="project-contents">
         Loading...
       </div>
+      <div class="project-header" onclick="window.doShow('wuas-attributes')">
+        Attributes
+      </div>
+      <div id="wuas-attributes" class="project-contents">
+        Loading...
+      </div>
       <div class="project-header" onclick="window.doShow('wuas-rulings')">
         Miscellaneous Rulings
       </div>

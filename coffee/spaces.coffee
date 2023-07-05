@@ -25,6 +25,8 @@
             dataType: "json"
             success: (data, _0, _1) ->
                 wuas = data
+                # Backward compatibility
+                wuas.attributes = {} unless wuas.attributes
                 $("#wuas-space-map").html """
                     <img src="#{file_struct.spaces}" usemap="#spaces-map" />
                     <map name="spaces-map" id="spaces-map">
@@ -32,6 +34,7 @@
                 """
                 setupSpaceMap()
                 listOutValsWithNames wuas.items, $("#wuas-items")
+                listOutValsWithNames wuas.attributes, $("#wuas-attributes")
                 listOutWithNames wuas.effects, $("#wuas-effects")
                 listOutWithEntry wuas.tokens, $("#wuas-tokens")
                 listOut wuas.rulings, $("#wuas-rulings")
@@ -130,6 +133,8 @@
                 for effect in wuas.effects when effect.name.toLowerCase().includes text
             results.push tokenDescriptor(token) \
                 for key, token of wuas.tokens when token.name.toLowerCase().includes text
+            results.push "<dt><b>#{attribute.name}</b></dt><dd>#{attribute.desc}</dd>" \
+                for key, attribute of wuas.attributes when attribute.name.toLowerCase().includes text
             if results.length > 10
                 divField.html "Please narrow your search."
             else if results.length == 0
