@@ -17,7 +17,7 @@
             "name": "Altar",
             "coords": "66,0,99,33",
             "visual": "red space with black 'A'",
-            "desc": "A player on this space is allowed to make one wish. At the end of the turn, all players who made wishes have their wishes granted and then are returned to Start. Multiple players on this space do not engage in combat."
+            "desc": "A player on this space is allowed to make one wish. At the end of the turn, all players who made wishes have their wishes granted and then are returned to Start. Multiple players on this space do not engage in combat. Emits light level 5."
         },
         "start": {
             "name": "Start Square",
@@ -30,6 +30,66 @@
             "coords": "132,0,165,33",
             "visual": "empty white area",
             "desc": "These spaces are ordinarily impassible to players. If a player is forced onto a gap, they immediately return to Start and loses 5 HP. A player who is adjacent to a gap can choose to leap into the gap."
+        },
+        "giver": {
+            "name": "Silver Giver",
+            "coords": "165,0,198,33",
+            "visual": "grayscale The Giver cover",
+            "desc": "Anyone on this space at the end of the turn receives a Silver Coin."
+        },
+        "black": {
+            "name": "Darkness",
+            "coords": "198,0,231,33",
+            "visual": "solid black",
+            "desc": "A space shrouded in darkness; you can't tell what it is from this distance."
+        },
+        "highway": {
+            "name": "Speed Highway",
+            "coords": "0,33,33,66",
+            "visual": "light blue space with dark blue 'interstate' sign",
+            "desc": "This space is always considered adjacent to its paired Speed Highway space. Players standing on one of the two may expend one movement point to move to the other."
+        },
+        "grass": {
+            "name": "Grass",
+            "coords": "33,33,66,66",
+            "visual": "green grass-textured space",
+            "desc": "This space behaves like a neutral space but cannot become tainted. At the end of the turn, if this tile has fewer than two grass tiles adjacent or diagonally-adjacent to it, it becomes a dirt tile. If this tile has more than three grass tiles adjacent or diagonally-adjacent to it, it becomes a Tree Space."
+        },
+        "dirt": {
+            "name": "Dirt",
+            "coords": "66,33,99,66",
+            "visual": "solid brown space",
+            "desc": "This space behaves like a neutral space. At the end of the turn, if a dirt tile is surrounded (adjacent or diagonally) by either 2 or 3 grass tiles, it becomes a grass tile. Alternatively, if a dirt tile is adjacent or diagonally-adjacent to a water tile, the dirt becomes a grass tile."
+        },
+        "tree": {
+            "name": "Tree Space",
+            "coords": "99,33,132,66",
+            "visual": "teal space with green tree clipart",
+            "desc": "Light passing through this space is diminished by one. Moving onto this space costs two movement points. Tree Spaces cannot be tainted, and they cure the tainted status on adjacent and diagonally-adjacent spaces. At the end of the turn, if this tile has one or fewer grass tiles adjacent to it, it becomes a grass tile."
+        },
+        "water": {
+            "name": "Water Space",
+            "coords": "132,33,165,66",
+            "visual": "blue space with watery texture",
+            "desc": "A player who moves onto this space must stop here."
+        },
+        "tneutral": {
+            "name": "Tainted Neutral Space",
+            "coords": "165,33,198,66",
+            "visual": "empty gray space with tainted border",
+            "desc": "This space requires 2 movement points to move onto. This space is Tainted."
+        },
+        "yeolde": {
+            "name": "Ye Olde Shoppe",
+            "coords": "198,33,231,66",
+            "visual": "old shop textured space",
+            "desc": "A player who is on this space can exchange any coins for random items. The following currency types are not accepted: ruthenium, rhodium, palladium, osmium, iridium, platinum, and gold. A player does not have to stop on this space to exchange."
+        },
+        "fire": {
+            "name": "Fire Space",
+            "coords": "0,66,33,99",
+            "visual": "greenish space with Fire on it",
+            "desc": "Anyone who passes this space takes damage equal to their ATK power. Emits light level 2."
         }
     },
     "items": {
@@ -47,7 +107,13 @@
             "name": "Gold Coin",
             "stats": "N/A",
             "thumbnail": [16, 0],
-            "desc": "Can be picked up by a player. Always protected from wishes."
+            "desc": "Can be picked up by a player. Always protected from wishes. Emits light level 1."
+        },
+        "silvercoin": {
+            "name": "Silver Coin",
+            "stats": "N/A",
+            "thumbnail": [32, 0],
+            "desc": "Can be picked up by a player. These are like gold coins, but are not protected by the game's rules and have no intrinsic value. Emits light level 1."
         },
         "lukasmah": {
             "name": "Lukasmah",
@@ -102,6 +168,30 @@
             "stats": "Player",
             "thumbnail": [0, 80],
             "desc": "A player token."
+        },
+        "war": {
+            "name": "War",
+            "stats": "10 HP; 1 ATK; 2 MOV",
+            "thumbnail": [0, 96],
+            "desc": "Moves randomly each turn, attacking any player or other token who ends up on the same space. Permanently gains 1 ATK whenever he successfully kills anyone. If he dies, War respawns on a random space the following turn, with his ATK reset to 1."
+        },
+        "famine": {
+            "name": "Famine",
+            "stats": "0 ATK; 2 MOV",
+            "thumbnail": [0, 112],
+            "desc": "Moves randomly each turn. If he ends up on the same space as another player, Famine rots one food- or drink- themed item in that player's inventory at random."
+        },
+        "pestilence": {
+            "name": "Pestilence",
+            "stats": "0 ATK; 2 MOV",
+            "thumbnail": [16, 96],
+            "desc": "Moves randomly each turn. At the end of the turn, whatever space Pestilence lands on becomes tainted."
+        },
+        "death": {
+            "name": "Death",
+            "stats": "0 ATK; 2 MOV",
+            "thumbnail": [16, 112],
+            "desc": "Moves randomly each turn. If he lands on the same space as a player, that player may challenge Death to a deadly game of dice. If the player wins the game of chance, he gets a random useful item. If the player loses, he dies."
         }
     },
     "rulings": [
@@ -121,8 +211,10 @@
             "desc": "The larger the magnitude of a wish, the less likely it is to end up in the wisher's favor. That is, a simple wish is likely to go exactly as intended. A large and complicated wish may be interpreted extremely literally and the results may not be what was desired."
         }
     ],
-    "current_turn": 1,
+    "current_turn": 3,
     "turns": {
-        "1": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "altar", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "lukasmah", "position": [132, 164]}, {"object": "southbridge", "position": [136, 164]}, {"object": "evanski", "position": [140, 164]}, {"object": "flip", "position": [132, 172]}, {"object": "yokcos", "position": [136, 172]}, {"object": "rougebare", "position": [140, 172]}]}}
+        "1": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "altar", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "lukasmah", "position": [132, 164]}, {"object": "southbridge", "position": [136, 164]}, {"object": "evanski", "position": [140, 164]}, {"object": "flip", "position": [132, 172]}, {"object": "yokcos", "position": [136, 172]}, {"object": "rougebare", "position": [140, 172]}]}},
+        "2": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["neutral", "gap", "gap", "neutral", "neutral", "neutral", "gap", "gap", "neutral", "gap"], ["gap", "gap", "neutral", "neutral", "neutral", "neutral", "neutral", "gap", "gap", "gap"], ["gap", "neutral", "neutral", "neutral", "altar", "neutral", "neutral", "neutral", "gap", "gap"], ["gap", "gap", "neutral", "neutral", "neutral", "neutral", "neutral", "gap", "gap", "gap"], ["gap", "gap", "gap", "neutral", "neutral", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "giver", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "neutral", "gap", "neutral", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "death", "position": [136, 40]}, {"object": "goldcoin", "position": [8, 72]}, {"object": "goldcoin", "position": [264, 72]}, {"object": "famine", "position": [40, 136]}, {"object": "war", "position": [232, 136]}, {"object": "pestilence", "position": [136, 232]}, {"object": "lukasmah", "position": [132, 260]}, {"object": "southbridge", "position": [136, 260]}, {"object": "evanski", "position": [140, 260]}, {"object": "flip", "position": [132, 268]}, {"object": "yokcos", "position": [136, 268]}, {"object": "rougebare", "position": [140, 268]}, {"object": "silvercoin", "position": [104, 328]}, {"object": "silvercoin", "position": [168, 328]}]}},
+        "3": {"0": {"spaces": [["fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire"], ["fire", "dirt", "tree", "dirt", "grass", "grass", "dirt", "grass", "grass", "grass", "grass", "dirt", "grass", "dirt", "dirt", "grass", "grass", "fire"], ["fire", "grass", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "grass", "fire"], ["fire", "tree", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "grass", "fire"], ["fire", "tree", "black", "black", "black", "black", "black", "tree", "grass", "black", "black", "black", "black", "black", "black", "black", "grass", "fire"], ["fire", "dirt", "black", "black", "black", "black", "tree", "dirt", "neutral", "tree", "black", "black", "black", "black", "black", "black", "dirt", "fire"], ["fire", "grass", "black", "black", "neutral", "black", "tree", "neutral", "neutral", "neutral", "dirt", "black", "neutral", "black", "black", "black", "dirt", "fire"], ["fire", "grass", "black", "black", "black", "dirt", "neutral", "neutral", "neutral", "neutral", "neutral", "dirt", "black", "black", "black", "black", "dirt", "fire"], ["fire", "grass", "black", "black", "dirt", "neutral", "neutral", "neutral", "altar", "neutral", "neutral", "neutral", "grass", "black", "black", "black", "grass", "fire"], ["fire", "tree", "black", "black", "black", "dirt", "neutral", "neutral", "tneutral", "neutral", "neutral", "tree", "black", "black", "black", "black", "grass", "fire"], ["fire", "tree", "black", "black", "black", "black", "grass", "neutral", "neutral", "neutral", "yeolde", "tree", "black", "black", "black", "black", "dirt", "fire"], ["fire", "grass", "black", "black", "black", "black", "black", "grass", "neutral", "dirt", "dirt", "black", "black", "black", "black", "black", "grass", "fire"], ["fire", "dirt", "black", "black", "black", "black", "tree", "dirt", "start", "grass", "tree", "black", "black", "black", "black", "black", "dirt", "fire"], ["fire", "dirt", "black", "black", "black", "black", "black", "grass", "giver", "tree", "black", "black", "black", "black", "black", "black", "grass", "fire"], ["fire", "grass", "black", "black", "black", "black", "black", "neutral", "dirt", "neutral", "black", "black", "black", "black", "black", "black", "dirt", "fire"], ["fire", "dirt", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "tree", "fire"], ["fire", "tree", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "dirt", "fire"], ["fire", "grass", "dirt", "tree", "dirt", "grass", "grass", "dirt", "grass", "grass", "dirt", "dirt", "tree", "dirt", "tree", "dirt", "grass", "fire"], ["fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire", "fire"]], "tokens": [{"object": "goldcoin", "position": [136, 200]}, {"object": "death", "position": [232, 200]}, {"object": "goldcoin", "position": [392, 200]}, {"object": "famine", "position": [232, 264]}, {"object": "pestilence", "position": [264, 296]}, {"object": "war", "position": [328, 296]}, {"object": "lukasmah", "position": [260, 388]}, {"object": "southbridge", "position": [264, 388]}, {"object": "evanski", "position": [268, 388]}, {"object": "flip", "position": [260, 396]}, {"object": "yokcos", "position": [264, 396]}, {"object": "rougebare", "position": [268, 396]}, {"object": "silvercoin", "position": [232, 456]}, {"object": "silvercoin", "position": [296, 456]}]}}
     }
 }

@@ -134,10 +134,21 @@
             <td>The Molten Shuffle</td>
             <td></td>
             <td>2020</td>
-            <td>Ongoing</td>
+            <td>12 turns</td>
             <td>Discord</td>
             <td><a href="index.php?file=4">Available</a></td>
+            <td>7</td>
+            <td>Rougebare</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>???</td>
             <td></td>
+            <td>2023</td>
+            <td>Ongoing</td>
+            <td>Discord</td>
+            <td><a href="index.php?file=5">Available</a></td>
+            <td>6</td>
             <td></td>
           </tr>
         </tbody>
