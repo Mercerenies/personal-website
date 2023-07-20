@@ -34,7 +34,4 @@
   <a class="navbutton" href="contact.php">
     Contact
   </a>
-  <a class="navbutton" href="pfolio/">
-    Portfolio
-  </a>
 </div>

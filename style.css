@@ -138,3 +138,15 @@ tr.roweven {
 tr.rowodd {
     background-color: #8b8989;
 }
+
+.new-site-notice {
+    background-color: rgb(248, 128, 128);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 10px;
+}
+
+.new-site-notice a {
+    color: #144;
+}
