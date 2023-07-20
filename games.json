@@ -454,6 +454,46 @@
             "summary": "Start with nothing but a single nail and trade your way into a fortune",
             "finished": [5, 2022],
             "page": "https://www.mediafire.com/file/lq39bv2hnyhpkh6/NailByMercerenies.zip/file"
+        },
+        {
+            "name": "Marty the Mole",
+            "author": "Mercerenies / Alicia / Cora",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Help Marty rescue his wife in this underground block-pusher",
+            "finished": [8, 2022],
+            "page": "https://www.mediafire.com/file/yok22gzrk0r2kaa/MartyTheMole_MercereniesAliciaCora.zip/file"
+        },
+        {
+            "name": "Baby! Don't Touch That!",
+            "author": "Mercerenies",
+            "genre": "Casual",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Protect Baby from all of the hazardous household objects",
+            "finished": [11, 2022],
+            "page": "https://www.mediafire.com/file/qgd3nnsrs6y7zjh/BabyDontTouchThat.zip/file"
+        },
+        {
+            "name": "Killborg Flowerbot",
+            "author": "Mercerenies",
+            "genre": "Puzzle",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Help the Killborg deliver flowers, and try to keep it from killing people",
+            "finished": [2, 2023],
+            "page": "https://mercerenies.itch.io/killborg-flowerbot"
+        },
+        {
+            "name": "Prismania",
+            "author": "Mercerenies",
+            "genre": "Platformer",
+            "occasion": "GMC Jam",
+            "magnitude": "Medium",
+            "summary": "Save Prismania from the mysterious dictator who's taken it over in this platforming adventure",
+            "finished": [5, 2023],
+            "page": "https://www.mediafire.com/file/3x5nxizbhqsrls8/Prismania_by_Mercerenies.zip/file"
         }
     ]
 }
