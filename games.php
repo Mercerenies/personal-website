@@ -12,6 +12,7 @@
   <body>
     <?php include('private/header.php'); ?>
     <div class="page content">
+      <?php include('private/new_site_notice.php'); ?>
       Here, you'll find a list of game projects that I either wrote or
       contributed to. Note that some of my earliest games from long ago are not
       listed here. Most of those are available

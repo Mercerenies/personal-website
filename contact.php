@@ -8,14 +8,12 @@
   <body>
     <?php include('private/header.php'); ?>
     <div class="page content">
+      <?php include('private/new_site_notice.php'); ?>
       Here's how to get in touch with me. The ones nearer the top of the list are
       the easier ways to reach me.
       <ul>
         <li>
           Email: Mercerenies at comcast dot net
-        </li>
-        <li>
-          Secondary Email: smayolo at purdue dot edu
         </li>
         <li>
           GMC Account:

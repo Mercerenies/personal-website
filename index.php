@@ -28,6 +28,7 @@
   <body>
     <?php include('private/header.php'); ?>
     <div class="page content">
+      <?php include('private/new_site_notice.php'); ?>
       My name is Silvio Mayolo, known online as Mercerenies. I am a
       24-year-old programmer and mathematician. This is a website for me to showcase various
       projects and things that I write, as well as neat stuff I find
@@ -37,6 +38,10 @@
       <a href="pfolio/">professional portfolio</a>
       and <a href="https://github.com/mercerenies" target="new">my
       GitHub page</a> to see the work I've done. <br/><br/>
+      Also, be sure to check out my <a href="https://www.youtube.com/playlist?list=PL1ltQrTP1szcCAD-Jm-6eQdV_zhnm3oNq">YouTube series</a>,
+      where I talk about various programming languages and solve
+      problems in some esoteric ones. New episodes every week!<br/><br/>
+      <br/><br/>
       <div class="imgbox">
         <div class="imgbox1">
           <a href="pfolio/asm_img.png">

@@ -12,6 +12,7 @@
   <body>
     <?php include('private/header.php'); ?>
     <div class="page content">
+      <?php include('private/new_site_notice.php'); ?>
       These are the projects that I'm currently working on or thinking
       about. Click any of them for details. Note that, for unfinished
       projects, the names listed here are arbitrary code names that I

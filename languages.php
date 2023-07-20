@@ -8,6 +8,7 @@
   <body>
     <?php include('private/header.php'); ?>
     <div class="page content">
+      <?php include('private/new_site_notice.php'); ?>
       I consider myself to be something of a programming language enthusiast, so
       this is a list of programming languages I consider to be valuable to learn.
       The top three tend to be my languages of choice unless I have a good reason

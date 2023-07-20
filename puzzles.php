@@ -10,6 +10,7 @@
   <body>
     <?php include('private/header.php'); ?>
     <div class="page content">
+      <?php include('private/new_site_notice.php'); ?>
       <div>
         These are a few of my personal favorite puzzles and riddles, in no particular order.
       </div>
