@@ -151,6 +151,17 @@
             <td>7</td>
             <td>(Nobody)</td>
           </tr>
+          <tr>
+            <td>11</td>
+            <td>???</td>
+            <td></td>
+            <td>2024</td>
+            <td>(Ongoing)</td>
+            <td>Discord</td>
+            <td><a href="index.php?file=6">Available</a></td>
+            <td>???</td>
+            <td>(Ongoing)</td>
+          </tr>
         </tbody>
       </table>
       <div>
