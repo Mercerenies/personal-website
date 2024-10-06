@@ -47,6 +47,14 @@
       "spaces": "./spaces_uncle.png",
       "tokens": "./tokens_uncle.png",
       "prefix": "u"
+    },
+    {
+      "name": "2024 Game",
+      "shortname": "2024",
+      "json": "../wuas_rocket.json",
+      "spaces": "./spaces_rocket.png",
+      "tokens": "./tokens_rocket.png",
+      "prefix": "r"
     }
   ]
 }
