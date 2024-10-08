@@ -36,11 +36,21 @@
             "coords": "198,0,231,33",
             "visual": "solid black",
             "desc": "A space shrouded in darkness; you can't tell what it is from this distance."
+        },
+        "balloon": {
+            "name": "Balloon Space",
+            "coords": "165,0,198,33",
+            "visual": "image of several balloons on a blue background",
+            "desc": "This space summons a Balloon token on itself immediately, if it does not currently have a Balloon token on the board."
         }
     },
     "items": {
     },
     "effects": [
+        {
+            "name": "Heavy",
+            "desc": "Every time you leave a space, there is a 10% chance of that space being destroyed, similar to a Crumbled Space."
+        }
     ],
     "tokens": {
         "item": {
@@ -54,9 +64,51 @@
             "stats": "N/A",
             "thumbnail": [16, 0],
             "desc": "Can be picked up by a player. Always protected from wishes. Emits light level 1."
+        },
+        "lukas": {
+            "name": "Lukas",
+            "stats": "Player",
+            "thumbnail": [0, 16],
+            "desc": "A player token."
+        },
+        "rougebare": {
+            "name": "rougebare",
+            "stats": "Player",
+            "thumbnail": [0, 64],
+            "desc": "A player token."
+        },
+        "evanski": {
+            "name": "Evanski",
+            "stats": "Player",
+            "thumbnail": [0, 80],
+            "desc": "A player token."
+        },
+        "misu": {
+            "name": "Misu",
+            "stats": "Player",
+            "thumbnail": [16, 48],
+            "desc": "A player token."
+        },
+        "balloon": {
+            "name": "Balloon",
+            "stats": "3 MOV",
+            "thumbnail": [0, 96],
+            "desc": "Moves up one to three spaces per turn, stopping if it encounters a player. Balloons can move freely over gaps and ignore gravity. A player on the same space as a Balloon can grab the Balloon, allowing them to ignore gravity for that turn. If they do so, the Balloon pops at the end of the turn. If a Balloon reaches the top of the board, or touches any spiky or sharp object, it also pops."
+        },
+        "cake": {
+            "name": "Cake",
+            "stats": "N/A",
+            "thumbnail": [16, 96],
+            "desc": "A player on the same space as a Cake may choose to eat it. If they do so, the Cake is destroyed and the player becomes Heavy."
         }
     },
     "attributes": {
+        "isfloor": {
+            "name": "Floor",
+            "outlinecolor": "saddlebrown",
+            "outlineside": "bottom",
+            "desc": "There is nothing below this space, so it counts as a floor for gravity purposes."
+        }
     },
     "rulings": [
         {
@@ -75,8 +127,9 @@
             "desc": "The larger the magnitude of a wish, the less likely it is to end up in the wisher's favor. That is, a simple wish is likely to go exactly as intended. A large and complicated wish may be interpreted extremely literally and the results may not be what was desired."
         }
     ],
-    "current_turn": 1,
+    "current_turn": 2,
     "turns": {
-        "1": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "neutral", "gap", "gap", "gap", "gap", "gap", "neutral", "gap", "gap"], ["gap", "gap", "gap", "neutral", "altar", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "neutral", "gap", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "neutral", "neutral", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "goldcoin", "position": [40, 40]}, {"object": "goldcoin", "position": [232, 40]}, {"object": "goldcoin", "position": [136, 264]}]}}
+        "1": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "neutral", "gap", "gap", "gap", "gap", "gap", "neutral", "gap", "gap"], ["gap", "gap", "gap", "neutral", "altar", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "neutral", "gap", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "neutral", "neutral", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "start", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "goldcoin", "position": [40, 40]}, {"object": "goldcoin", "position": [232, 40]}, {"object": "goldcoin", "position": [136, 264]}]}},
+        "2": {"0": {"spaces": [["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", {"space": "neutral", "attributes": ["isfloor"]}, "gap", "gap", "gap", "gap", "gap", {"space": "neutral", "attributes": ["isfloor"]}, "gap", "gap"], ["gap", "gap", "gap", "neutral", {"space": "altar", "attributes": ["isfloor"]}, "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "neutral", "gap", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", {"space": "neutral", "attributes": ["isfloor"]}, "neutral", "neutral", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", {"space": "start", "attributes": ["isfloor"]}, {"space": "balloon", "attributes": ["isfloor"]}, "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "neutral", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", {"space": "neutral", "attributes": ["isfloor"]}, "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"], ["gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap", "gap"]], "tokens": [{"object": "goldcoin", "position": [40, 40]}, {"object": "goldcoin", "position": [232, 40]}, {"object": "cake", "position": [104, 72]}, {"object": "cake", "position": [168, 104]}, {"object": "lukas", "position": [144, 176]}, {"object": "rougebare", "position": [144, 160]}, {"object": "evanski", "position": [128, 176]}, {"object": "misu", "position": [128, 160]}, {"object": "balloon", "position": [168, 162]}, {"object": "cake", "position": [136, 232]}, {"object": "goldcoin", "position": [136, 264]}]}}
     }
 }
