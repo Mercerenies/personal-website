@@ -148,7 +148,7 @@
       }
     };
     window.updateSearch = function(divId, textId) {
-      var attribute, divField, dl, effect, item, j, k, key, len, len1, ref, ref1, ref2, ref3, ref4, result, results, space, text, textField, token, tokenDescriptor;
+      var attribute, divField, dl, effect, item, j, k, key, len, len1, ref, ref1, ref2, ref3, ref4, ref5, result, results, space, text, textField, token, tokenDescriptor;
       tokenDescriptor = function(token) {
         var thumbnail, xpos, ypos;
         thumbnail = "";
@@ -197,6 +197,13 @@
         ref4 = wuas.attributes;
         for (key in ref4) {
           attribute = ref4[key];
+          if (attribute.name.toLowerCase().includes(text)) {
+            results.push(`<dt><b>${attribute.name}</b></dt><dd>${attribute.desc}</dd>`);
+          }
+        }
+        ref5 = wuas.captures || {};
+        for (key in ref5) {
+          attribute = ref5[key];
           if (attribute.name.toLowerCase().includes(text)) {
             results.push(`<dt><b>${attribute.name}</b></dt><dd>${attribute.desc}</dd>`);
           }

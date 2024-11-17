@@ -138,6 +138,8 @@
                 for key, token of wuas.tokens when token.name.toLowerCase().includes text
             results.push "<dt><b>#{attribute.name}</b></dt><dd>#{attribute.desc}</dd>" \
                 for key, attribute of wuas.attributes when attribute.name.toLowerCase().includes text
+            results.push "<dt><b>#{attribute.name}</b></dt><dd>#{attribute.desc}</dd>" \
+                for key, attribute of (wuas.captures or {}) when attribute.name.toLowerCase().includes text
             if results.length > 10
                 divField.html "Please narrow your search."
             else if results.length == 0
