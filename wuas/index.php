@@ -112,6 +112,14 @@
       <div id="wuas-attributes" class="project-contents">
         Loading...
       </div>
+      <div id="wuas-captures-project-div" class="hidden-project">
+        <div class="project-header" onclick="window.doShow('wuas-captures')">
+          Captures
+        </div>
+        <div id="wuas-captures" class="project-contents">
+          Loading...
+        </div>
+      </div>
       <div class="project-header" onclick="window.doShow('wuas-rulings')">
         Miscellaneous Rulings
       </div>

@@ -62,6 +62,10 @@ div.project-contents {
     overflow: hidden;
 }
 
+div.hidden-project {
+    display: none;
+}
+
 img.thumbnail {
     width: 100px;
     height: 100px;

@@ -35,6 +35,9 @@
                 setupSpaceMap()
                 listOutValsWithNames wuas.items, $("#wuas-items")
                 listOutValsWithNames wuas.attributes, $("#wuas-attributes")
+                if wuas.captures
+                    $("#wuas-captures-project-div").removeClass "hidden-project"
+                    listOutValsWithNames wuas.captures, $("#wuas-captures")
                 listOutWithNames wuas.effects, $("#wuas-effects")
                 listOutWithEntry wuas.tokens, $("#wuas-tokens")
                 listOut wuas.rulings, $("#wuas-rulings")
