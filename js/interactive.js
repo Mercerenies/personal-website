@@ -2,12 +2,19 @@
 (function() {
   // -*- coffee-tab-width: 4 -*-
   (function($) {
-    var active_turn, current_turn, file, filePrefix, leaflet, loadEverything, setupMenus, zaxis;
+    var active_turn, current_turn, file, filePrefix, floorName, leaflet, loadEverything, setupMenus, zaxis;
     file = 2;
     current_turn = -1;
     active_turn = -1;
     zaxis = 0;
     leaflet = true;
+    floorName = function(zz) {
+      if (zz === 'inf') {
+        return '∞';
+      } else {
+        return zz;
+      }
+    };
     $(function() {
       return window.wuasCallback(function() {
         current_turn = window.wuas().current_turn;
@@ -55,9 +62,9 @@
       };
       doZElem = function(zz) {
         if (`${zaxis}` === `${zz}`) {
-          return `${zz}`;
+          return `${floorName(zz)}`;
         } else {
-          return `<a href='interactive.php?zoom=${leaflet}&file=${file}&turn=${turn}&z=${zz}'>${zz}</a>`;
+          return `<a href='interactive.php?zoom=${leaflet}&file=${file}&turn=${turn}&z=${floorName(zz)}'>${floorName(zz)}</a>`;
         }
       };
       zooms = (function() {

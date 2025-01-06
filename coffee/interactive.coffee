@@ -8,6 +8,12 @@
     zaxis = 0
     leaflet = true
 
+    floorName = (zz) ->
+        if zz == 'inf'
+            '∞'
+        else
+            zz
+
     $ ->
         window.wuasCallback ->
             current_turn = window.wuas().current_turn
@@ -47,9 +53,9 @@
                 "<a href='interactive.php?zoom=#{leaflet}&file=#{file}&turn=#{tt}&z=0'>#{tt}</a>"
         doZElem = (zz) ->
             if "#{zaxis}" == "#{zz}"
-                "#{zz}"
+                "#{floorName(zz)}"
             else
-                "<a href='interactive.php?zoom=#{leaflet}&file=#{file}&turn=#{turn}&z=#{zz}'>#{zz}</a>"
+                "<a href='interactive.php?zoom=#{leaflet}&file=#{file}&turn=#{turn}&z=#{floorName(zz)}'>#{floorName(zz)}</a>"
         zooms = (doZoomElem(zz) for zz in ["On", "Off"])
         $("#zoom-menu").html "Zoom = #{zooms.join ' | '}"
         files = (doFileElem(ff) for ff in [0...window.fileCount()])

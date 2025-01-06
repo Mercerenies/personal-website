@@ -5,6 +5,8 @@
 <?php $GLOBALS["z"] = isset($_GET["z"]) ? $_GET["z"] : 0; ?>
 <?php $GLOBALS["zoom"] = isset($_GET["zoom"]) ? $_GET["zoom"] : 1; ?>
 
+<?php if ($GLOBALS["z"] == "∞") { $GLOBALS["z"] = "'inf'"; } ?>
+
 <html>
   <head>
     <title>Mercerenies - WUAS</title>
