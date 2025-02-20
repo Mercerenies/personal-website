@@ -94,7 +94,7 @@
             <td><a target="new" href="https://forum.yoyogames.com/index.php?threads/%E2%98%85-wish-upon-a-star-7-%E2%88%9E-turn-9-reached-the-cyberpunk-era-%E2%98%85.879/">GMC</a></td>
             <td><a href="index.php?file=0">Available</a></td>
             <td>7</td>
-            <td>Lukasmah / Kepons</td>
+            <td>Lukas / Kepons</td>
           </tr>
           <tr>
             <td>6</td>
@@ -116,7 +116,7 @@
             <td>Discord</td>
             <td><a href="index.php?file=2">Available</a></td>
             <td>9</td>
-            <td>Hatcrafter</td>
+            <td>Flipsie</td>
           </tr>
           <tr>
             <td>8</td>
@@ -127,7 +127,7 @@
             <td>Discord</td>
             <td><a href="index.php?file=3">Available</a></td>
             <td>5</td>
-            <td>Dolphinhats / Misu</td>
+            <td>Southbridge / Misu</td>
           </tr>
           <tr>
             <td>9</td>
@@ -160,7 +160,7 @@
             <td>Discord</td>
             <td><a href="index.php?file=6">Available</a></td>
             <td>???</td>
-            <td>(Ongoing)</td>
+            <td>Lukas / Flipsie</td>
           </tr>
         </tbody>
       </table>
