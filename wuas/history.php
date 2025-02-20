@@ -156,10 +156,10 @@
             <td>Falling Down Down Down</td>
             <td></td>
             <td>2024</td>
-            <td>(Ongoing)</td>
+            <td>30 turns</td>
             <td>Discord</td>
             <td><a href="index.php?file=6">Available</a></td>
-            <td>???</td>
+            <td>6</td>
             <td>Lukas / Flipsie</td>
           </tr>
         </tbody>
