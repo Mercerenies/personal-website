@@ -19,10 +19,10 @@
         <img src="banner.png" alt="Wish Upon A Star" />
       </div>
       <p>
-        WUAS began in 2013 and is currently on its eighth round. The
-        first six were hosted on the GMC webforum, but the most recent
-        two rounds have been hosted on a Discord gaming server. Links
-        to the first few games are unfortunately not available, as the
+        WUAS began in 2013 and has been run over ten times. The first
+        six games were hosted on the GMC webforum, but the more recent
+        ones have been hosted on a Discord gaming server. Links to the
+        first few games are unfortunately not available, as the
         original GMC forum on which they were hosted has been taken
         down.
       </p>
