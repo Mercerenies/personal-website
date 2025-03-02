@@ -1,0 +1,3 @@
+<Files ./scores.json*>
+  Deny from all
+</Files>
